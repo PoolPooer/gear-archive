@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paul's Gear Archive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Personal archive</p>
+        <h1>GEAR</h1>
+        <p class="lede">Instruments, equipment, modifications & maintenance.</p>
+      </div>
+      <nav class="filters" aria-label="Gear categories">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="guitar">Guitars</button>
+        <button class="filter" data-filter="bass">Bass</button>
+      </nav>
+    </header>
+
+    <section id="collectionView">
+      <div class="stats" id="stats"></div>
+
+      <div class="section-heading">
+        <h2>Collection</h2>
+        <span id="collectionCount"></span>
+      </div>
+
+      <div id="gearList" class="gear-list"></div>
+    </section>
+
+    <section id="detailView" class="hidden"></section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
