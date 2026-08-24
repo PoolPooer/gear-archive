@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.tmp
+
+# Local/private gear data
+private/
+*.private.js
+*.private.json
