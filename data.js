@@ -220,7 +220,7 @@ const gear = [
   modified: true,
 
   serial: null,
-  
+
   serialRecorded: true,
 
   acquired: '2013',
@@ -343,6 +343,7 @@ const gear = [
   modified: true,
 
   serial: null,
+
   serialRecorded: true,
 
   acquired: '5 Jul 2019',
@@ -373,7 +374,8 @@ const gear = [
     Pickguard: 'WD Custom Powercaster #05W — Tortoise Shell/White',
     Knobs: 'D10 Knob Dwyer II by OAIModifications',
     StrapPins: 'Planet Waves PWEEP202 Elliptical End Pins — Chrome',
-    Strap: 'Ernie Ball Rainbow Polypro Guitar Strap'
+    Strap: 'Ernie Ball Rainbow Polypro Guitar Strap',
+    Strings: 'Ernie Ball Ultra Slinky 10–48'
   },
 
   financials: {
