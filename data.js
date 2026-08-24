@@ -75,7 +75,7 @@ const gear = [
       },
 
       modificationSpend: {
-        amount: 468.11,
+        amount: 479.79,
         currency: 'EUR'
       }
 
@@ -162,6 +162,20 @@ const gear = [
       },
 
       {
+        date: '2018',
+
+        type: 'Hardware',
+
+        title: 'Fender F-stamped neck plate',
+
+        description: 'Replaced the stock neck plate with a Fender F-stamped neck plate.',
+
+        cost: 11.68,
+
+        currency: 'EUR'
+      },
+
+      {
 
         date: '~Aug 2004',
 
@@ -185,26 +199,286 @@ const gear = [
 
   },
 
+  
   {
-    id: 'mustang-2011',
-    kind: 'guitar',
-    brand: 'Fender',
-    model: 'Classic Series ’65 Mustang',
-    year: 2011,
-    finish: 'Daphne Blue',
-    origin: 'Japan',
-    status: 'Owned'
+  id: 'mustang-2011',
+
+  kind: 'guitar',
+
+  brand: 'Fender',
+
+  model: 'Classic Series ’65 Mustang',
+
+  year: 2011,
+
+  finish: 'Daphne Blue',
+
+  origin: 'Japan',
+
+  status: 'Sold',
+
+  modified: true,
+
+  serial: null,
+  
+  serialRecorded: true,
+
+  acquired: '2013',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 752.10,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Pickups: 'Stock',
+    Bridge: 'Stock',
+    Tuners: 'Stock',
+    NeckPlate: 'Stock'
+  },
+
+  currentSpec: {
+    Pickups: 'Stock',
+    Bridge: 'Stock',
+    Tuners: 'Stock',
+    NeckPlate: 'Fender F-stamped neck plate'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 752.10,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Purchased from an American eBay seller'
+    },
+
+    importCosts: {
+      amount: 300,
+      currency: 'EUR',
+      approximate: true
+    },
+
+    modificationSpend: {
+      amount: 11.68,
+      currency: 'EUR'
+    },
+
+    sale: {
+      amount: 944.26,
+      currency: 'EUR',
+      date: 'October 2023',
+      destination: 'Canada',
+      shippingCost: null
+    }
+
+  },
+
+  history: [
+
+    {
+      date: 'Oct 2023',
+      type: 'Sale',
+      title: 'Sold',
+      description: 'Sold and shipped to the buyer in Canada.',
+      cost: -944.26,
+      currency: 'EUR'
+    },
+
+    {
+      date: '2018',
+      type: 'Hardware',
+      title: 'Fender F-stamped neck plate',
+      description: 'Replaced the stock neck plate with a Fender F-stamped neck plate.',
+      cost: 11.68,
+      currency: 'EUR'
+    },
+
+    {
+      date: '2013',
+      type: 'Import',
+      title: 'Import and customs fees',
+      description: 'Import and customs charges paid when the guitar arrived in Ireland.',
+      cost: 300,
+      currency: 'EUR',
+      approximate: true
+    },
+
+    {
+      date: '2013',
+      type: 'Acquisition',
+      title: 'Purchased from US eBay seller',
+      description: 'Purchased from an American store on eBay.',
+      cost: 752.10,
+      currency: 'EUR',
+      personalSpend: true
+    }
+
+  ]
+
   },
 
   {
-    id: 'powercaster-2019',
-    kind: 'guitar',
-    brand: 'Fender',
-    model: 'Alternate Reality Powercaster',
-    year: 2019,
-    finish: 'Surf Green',
-    origin: 'Mexico',
-    status: 'Owned'
+  
+  id: 'powercaster-2019',
+
+  kind: 'guitar',
+
+  brand: 'Fender',
+
+  model: 'Alternate Reality Powercaster',
+
+  year: 2019,
+
+  finish: 'Surf Green',
+
+  origin: 'Mexico',
+
+  status: 'Owned',
+
+  modified: true,
+
+  serial: null,
+  serialRecorded: true,
+
+  acquired: '5 Jul 2019',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 800,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    BridgePickup: 'Fender Atomic Humbucker',
+    NeckPickup: 'Fender MP-90 Single-Coil',
+    Bridge: 'Stock',
+    Tuners: 'Stock',
+    Pickguard: 'Stock',
+    Knobs: 'Stock',
+    StrapPins: 'Stock'
+  },
+
+  currentSpec: {
+    BridgePickup: 'DiMarzio DP100 BK/CR',
+    NeckPickup: 'Lollar P-90 Soap Bar High Wind Bridge',
+    Bridge: 'Stock',
+    Tuners: 'Fender Strat/Tele Locking Tuner 6-pk — Chrome',
+    Pickguard: 'WD Custom Powercaster #05W — Tortoise Shell/White',
+    Knobs: 'D10 Knob Dwyer II by OAIModifications',
+    StrapPins: 'Planet Waves PWEEP202 Elliptical End Pins — Chrome',
+    Strap: 'Ernie Ball Rainbow Polypro Guitar Strap'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 800,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Purchased in Waterford, Ireland'
+    },
+
+    modificationSpend: {
+      amount: 376.35,
+      currency: 'EUR'
+    }
+
+  },
+
+  history: [
+
+    {
+      date: '29 May 2025',
+      type: 'Electronics',
+      title: 'Lollar P-90 installed',
+      description: 'Replaced the stock Fender MP-90 neck pickup with a Lollar P-90 Soap Bar High Wind Bridge pickup.',
+      cost: 98.58,
+      currency: 'EUR'
+    },
+
+    {
+      date: '27 Apr 2025',
+      type: 'Electronics',
+      title: 'DiMarzio bridge pickup installed',
+      description: 'Replaced the stock Fender Atomic bridge humbucker with a DiMarzio DP100 BK/CR.',
+      cost: 124.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Aug 2023',
+      type: 'Hardware',
+      title: 'Fender locking tuners installed',
+      description: 'Replaced the stock tuners with Fender Strat/Tele Locking Tuner 6-pk — Chrome.',
+      cost: 53.99,
+      currency: 'EUR'
+    },
+
+    {
+      date: '29 Jul 2023',
+      type: 'Hardware',
+      title: 'Replacement pickguard screws',
+      description: 'Purchased replacement pickguard screws in both black and chrome.',
+      cost: 9.21,
+      currency: 'EUR'
+    },
+
+    {
+      date: '24 Jul 2023',
+      type: 'Hardware',
+      title: 'Planet Waves elliptical end pins',
+      description: 'Installed Planet Waves PWEEP202 Elliptical End Pins — Chrome.',
+      cost: 8.98,
+      currency: 'EUR'
+    },
+
+    {
+      date: '6 May 2023',
+      type: 'Cosmetic / Hardware',
+      title: 'WD Custom tortoise shell pickguard',
+      description: 'Installed WD Custom Pickguard for Fender 2019-Present Made in Mexico Alternate Reality Powercaster #05W — Tortoise Shell/White.',
+      cost: 47.10,
+      currency: 'EUR'
+    },
+
+    {
+      date: '4 Nov 2020',
+      type: 'Cosmetic / Hardware',
+      title: 'Replacement control knobs',
+      description: 'Installed D10 Knob Dwyer II replacement knobs by OAIModifications.',
+      cost: 24.33,
+      currency: 'EUR'
+    },
+
+    {
+      date: '8 Jul 2019',
+      type: 'Accessory',
+      title: 'Ernie Ball Rainbow Polypro strap',
+      description: 'Purchased Ernie Ball Rainbow Polypro Guitar Strap.',
+      cost: 10.16,
+      currency: 'EUR'
+    },
+
+    {
+      date: '5 Jul 2019',
+      type: 'Acquisition',
+      title: 'Purchased in Waterford',
+      description: 'Purchased in Waterford, Ireland.',
+      cost: 800,
+      currency: 'EUR',
+      personalSpend: true
+    }
+
+  ]
+
   },
 
   {
