@@ -494,15 +494,152 @@ const gear = [
     status: 'Owned'
   },
 
-  {
-    id: 'strat-o-sonic-2023',
-    kind: 'guitar',
-    brand: 'Squier',
-    model: 'Paranormal Strat-O-Sonic',
-    year: 2023,
-    finish: 'Crimson Red Transparent',
-    origin: 'China',
-    status: 'Owned'
+ {
+  id: 'strat-o-sonic-2023',
+
+  kind: 'guitar',
+
+  brand: 'Squier',
+
+  model: 'Paranormal Strat-O-Sonic',
+
+  year: 2023,
+
+  finish: 'Crimson Red Transparent',
+
+  origin: 'China',
+
+  status: 'Sold',
+
+  modified: true,
+
+  serial: null,
+
+  serialRecorded: true,
+
+  acquired: '14 Oct 2023',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 400,
+    currency: 'EUR',
+    approximate: true
+  },
+
+  originalSpec: {
+    Pickups: 'Stock Squier pickups',
+    Switching: 'Stock switching configuration',
+    Bridge: 'Stock wraparound bridge',
+    Tuners: 'Stock',
+    NeckFinish: 'Gloss',
+    Hardware: 'Stock'
+  },
+
+  currentSpec: {
+    Pickups: 'Fender Black Dove P-90 Soapbar pickups',
+    Switching: 'Classic 3-way switching',
+    Bridge: 'TonePros AVT2M Compensated Wraparound',
+    Tuners: 'Musiclily Pro R15J-13 Vintage 6-inline Split Shaft Tuners — Off White Button',
+    NeckFinish: 'Gloss removed',
+    Hardware: 'Black screws and nuts'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 400,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: true,
+      note: 'Approximate purchase price'
+    },
+
+    modificationSpend: {
+      amount: 317.00,
+      currency: 'EUR',
+      approximate: true
+    },
+
+    sale: {
+      amount: 439.00,
+      currency: 'EUR',
+      date: '6 Dec 2025',
+      destination: 'USA',
+      shippingCost: null
+    }
+
+  },
+
+  history: [
+
+    {
+      date: '6 Dec 2025',
+      type: 'Sale',
+      title: 'Sold',
+      description: 'Sold and shipped to the buyer in the United States.',
+      cost: -439.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '14 May 2024',
+      type: 'Hardware',
+      title: 'Black hardware conversion',
+      description: 'Replaced screws and nuts with black hardware.',
+      cost: 5.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '13 May 2024',
+      type: 'Hardware',
+      title: 'TonePros bridge installed',
+      description: 'Replaced the stock bridge with a TonePros AVT2M Compensated Wraparound bridge.',
+      cost: 130.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '12 May 2024',
+      type: 'Hardware',
+      title: 'Musiclily vintage tuners installed',
+      description: 'Replaced the stock machine heads with Musiclily Pro R15J-13 Vintage 6-inline Split Shaft Tuners with Off White Buttons.',
+      cost: 22.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '~16 Oct 2023',
+      type: 'Neck / Finish',
+      title: 'Neck gloss removed',
+      description: 'Removed the gloss finish from the neck for a smoother satin-style feel.',
+      cost: null
+    },
+
+    {
+      date: 'Oct 2023',
+      type: 'Electronics',
+      title: 'Fender Black Dove P-90 conversion',
+      description: 'Replaced the stock pickups with Fender Black Dove P-90 soapbars, matching the pickup specification of the early-2000s Fender Stratosonic. Electronics were converted to classic 3-way switching.',
+      cost: 160.00,
+      currency: 'EUR',
+      approximate: true
+    },
+
+    {
+      date: '14 Oct 2023',
+      type: 'Acquisition',
+      title: 'Purchased',
+      description: 'Purchased on 14 October 2023.',
+      cost: 400.00,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: true
+    }
+
+  ]
+
   },
 
   {
