@@ -484,15 +484,176 @@ const gear = [
   },
 
   {
-    id: 'ibanez-540pii-1989',
-    kind: 'guitar',
-    brand: 'Ibanez',
-    model: '540PII-SH',
-    year: 1989,
-    finish: 'Fire Alarm Red',
-    origin: '',
-    status: 'Owned'
+  id: 'ibanez-540pii-1989',
+
+  kind: 'guitar',
+
+  brand: 'Ibanez',
+
+  model: '540PII-SH',
+
+  year: 1989,
+
+  finish: 'Fire Alarm Red',
+
+  origin: 'FujiGen Gakki, Nagano, Japan',
+
+  status: 'Sold',
+
+  modified: true,
+
+  serial: null,
+
+  serialRecorded: true,
+
+  acquired: 'Apr 2021',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 350,
+    currency: 'EUR',
+    approximate: true
   },
+
+  originalSpec: {
+    BodyType: 'Solid body',
+    BodyMaterial: 'Basswood',
+    NeckJoint: 'Cutaway Heel',
+    NeckType: 'Wizard',
+    NeckMaterial: '1-piece maple',
+    ScaleLength: '648 mm / 25½"',
+    Fingerboard: 'Rosewood with binding',
+    Inlays: 'Sharktooth',
+    Frets: '24 jumbo',
+    Nut: 'Top-Lok III',
+    Bridge: 'Ibanez Edge tremolo — 10.8 mm string spacing',
+    Pickguard: 'Pearl white',
+    Hardware: 'Cosmo black',
+    MachineHeads: 'Gotoh SG38',
+    PickupConfiguration: 'HS',
+    BridgePickup: 'IBZ/USA F3 humbucker',
+    NeckPickup: 'IBZ/USA C2 single-coil',
+    Controls: 'Single volume / 3-way toggle pickup selector',
+    OutputJack: '¼" stereo barrel — side mounted',
+    StringGauge: '.009 / .011 / .016 / .024 / .032 / .042'
+  },
+
+  currentSpec: {
+    Body: 'Basswood',
+    Neck: '1-piece maple Wizard',
+    Fingerboard: '24-fret rosewood with binding',
+    Bridge: 'Original Ibanez Edge tremolo',
+    TremoloArm: 'Red Bishop MAGIK-ARM RBAH2B2',
+    Nut: 'Ibanez Top Lok III BK 2TL1X43B replacement — original retained',
+    MachineHeads: 'Original Gotoh SG38',
+    BridgePickup: 'Original IBZ/USA F3 humbucker',
+    NeckPickup: 'Original IBZ/USA C2 single-coil',
+    PickupSelector: 'Replacement 3-way selector — identical functioning replacement',
+    Strings: '9 gauge'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 350,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: true,
+      note: 'Purchased from a local music shop in Waterford'
+    },
+
+    modificationSpend: {
+      amount: 116.89,
+      currency: 'EUR'
+    },
+
+    sale: {
+      amount: 1330.00,
+      currency: 'EUR',
+      date: '15 Jul 2023',
+      destination: 'New Zealand',
+      shippingCost: null
+    }
+
+  },
+
+  provenance: {
+    manufactureDate: 'July 1989',
+    factory: 'FujiGen Gakki',
+    location: 'Nagano, Japan',
+    previousOwners: 1,
+    prePurchaseHistory: 'According to the sale listing, the guitar had been in the local Waterford music shop for roughly 20 years before purchase in April 2021.'
+  },
+
+  condition: {
+    overall: 'Good vintage condition with cosmetic wear',
+    frets: 'Minimal fret wear considering age',
+    body: 'Cosmetic damage and marks present',
+    neck: 'Small marks present',
+    repairs: 'Replacement nut fitted; original retained',
+    setup: 'Set up with 9 gauge strings, low action and intonation set during ownership'
+  },
+
+  history: [
+
+    {
+      date: '15 Jul 2023',
+      type: 'Sale',
+      title: 'Sold',
+      description: 'Sold and shipped to the buyer in New Zealand.',
+      cost: -1330.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '8 Oct 2021',
+      type: 'Electronics / Hardware',
+      title: '3-way pickup selector replaced',
+      description: 'Replaced the 3-way pickup selector with an identical functioning replacement.',
+      cost: 8.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '22 Sep 2021',
+      type: 'Hardware',
+      title: 'Ibanez Top Lok III replacement nut',
+      description: 'Installed an Ibanez Top Lok III BK 2TL1X43B replacement locking nut. Original nut retained.',
+      cost: 54.89,
+      currency: 'EUR'
+    },
+
+    {
+      date: '20 Sep 2021',
+      type: 'Hardware',
+      title: 'Red Bishop MAGIK-ARM purchased',
+      description: 'Purchased a Red Bishop MAGIK-ARM for Ibanez EDGE / Lo-Pro EDGE (RBAH2B2) from Japan as a compatible replacement tremolo arm.',
+      cost: 54.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Apr 2021',
+      type: 'Acquisition',
+      title: 'Purchased in Waterford',
+      description: 'Purchased from a local music shop in Waterford, Ireland, where the guitar had reportedly been for roughly 20 years.',
+      cost: 350.00,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: true
+    },
+
+    {
+      date: 'Jul 1989',
+      type: 'Manufacture',
+      title: 'Manufactured in Japan',
+      description: 'Manufactured at FujiGen Gakki in Nagano, Japan.'
+    }
+
+  ]
+
+},
 
  {
   id: 'strat-o-sonic-2023',
@@ -807,6 +968,177 @@ const gear = [
     finish: 'Natural finish',
     origin: '',
     status: 'Owned'
-  }
+  },
+
+  {
+  id: 'fender-tone-master-twin-reverb',
+
+  kind: 'amp',
+
+  brand: 'Fender',
+
+  model: 'Tone Master Twin Reverb',
+
+  year: '',
+
+  finish: 'Black',
+
+  origin: '',
+
+  status: 'Owned',
+
+  modified: false,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '6 Dec 2022',
+
+  acquisitionType: 'Purchased / Trade-in',
+
+  originalPrice: {
+    amount: 1250,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 1250,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Purchased from local music shop in Waterford'
+    },
+
+    tradeIn: {
+      amount: 150,
+      currency: 'EUR',
+      item: 'Boss Katana 50'
+    },
+
+    cashPaid: {
+      amount: 1100,
+      currency: 'EUR'
+    },
+
+    modificationSpend: {
+      amount: 0,
+      currency: 'EUR'
+    }
+
+  },
+
+  history: [
+
+    {
+      date: '6 Dec 2022',
+      type: 'Acquisition',
+      title: 'Purchased in Waterford',
+      description: 'Purchased from a local music shop in Waterford for €1,250. A Boss Katana 50 was traded against the purchase for €150.',
+      cost: 1250,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    {
+      date: '6 Dec 2022',
+      type: 'Trade-in',
+      title: 'Boss Katana 50 traded in',
+      description: 'Boss Katana 50 accepted as part-exchange with a trade-in value of €150, leaving €1,100 to pay toward the Tone Master Twin Reverb.',
+      cost: -150,
+      currency: 'EUR'
+    }
+
+  ]
+},
+
+
+  {
+  id: 'boss-katana-50',
+
+  kind: 'amp',
+
+  brand: 'Boss',
+
+  model: 'Katana 50',
+
+  year: '',
+
+  finish: 'Black',
+
+  origin: '',
+
+  status: 'Traded',
+
+  modified: false,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '2017',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 350,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 350,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Purchased from local music shop in Waterford'
+    },
+
+    tradeIn: {
+      amount: 150,
+      currency: 'EUR',
+      date: '6 Dec 2022',
+      toward: 'Fender Tone Master Twin Reverb'
+    }
+
+  },
+
+  history: [
+
+    {
+      date: '6 Dec 2022',
+      type: 'Trade-in',
+      title: 'Traded toward Fender Tone Master Twin Reverb',
+      description: 'Traded back to the local Waterford music shop toward the purchase of a Fender Tone Master Twin Reverb.',
+      cost: -150,
+      currency: 'EUR'
+    },
+
+    {
+      date: '2017',
+      type: 'Acquisition',
+      title: 'Purchased in Waterford',
+      description: 'Purchased from a local music shop in Waterford.',
+      cost: 350,
+      currency: 'EUR',
+      personalSpend: true
+    }
+
+  ]
+
+},
 
 ];

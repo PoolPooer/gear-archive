@@ -47,6 +47,11 @@ function getModificationSpend(item) {
 function renderStats() {
   const guitars = gear.filter(i => i.kind === 'guitar').length;
   const basses = gear.filter(i => i.kind === 'bass').length;
+  const amps = gear.filter(i => i.kind === 'amp').length;
+  const pedals = gear.filter(i => i.kind === 'pedal').length;
+  const microphones = gear.filter(i => i.kind === 'microphone').length;
+  const recording = gear.filter(i => i.kind === 'recording').length;
+  const accessories = gear.filter(i => i.kind === 'accessory').length;
 
   const totalKnownModificationSpend = gear.reduce(
     (total, item) => total + getModificationSpend(item),
@@ -55,18 +60,43 @@ function renderStats() {
 
   stats.innerHTML = `
     <div class="stat">
-      <div class="stat-label">Instruments</div>
+      <div class="stat-label">Items</div>
       <div class="stat-value">${gear.length}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Guitars</div>
-      <div class="stat-value">${guitars}</div>
+      <div class="stat-value">${guitar}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Bass</div>
-      <div class="stat-value">${basses}</div>
+      <div class="stat-value">${bass}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Amps</div>
+      <div class="stat-value">${amp}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Pedals</div>
+      <div class="stat-value">${pedal}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Microphones</div>
+      <div class="stat-value">${microphone}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Recording</div>
+      <div class="stat-value">${recording}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Accessories</div>
+      <div class="stat-value">${accessory}</div>
     </div>
 
     <div class="stat">
@@ -84,7 +114,7 @@ function renderCollection(filter = 'all') {
   );
 
   collectionCount.textContent =
-    `${visible.length} instrument${visible.length === 1 ? '' : 's'}`;
+  `${visible.length} item${visible.length === 1 ? '' : 's'}`;
 
   list.innerHTML = visible.map(item => {
     const details = [
