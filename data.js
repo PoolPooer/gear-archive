@@ -643,15 +643,126 @@ const gear = [
   },
 
   {
-    id: 'melody-maker-1964',
-    kind: 'guitar',
-    brand: 'Gibson',
-    model: 'Melody Maker D',
-    year: 1964,
-    finish: 'Cherry Red',
-    origin: 'Kalamazoo, Michigan, USA',
-    status: 'Owned'
+  id: 'melody-maker-1964',
+
+  kind: 'guitar',
+
+  brand: 'Gibson',
+
+  model: 'Melody Maker D',
+
+  year: 1964,
+
+  finish: 'Cherry Red',
+
+  origin: 'Kalamazoo, Michigan, USA',
+
+  status: 'Owned',
+
+  modified: true,
+
+  serial: null,
+
+  serialRecorded: true,
+
+  acquired: '12 Sep 2025',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 1965.63,
+    currency: 'EUR',
+    approximate: false
   },
+
+  originalSpec: {
+    Pickups: 'Original Gibson pickups',
+    Electronics: 'Original electronics',
+    Bridge: 'Vintage Leo Quan Badass bridge fitted at time of purchase; original Gibson wrap-around tailpiece included',
+    Body: 'Mahogany slab body',
+    Neck: 'Mahogany neck',
+    Fingerboard: 'Brazilian rosewood — as described in original Reverb listing',
+    NutWidth: '1-9/16 inch',
+    Weight: '5 lb 9 oz',
+    Tremolo: 'None; listing notes guitar never had one'
+  },
+
+  currentSpec: {
+    Pickups: 'Original Gibson pickups',
+    Electronics: 'Original electronics',
+    Bridge: 'Vintage Leo Quan Badass bridge',
+    Strings: 'D’Addario NYXL 10–46',
+    VolumeToneKnobs: 'Replacement knobs',
+    OriginalTailpiece: 'Original Gibson wrap-around tailpiece retained'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 1965.63,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Purchased via Reverb · final price including tax'
+    },
+
+    modificationSpend: {
+      amount: 0,
+      currency: 'EUR',
+      note: 'Replacement knob cost not yet recorded'
+    }
+
+  },
+
+  listingDetails: {
+
+    pickupReadings: {
+      Bridge: '7.42',
+      Middle: '3.61',
+      Neck: '7.04'
+    },
+
+    conditionAtPurchase: [
+      'No breaks, cracks or repairs reported in listing',
+      'Minor fret wear',
+      'A few dings on the back of the neck and body',
+      'Light buckle indentations on the back',
+      'Small melt/stand mark noted by seller',
+      'Nitro finish described as glossy and clear with no checking',
+      'Wear visible around pickup covers'
+    ],
+
+    provenance: 'Seller described the buyer as becoming the third owner.',
+
+    case: '1970s Gretsch Committee rectangular hard shell case with keys',
+
+    sellerNotes: 'Original listing described the guitar as lightweight, strong-output, and in particularly good condition for a 1964 Melody Maker.'
+
+  },
+
+  history: [
+
+    {
+      date: '12 Sep 2025',
+      type: 'Acquisition',
+      title: 'Purchased via Reverb',
+      description: 'Purchased as a 1964 Gibson Melody Maker with original electronics, vintage Leo Quan Badass bridge fitted, original Gibson wrap-around tailpiece included, and a 1970s Gretsch Committee hard shell case.',
+      cost: 1965.63,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    {
+      date: 'Date unknown',
+      type: 'Cosmetic / Hardware',
+      title: 'Volume and tone knobs replaced',
+      description: 'Replaced the volume and tone control knobs.',
+      cost: null
+    }
+
+  ]
+
+},
 
   {
     id: 'geddy-lee-jazz-bass-2007',
