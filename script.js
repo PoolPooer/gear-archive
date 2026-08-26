@@ -46,6 +46,7 @@ function getModificationSpend(item) {
 
 function renderStats() {
   const guitars = gear.filter(i => i.kind === 'guitar').length;
+  const acoustics = gear.filter(i => i.kind === 'acoustic').length;
   const basses = gear.filter(i => i.kind === 'bass').length;
   const amps = gear.filter(i => i.kind === 'amp').length;
   const pedals = gear.filter(i => i.kind === 'pedal').length;
@@ -67,6 +68,11 @@ function renderStats() {
     <div class="stat">
       <div class="stat-label">Guitars</div>
       <div class="stat-value">${guitar}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">Acoustics</div>
+      <div class="stat-value">${acoustics}</div>
     </div>
 
     <div class="stat">

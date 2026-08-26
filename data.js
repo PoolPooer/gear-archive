@@ -937,38 +937,605 @@ const gear = [
   },
 
   {
-    id: 'jackson-js32-rhoads',
-    kind: 'guitar',
-    brand: 'Jackson',
-    model: 'JS32 Rhoads AH',
-    year: '',
-    finish: 'Ivory',
-    origin: 'China',
-    status: 'Owned',
-    note: 'Purchased 2024'
+  id: 'jackson-js32-rhoads',
+
+  kind: 'guitar',
+
+  brand: 'Jackson',
+
+  model: 'JS32 Rhoads AH',
+
+  year: '2023',
+
+  finish: 'Ivory',
+
+  origin: 'China',
+
+  status: 'Owned',
+
+  modified: true,
+
+  project: true,
+
+  serial: null,
+
+  serialRecorded: true,
+
+  acquired: '19 Jun 2024',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 366,
+    currency: 'EUR',
+    approximate: false
   },
 
-  {
-    id: 'squier-se-2002',
-    kind: 'guitar',
-    brand: 'Squier',
-    model: 'Stratocaster SE',
-    year: 2002,
-    finish: 'Sunburst',
-    origin: '',
-    status: 'Owned'
+  originalSpec: {
+    Pickups: 'Stock bridge and neck pickups',
+    PickupSelector: 'Stock pickup selector',
+    Controls: 'Volume and tone controls',
+    Bridge: 'Stock',
+    Nut: 'Stock',
+    PickupRing: 'Stock',
+    Hardware: 'Stock'
   },
 
-  {
-    id: 'custom-jazzmaster-2022',
-    kind: 'guitar',
-    brand: 'Custom',
-    model: 'Jazzmaster',
-    year: 2022,
-    finish: 'Natural finish',
-    origin: '',
-    status: 'Owned'
+  currentSpec: {
+    BridgePickup: 'Seymour Duncan SH-8B Invader — Black',
+    NeckPickup: 'Removed',
+    PickupSelector: 'Removed',
+    Controls: 'Single volume control',
+    VolumePotLocation: 'Moved to former tone-control position',
+    VolumeKnob: 'Chrome replacement knob — details pending',
+    Bridge: 'Gotoh GE1996T 33 mm — Black',
+    Nut: 'Gotoh GHL-2B',
+    PickupRing: 'Spray-painted blue',
+    CosmeticDetails: 'Sticker pack applied'
   },
+
+  financials: {
+
+    acquisition: {
+      amount: 366,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Purchased B-Stock from Thomann'
+    },
+
+    modificationSpend: {
+      amount: 452.16,
+      currency: 'EUR',
+      note: 'Known spend only; chrome volume knob cost still to be added'
+    }
+
+  },
+
+  projectDetails: {
+    inspiration: 'Wes Borland',
+    goal: 'Project guitar built to visually and functionally resemble elements of one of Wes Borland’s guitars.',
+    approach: [
+      'Simplified electronics to bridge pickup and single volume control',
+      'Removed neck pickup and pickup selector',
+      'Moved volume control to former tone-control position',
+      'Changed major hardware to black Gotoh components',
+      'Painted pickup ring blue',
+      'Added sticker graphics'
+    ]
+  },
+
+  history: [
+
+    {
+      date: '7 Apr 2025',
+      type: 'Hardware',
+      title: 'Gotoh bridge and locking nut upgrade',
+      description: 'Replaced the stock bridge and nut with a Gotoh GE1996T 33 mm bridge in black and Gotoh GHL-2B locking nut.',
+      cost: 280.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Date unknown',
+      type: 'Cosmetic / Hardware',
+      title: 'Chrome volume knob installed',
+      description: 'Installed a chrome replacement volume knob.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Date unknown',
+      type: 'Cosmetic',
+      title: 'Pickup ring painted blue',
+      description: 'Removed the pickup ring, spray-painted it blue, and remounted it.',
+      cost: null
+    },
+
+    {
+      date: 'Date unknown',
+      type: 'Electronics · Permanent alteration',
+      title: 'Electronics simplified',
+      description: 'Removed the neck pickup, pickup selector and tone control. Moved the volume pot to the former tone-control position, leaving the guitar with a bridge pickup and single volume control.',
+      cost: null
+    },
+
+    {
+      date: '4 Jul 2024',
+      type: 'Cosmetic',
+      title: 'Sticker pack purchased',
+      description: 'Purchased a sticker pack for the Wes Borland-inspired visual treatment.',
+      cost: 23.16,
+      currency: 'EUR'
+    },
+
+    {
+      date: '19 Jun 2024',
+      type: 'Electronics',
+      title: 'Seymour Duncan Invader purchased',
+      description: 'Purchased a Seymour Duncan SH-8B BK Invader bridge pickup for the project.',
+      cost: 149.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '19 Jun 2024',
+      type: 'Acquisition',
+      title: 'Purchased B-Stock from Thomann',
+      description: 'Purchased a Jackson JS32 Rhoads AH in Ivory as B-Stock from Thomann.',
+      cost: 366.00,
+      currency: 'EUR',
+      personalSpend: true
+    }
+
+  ]
+
+},
+
+  {
+  id: 'squier-affinity-stratocaster-early-2000s',
+
+  kind: 'guitar',
+
+  brand: 'Squier',
+
+  model: 'Affinity Series Stratocaster',
+
+  year: '2001–2002',
+
+  yearApproximate: true,
+
+  finish: 'Sunburst',
+
+  origin: '',
+
+  status: 'Traded',
+
+  modified: true,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '~2001–2002',
+
+  acquisitionType: 'Christmas / birthday gift',
+
+  originalPrice: {
+    amount: null,
+    currency: 'EUR',
+    approximate: true
+  },
+
+  identification: {
+    exactModel: 'Squier Affinity Series Stratocaster',
+    yearConfirmed: false,
+    notes: 'Received as part of a Squier starter pack around 2001–2002. Exact production year, country of manufacture and serial number are unknown.'
+  },
+
+  originalSpec: {
+    BodyStyle: 'Stratocaster',
+    Finish: 'Sunburst',
+    Pickguard: 'White',
+    PickupConfiguration: 'SSS — 3 single-coil pickups',
+    Bridge: 'Stratocaster-style tremolo',
+    Fingerboard: 'Dark wood — likely rosewood',
+    Neck: 'Maple',
+    Hardware: 'Chrome',
+    Controls: 'Master volume, 2 tone controls and pickup selector'
+  },
+
+  currentSpec: {
+    BodyStyle: 'Stratocaster',
+    Finish: 'Sunburst',
+    Pickguard: 'White',
+    PickupConfiguration: 'SSS — 3 single-coil pickups',
+    Bridge: 'Stratocaster-style tremolo',
+    Fingerboard: 'Dark wood',
+    Neck: 'Maple',
+    Hardware: 'Chrome',
+    TremoloBlock: 'Replacement following broken tremolo arm repair'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: null,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: false,
+      note: 'Received as a Christmas / birthday gift'
+    },
+
+    maintenanceSpend: {
+      amount: 50,
+      currency: 'EUR',
+      note: 'Tremolo block repair / replacement'
+    },
+
+    tradeIn: {
+      amount: null,
+      currency: 'EUR',
+      date: null,
+      toward: 'Bass guitar — details to be added',
+      note: 'Exact trade-in value unknown; remembered as likely no more than approximately €80'
+    }
+
+  },
+
+  packageDetails: {
+    type: 'Squier starter pack',
+    included: [
+      'Squier Affinity Series Stratocaster',
+      'Small practice amplifier',
+      'Gig bag',
+      'Guitar strap'
+    ],
+    notes: 'Exact starter pack and amplifier model unknown.'
+  },
+
+  history: [
+
+    {
+      date: 'Date unknown',
+      type: 'Trade-in',
+      title: 'Traded toward bass guitar',
+      description: 'Traded toward the purchase of a bass guitar. Exact trade-in value is unknown; remembered as likely no more than approximately €80.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Date unknown',
+      type: 'Repair',
+      title: 'Tremolo block replaced',
+      description: 'The tremolo arm snapped inside the bridge block. The broken section had to be drilled out and the tremolo block was replaced.',
+      cost: 50.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '~2001–2002',
+      type: 'Acquisition',
+      title: 'Received as Christmas / birthday gift',
+      description: 'Received while young as part of a Squier starter pack containing the Affinity Series Stratocaster, a small practice amplifier, gig bag and guitar strap.',
+      cost: null,
+      currency: 'EUR',
+      personalSpend: false
+    }
+
+  ]
+
+},
+
+  {
+  id: 'custom-jazzmaster-2022',
+
+  kind: 'guitar',
+
+  brand: 'Custom',
+
+  model: 'Jazzmaster',
+
+  year: 2022,
+
+  finish: 'Natural / Olivewood with red sparkle epoxy accents',
+
+  origin: 'Custom build',
+
+  status: 'Owned',
+
+  modified: true,
+
+  project: true,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '2021–2022',
+
+  acquisitionType: 'Custom build',
+
+  originalPrice: {
+    amount: 1535,
+    currency: 'EUR',
+    approximate: false,
+    note: 'Known build and associated accessory cost'
+  },
+
+  originalSpec: {
+    BuildType: 'Custom Jazzmaster-style project guitar',
+
+    Body: 'Ceccarini Guitars custom Jazzmaster-style body',
+    BodyWood: 'Ash — 3-piece',
+    TopWood: 'Olivewood',
+    BodyFinish: 'Oil and carnauba wax',
+    BodyAccents: 'Red / sparkle epoxy-filled accents',
+    BodyContours: 'Arm and belly contours',
+    ElectronicsRouting: 'Rear routed electronics with backplate',
+    JackRouting: '22 mm side-mounted jack hole',
+
+    Neck: 'Warmoth Jazzmaster replacement neck — Gibson scale conversion',
+    NeckShaft: 'Roasted maple',
+    Fretboard: 'Pau ferro',
+    FretboardRadius: '9.5"–14" compound',
+    NeckProfile: 'Standard Thin',
+    NutWidth: '1-11/16" / 43 mm',
+    Frets: '22 × 6105 narrow/tall nickel',
+    NeckFinish: 'Clear satin nitro',
+    Nut: 'White Corian',
+    NeckHeel: 'Strat-style 4-bolt',
+
+    Pickups: 'Electrical Guitar Company JM500 / Travis Bean TB500 hybrid set',
+    PickupCovers: 'Black',
+    PickupConfiguration: '2 × single-coil hybrid JM/TB500',
+
+    Controls: 'Independent volume and tone controls for each pickup',
+    Pots: '4 × 500k pots',
+    PickupSelector: '3-way toggle switch',
+    OutputJack: 'Side-mounted jack',
+
+    Bridge: 'B-162-N — Nickel finish',
+    BridgeStuds: 'M8',
+    BridgeStudSpacing: '74 mm',
+    BridgeStringSpacing: '52 mm',
+    BridgeRadius: '16"',
+    BridgeAnchorDiameter: '11 mm',
+    BridgeAnchorLength: '23 mm',
+    BridgeStudTopDiameter: '6 mm',
+
+    Tailpiece: 'Boston T-70-AN aluminium stop tailpiece — Nickel',
+
+    Tuners: 'Vintage-style closed-back chrome machine heads',
+    StrapPins: 'Planet Waves PWEEP202 Elliptical End Pins — Chrome',
+    Knobs: 'Count Blankula D10 knobs',
+
+    Strings: 'Ernie Ball Skinny Top Heavy Bottom 10–52',
+
+    Weight: 'Approx. 3.6 kg / 7.9 lbs'
+  },
+
+  currentSpec: {
+    Body: 'Ceccarini Guitars ash Jazzmaster body with olivewood top',
+    Finish: 'Oil and carnauba wax',
+    Accents: 'Red / sparkle epoxy-filled details',
+
+    Neck: 'Warmoth roasted maple Jazzmaster neck — Gibson scale conversion',
+    Fretboard: 'Pau ferro',
+    Radius: '9.5"–14" compound',
+    Frets: '22 × 6105 narrow/tall',
+    Headstock: 'Custom decals added October 2022',
+
+    Pickups: 'Electrical Guitar Company JM500 / Travis Bean TB500 hybrid set — Black',
+    Controls: 'Independent volume and tone controls for each pickup',
+    Pots: '4 × 500k',
+    PickupSelector: '3-way toggle',
+
+    Bridge: 'B-162-N — Nickel',
+    Tailpiece: 'Boston T-70-AN aluminium stop tailpiece — Nickel',
+
+    Tuners: 'Vintage-style closed-back chrome machine heads',
+    StrapPins: 'Planet Waves PWEEP202 Elliptical End Pins — Chrome',
+    Strap: 'Ernie Ball Burgundy Polypro Pickholder Strap',
+    Knobs: 'Count Blankula D10',
+    OutputJack: 'Side-mounted',
+
+    Strings: 'Ernie Ball Skinny Top Heavy Bottom 10–52',
+
+    Weight: 'Approx. 3.6 kg / 7.9 lbs'
+  },
+
+  financials: {
+
+    acquisition: {
+      amount: 1535,
+      currency: 'EUR',
+      approximate: false,
+      personalSpend: true,
+      note: 'Known component, assembly and associated accessory cost for custom build'
+    },
+
+    modificationSpend: {
+      amount: 9,
+      currency: 'EUR',
+      note: 'Post-build hardware spend'
+    },
+
+    buildSpend: {
+      amount: 1515,
+      currency: 'EUR'
+    },
+
+    accessorySpend: {
+      amount: 11,
+      currency: 'EUR'
+    }
+
+  },
+
+  projectDetails: {
+    projectType: 'Custom build',
+
+    goal: 'Build a unique Jazzmaster-style guitar using boutique/custom components rather than modifying an existing production instrument.',
+
+    bodyBuilder: 'Ceccarini Guitars',
+
+    neckBuilder: 'Warmoth',
+
+    pickupBuilder: 'Electrical Guitar Company',
+
+    finalAssembly: 'Local music shop in Waterford',
+
+    buildPeriod: 'Sep 2021 – Feb 2022',
+
+    knownComponentCosts: [
+      {
+        component: 'Ceccarini Guitars Custom Raw Body Jazzmaster',
+        cost: 500.00,
+        currency: 'EUR'
+      },
+      {
+        component: 'Electrical Guitar Company JM500 / Travis Bean TB500 pickup set',
+        cost: 300.00,
+        currency: 'EUR'
+      },
+      {
+        component: 'Warmoth Jazzmaster Gibson-scale conversion neck',
+        cost: 400.00,
+        currency: 'EUR'
+      },
+      {
+        component: 'Count Blankula D10 knobs',
+        cost: 65.00,
+        currency: 'EUR'
+      },
+      {
+        component: 'B-162-N bridge',
+        cost: 30.00,
+        currency: 'EUR'
+      },
+      {
+        component: 'Boston T-70-AN aluminium stop tailpiece',
+        cost: 20.00,
+        currency: 'EUR'
+      },
+      {
+        component: 'Electronics, tuners and final assembly',
+        cost: 200.00,
+        currency: 'EUR'
+      }
+    ]
+  },
+
+  pickupDetails: {
+    model: 'Electrical Guitar Company JM500 / Travis Bean TB500 hybrid',
+
+    magnets: 'Alnico 5 slug pole pieces',
+
+    wiring: 'Thermax Teflon-coated pure silver-plated coax cable',
+
+    polarity: 'Non-RWRP',
+
+    constructionNotes: 'Hybrid JM/TB500 design using enlarged magnetic substructures intended to redirect and concentrate the magnetic field.'
+  },
+
+  dimensions: {
+    overallLength: '40 inches',
+    bodyLength: '19 inches',
+    bodyDepth: '4.2 cm',
+    lowerBoutWidth: null,
+    middleBoutWidth: null,
+    upperBoutWidth: null
+  },
+
+  history: [
+
+    {
+      date: '24 Jul 2023',
+      type: 'Hardware',
+      title: 'Planet Waves elliptical end pins installed',
+      description: 'Installed Planet Waves PWEEP202 Elliptical End Pins — Chrome.',
+      cost: 9.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Oct 2022',
+      type: 'Cosmetic',
+      title: 'Headstock decals added',
+      description: 'Added custom decals to the Warmoth headstock.',
+      cost: 0,
+      currency: 'EUR'
+    },
+
+    {
+      date: '22 Apr 2022',
+      type: 'Build / Hardware',
+      title: 'Count Blankula D10 knobs acquired',
+      description: 'Purchased Count Blankula D10 control knobs.',
+      cost: 65.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Feb 2022',
+      type: 'Build / Assembly',
+      title: 'Final assembly completed',
+      description: 'Final build and assembly completed by the local music shop in Waterford. Installed four 500k pots, 3-way toggle switch, side-mounted output jack and vintage-style closed-back chrome machine heads.',
+      cost: 200.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '24 Dec 2021',
+      type: 'Accessory',
+      title: 'Ernie Ball Burgundy Polypro Pickholder Strap',
+      description: 'Purchased an Ernie Ball Burgundy Polypro Pickholder Strap for the guitar.',
+      cost: 11.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '8 Dec 2021',
+      type: 'Build / Neck',
+      title: 'Warmoth conversion neck acquired',
+      description: 'Purchased Warmoth Jazzmaster replacement neck with Gibson scale conversion, roasted maple shaft, pau ferro fingerboard and clear satin nitro finish.',
+      cost: 400.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '28 Oct 2021',
+      type: 'Build / Electronics',
+      title: 'Electrical Guitar Company pickups acquired',
+      description: 'Purchased the EGC JM500 / Travis Bean TB500 hybrid pickup set with black covers.',
+      cost: 300.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '25 Oct 2021',
+      type: 'Build / Body',
+      title: 'Ceccarini Jazzmaster body completed',
+      description: 'Custom Ceccarini Guitars Jazzmaster-style body completed using a three-piece ash body with olivewood top, red sparkle epoxy accents, oil and carnauba wax finish, rear-routed electronics, arm and belly contours, and side-mounted jack routing.',
+      cost: 500.00,
+      currency: 'EUR'
+    },
+
+    {
+      date: '27 Sep 2021',
+      type: 'Build / Hardware',
+      title: 'Bridge and tailpiece acquired',
+      description: 'Purchased the B-162-N nickel bridge and Boston T-70-AN aluminium stop tailpiece.',
+      cost: 50.00,
+      currency: 'EUR'
+    }
+
+  ]
+
+},
 
   {
   id: 'fender-tone-master-twin-reverb',
