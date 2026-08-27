@@ -1708,4 +1708,1601 @@ const gear = [
 
 },
 
+// ============================================================
+// PEDALS
+// ============================================================
+
+{
+  id: 'boss-jb-2',
+  kind: 'pedal',
+  brand: 'Boss',
+  model: 'JB-2',
+  status: 'Owned',
+  modified: false,
+  acquired: '2015',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 200,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 200,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '2015',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 200,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'mxr-carbon-copy',
+  kind: 'pedal',
+  brand: 'MXR',
+  model: 'Carbon Copy',
+  status: 'Owned',
+  modified: false,
+  acquired: '2013',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 180,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 180,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '2013',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 180,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'boss-dd-3-digital-delay',
+  kind: 'pedal',
+  brand: 'Boss',
+  model: 'DD-3 Digital Delay',
+  status: 'Owned',
+  modified: false,
+  acquired: '5 Nov 2020',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 159,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 159,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '5 Nov 2020',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 159,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'death-by-audio-fuzz-gun',
+  kind: 'pedal',
+  brand: 'Death By Audio',
+  model: 'Fuzz Gun',
+  status: 'Owned',
+  modified: false,
+  acquired: '1 Nov 2023',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 200.34,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 200.34,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '1 Nov 2023',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 200.34,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'death-by-audio-thee-fuzz-warr-overload',
+  kind: 'pedal',
+  brand: 'Death By Audio',
+  model: 'Thee Fuzz Warr Overload',
+  status: 'Owned',
+  modified: false,
+  acquired: 'Oct 2023',
+  acquisitionType: 'Gift',
+
+  originalPrice: {
+    amount: 600,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock',
+    Provenance: 'Signed by John Dwyer'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 600,
+      currency: 'EUR',
+      personalSpend: false,
+      note: 'Gift'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '14 Jun 2025',
+      type: 'Provenance',
+      title: 'Signed',
+      description: 'Pedal signed by John Dwyer.',
+      cost: 0,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Oct 2023',
+      type: 'Acquisition',
+      title: 'Received as gift',
+      cost: 600,
+      currency: 'EUR',
+      personalSpend: false
+    }
+  ]
+},
+
+{
+  id: 'greer-southland-harmonic-overdrive',
+  kind: 'pedal',
+  brand: 'Greer',
+  model: 'Southland Harmonic Overdrive',
+  status: 'Owned',
+  modified: false,
+  acquired: '22 May 2023',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 212,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 212,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '22 May 2023',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 212,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'electro-harmonix-mel9',
+  kind: 'pedal',
+  brand: 'Electro-Harmonix',
+  model: 'MEL9',
+  status: 'Owned',
+  modified: false,
+  acquired: '19 May 2023',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 222.16,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 222.16,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '19 May 2023',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 222.16,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'jhs-morning-glory-pedal-movie-exclusive',
+  kind: 'pedal',
+  brand: 'JHS',
+  model: 'Morning Glory — Pedal Movie Exclusive',
+  status: 'Sold',
+  modified: false,
+  acquired: '6 May 2021',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 303.01,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 303.01,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    sale: {
+      amount: 350,
+      currency: 'EUR',
+      date: '14 Nov 2022'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '14 Nov 2022',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -350,
+      currency: 'EUR'
+    },
+
+    {
+      date: '6 May 2021',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 303.01,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'audio-event-super-war-dance',
+  kind: 'pedal',
+  brand: 'Audio Event',
+  model: 'Super War Dance',
+  status: 'Owned',
+  modified: false,
+  acquired: '8 Dec 2020',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 159.54,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 159.54,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '8 Dec 2020',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 159.54,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'jhs-smiley-legends-of-fuzz',
+  kind: 'pedal',
+  brand: 'JHS',
+  model: 'Smiley — Legends of Fuzz',
+  status: 'Sold',
+  modified: false,
+  acquired: '16 May 2020',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 197.69,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 197.69,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    sale: {
+      amount: 110,
+      currency: 'EUR',
+      date: '24 Nov 2025'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '24 Nov 2025',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -110,
+      currency: 'EUR'
+    },
+
+    {
+      date: '16 May 2020',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 197.69,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'boss-ge-7',
+  kind: 'pedal',
+  brand: 'Boss',
+  model: 'GE-7 Equalizer',
+  status: 'Sold',
+  modified: false,
+  acquired: 'Mar 2016',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 110,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 110,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    sale: {
+      amount: 95,
+      currency: 'EUR',
+      date: '14 Aug 2026'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '14 Aug 2026',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -95,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Mar 2016',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 110,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'mxr-m107-phase-100',
+  kind: 'pedal',
+  brand: 'MXR',
+  model: 'M107 Phase 100',
+  status: 'Sold',
+  modified: false,
+  acquired: 'May 2017',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 180,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 180,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    sale: {
+      amount: 119,
+      currency: 'EUR',
+      date: '12 Mar 2026'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '12 Mar 2026',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -119,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'May 2017',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 180,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'boss-os-2',
+  kind: 'pedal',
+  brand: 'Boss',
+  model: 'OS-2 OverDrive / Distortion',
+  status: 'Sold',
+  modified: false,
+  acquired: '~2002',
+  acquisitionType: 'Gift',
+
+  originalPrice: {
+    amount: null,
+    currency: 'EUR',
+    approximate: true
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: null,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: false,
+      note: 'Received as gift around 2002'
+    },
+
+    sale: {
+      amount: 50,
+      currency: 'EUR',
+      date: '14 Oct 2023'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '14 Oct 2023',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -50,
+      currency: 'EUR'
+    },
+
+    {
+      date: '~2002',
+      type: 'Acquisition',
+      title: 'Received as gift',
+      cost: null,
+      currency: 'EUR',
+      personalSpend: false
+    }
+  ]
+},
+
+{
+  id: 'zvex-fuzz-factory-vexter-2018',
+  kind: 'pedal',
+  brand: 'ZVex',
+  model: 'Fuzz Factory Vexter Series',
+  year: 2018,
+  status: 'Sold',
+  modified: false,
+  acquired: '25 Nov 2018',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 199,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 199,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    sale: {
+      amount: 185,
+      currency: 'EUR',
+      date: '20 Feb 2023'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '20 Feb 2023',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -185,
+      currency: 'EUR'
+    },
+
+    {
+      date: '25 Nov 2018',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 199,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'universal-audio-uafx-dream-65',
+  kind: 'pedal',
+  brand: 'Universal Audio',
+  model: 'UAFX Dream ’65',
+  status: 'Owned',
+  modified: false,
+  acquired: '16 Apr 2026',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 349,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 349,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '16 Apr 2026',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 349,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'tc-electronic-polytune-3-noir',
+  kind: 'pedal',
+  brand: 'TC Electronic',
+  model: 'PolyTune 3 Noir',
+  status: 'Owned',
+  modified: false,
+  acquired: '22 Mar 2025',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 89,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 89,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '22 Mar 2025',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 89,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'ehx-jhs-big-muff-2',
+  kind: 'pedal',
+  brand: 'Electro-Harmonix / JHS',
+  model: 'Big Muff 2',
+  status: 'Owned',
+  modified: false,
+  acquired: '23 Dec 2025',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 236.90,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 236.90,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '23 Dec 2025',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 236.90,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'earthquaker-devices-hoof-reaper-v2',
+  kind: 'pedal',
+  brand: 'EarthQuaker Devices',
+  model: 'Hoof Reaper V2',
+  status: 'Owned',
+  modified: false,
+  acquired: 'Aug 2022',
+  acquisitionType: 'Gift',
+
+  originalPrice: {
+    amount: 400,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 400,
+      currency: 'EUR',
+      personalSpend: false,
+      note: 'Birthday gift'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: 'Aug 2022',
+      type: 'Acquisition',
+      title: 'Received as birthday gift',
+      cost: 400,
+      currency: 'EUR',
+      personalSpend: false
+    }
+  ]
+},
+
+{
+  id: 'dunlop-cry-baby-mini',
+  kind: 'pedal',
+  brand: 'Dunlop',
+  model: 'Cry Baby Mini',
+  status: 'Owned',
+  modified: false,
+  acquired: '1 Mar 2026',
+  acquisitionType: 'Purchased / Trade-in',
+
+  originalPrice: {
+    amount: 80,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 80,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    tradeIn: {
+      amount: 50,
+      currency: 'EUR',
+      item: 'Dunlop Cry Baby Classic GCB95F'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '1 Mar 2026',
+      type: 'Trade-in',
+      title: 'Cry Baby Classic traded toward purchase',
+      description: 'Dunlop Cry Baby Classic GCB95F received a €50 trade-in value toward the Cry Baby Mini.',
+      cost: -50,
+      currency: 'EUR'
+    },
+
+    {
+      date: '1 Mar 2026',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 80,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'dunlop-crybaby-classic-gcb95f',
+  kind: 'pedal',
+  brand: 'Dunlop',
+  model: 'Cry Baby Classic GCB95F',
+  status: 'Traded',
+  modified: false,
+  acquired: '29 Jun 2018',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 140,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 140,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    tradeIn: {
+      amount: 50,
+      currency: 'EUR',
+      date: '1 Mar 2026',
+      toward: 'Dunlop Cry Baby Mini'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '1 Mar 2026',
+      type: 'Trade-in',
+      title: 'Traded toward Cry Baby Mini',
+      cost: -50,
+      currency: 'EUR'
+    },
+
+    {
+      date: '29 Jun 2018',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 140,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'quite-theory-prelude',
+  kind: 'pedal',
+  brand: 'Quite Theory',
+  model: 'Prelude',
+  status: 'Owned',
+  modified: false,
+  acquired: '1 Feb 2020',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 220,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 220,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '1 Feb 2020',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 220,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'boss-tu-3',
+  kind: 'pedal',
+  brand: 'Boss',
+  model: 'TU-3',
+  status: 'Owned',
+  modified: false,
+  acquired: 'Jan 2018',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 110,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 110,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: 'Jan 2018',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 110,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'boss-me-50b',
+  kind: 'pedal',
+  subtype: 'Multi-effects',
+  brand: 'Boss',
+  model: 'ME-50B',
+  status: 'Sold',
+  modified: false,
+  acquired: 'Dec 2005',
+  acquisitionType: 'Christmas gift',
+
+  originalPrice: {
+    amount: 300,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 300,
+      currency: 'EUR',
+      personalSpend: false,
+      note: 'Christmas present'
+    },
+
+    sale: {
+      amount: 150,
+      currency: 'EUR',
+      date: '2021'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '2021',
+      type: 'Sale',
+      title: 'Sold',
+      cost: -150,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Dec 2005',
+      type: 'Acquisition',
+      title: 'Received as Christmas gift',
+      cost: 300,
+      currency: 'EUR',
+      personalSpend: false
+    }
+  ]
+},
+
+{
+  id: 'korg-ax-10g',
+  kind: 'pedal',
+  subtype: 'Multi-effects',
+  brand: 'Korg',
+  model: 'AX-10G',
+  status: 'Traded',
+  modified: false,
+  acquired: '1 Dec 2004',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 200,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 200,
+      currency: 'EUR',
+      personalSpend: true
+    },
+
+    tradeIn: {
+      amount: null,
+      currency: 'EUR',
+      date: null,
+      toward: 'Bass guitar — details to be added',
+      note: 'Believed to have been traded toward a bass guitar; exact value unknown'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: 'Date unknown',
+      type: 'Trade-in',
+      title: 'Traded toward bass guitar',
+      description: 'Believed to have been traded toward the purchase of a bass guitar. Exact trade value is unknown.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: '1 Dec 2004',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 200,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+
+// ============================================================
+// ACCESSORIES — PEDAL POWER
+// ============================================================
+
+{
+  id: 'cioks-dc7',
+  kind: 'accessory',
+  subtype: 'Pedal power supply',
+  brand: 'Cioks',
+  model: 'DC7',
+  status: 'Owned',
+  modified: false,
+  acquired: '12 Oct 2024',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 239,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Type: 'Pedal power supply',
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Type: 'Pedal power supply',
+    Configuration: 'Stock'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 239,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '12 Oct 2024',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 239,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'harley-benton-powerplant-iso-2-pro',
+  kind: 'accessory',
+  subtype: 'Pedal power supply',
+  brand: 'Harley Benton',
+  model: 'PowerPlant ISO-2 Pro',
+  status: 'Disposed',
+  modified: false,
+  acquired: '19 Jan 2020',
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 70,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Type: 'Pedal power supply',
+    Configuration: 'Stock'
+  },
+
+  currentSpec: {
+    Type: 'Pedal power supply',
+    Condition: 'Failed / no longer working'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 70,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: 'Date unknown',
+      type: 'Failure',
+      title: 'Power supply stopped working',
+      description: 'Unit stopped working and was subsequently disposed of.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: '19 Jan 2020',
+      type: 'Acquisition',
+      title: 'Purchased',
+      cost: 70,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'encore-w225',
+
+  kind: 'acoustic',
+
+  brand: 'Encore',
+
+  model: 'W225',
+
+  year: '~2001',
+
+  yearApproximate: true,
+
+  finish: '',
+
+  origin: '',
+
+  status: 'Owned',
+
+  modified: false,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '~2001',
+
+  acquisitionType: 'Unknown / Gift',
+
+  originalPrice: {
+    amount: null,
+    currency: 'EUR',
+    approximate: true
+  },
+
+  notes: 'First guitar owned. Further acquisition and specification details to be added.',
+
+  financials: {
+    acquisition: {
+      amount: null,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: false,
+      note: 'Acquisition details currently unknown'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '~2001',
+      type: 'Acquisition',
+      title: 'First guitar',
+      description: 'Encore W225 acoustic guitar. First guitar owned; further details to be added.',
+      cost: null,
+      currency: 'EUR',
+      personalSpend: false
+    }
+  ]
+},
+
+{
+  id: 'tanglewood-tw133-asm',
+
+  kind: 'acoustic',
+
+  brand: 'Tanglewood',
+
+  model: 'TW133-ASM',
+
+  year: '',
+
+  finish: 'Mahogany',
+
+  origin: '',
+
+  status: 'Owned',
+
+  modified: false,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '2010',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: null,
+    currency: 'EUR',
+    approximate: true
+  },
+
+  originalSpec: {
+    BodyStyle: 'Parlor'
+  },
+
+  currentSpec: {
+    BodyStyle: 'Parlor'
+  },
+
+  notes: 'Tanglewood TW133-ASM Mahogany Parlor Acoustic Guitar. Further details to be added.',
+
+  financials: {
+    acquisition: {
+      amount: null,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: true,
+      note: 'Purchase price currently unknown'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  history: [
+    {
+      date: '2010',
+      type: 'Acquisition',
+      title: 'Purchased',
+      description: 'Tanglewood TW133-ASM Mahogany Parlor Acoustic Guitar. Further purchase details to be added.',
+      cost: null,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
 ];
