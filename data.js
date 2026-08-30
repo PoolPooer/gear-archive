@@ -926,17 +926,6 @@ const gear = [
 },
 
   {
-    id: 'geddy-lee-jazz-bass-2007',
-    kind: 'bass',
-    brand: 'Fender',
-    model: 'Geddy Lee Jazz Bass',
-    year: 2007,
-    finish: 'Black',
-    origin: 'Japan',
-    status: 'Owned'
-  },
-
-  {
   id: 'jackson-js32-rhoads',
 
   kind: 'guitar',
@@ -1535,6 +1524,445 @@ const gear = [
 
   ]
 
+},
+
+// ============================================================
+// BASSES
+// ============================================================
+
+{
+  id: 'aria-sb303',
+
+  kind: 'bass',
+
+  brand: 'Aria',
+
+  model: 'SB-303',
+
+  year: '',
+
+  yearApproximate: true,
+
+  finish: 'Red satin',
+
+  origin: 'Korea',
+
+  status: 'Traded',
+
+  modified: false,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '2005',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 650,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Configuration: '4-string fretted bass',
+    Finish: 'Red satin',
+    Neck: 'Painted / colour-matched neck',
+    Fingerboard: 'Dark wood',
+    Frets: '24',
+    Electronics: 'Active',
+    Pickups: '2 × black pickups',
+    Controls: '2 × volume, 2 × tone',
+    PickupSelector: '3-way selector'
+  },
+
+  currentSpec: {
+    Configuration: 'Stock',
+    Electronics: 'Active',
+    Frets: '24',
+    Controls: '2 × volume, 2 × tone',
+    PickupSelector: '3-way selector'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 650,
+      currency: 'EUR',
+      personalSpend: true,
+      note: 'Purchased from local music shop'
+    },
+
+    tradeIn: {
+      amount: null,
+      currency: 'EUR',
+      date: 'Jun 2007',
+      toward: 'Fender Geddy Lee Jazz Bass',
+      note: 'Trade-in value currently unknown'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  notes: 'Active Korean-made Aria SB-series bass. Purchased in 2005 and later traded toward the Fender Geddy Lee Jazz Bass.',
+
+  history: [
+    {
+      date: 'Jun 2007',
+      type: 'Trade-in',
+      title: 'Traded toward Fender Geddy Lee Jazz Bass',
+      description: 'Traded to the local music shop toward the purchase of the Fender Geddy Lee Jazz Bass. Exact trade-in value is currently unknown.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: '2005',
+      type: 'Acquisition',
+      title: 'Purchased',
+      description: 'Purchased from the local music shop.',
+      cost: 650,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'aria-sb40f-fretless',
+
+  kind: 'bass',
+
+  brand: 'Aria',
+
+  model: 'SB-40F',
+
+  year: '',
+
+  yearApproximate: true,
+
+  finish: 'Black',
+
+  origin: '',
+
+  status: 'Traded',
+
+  modified: false,
+
+  serial: null,
+
+  serialRecorded: false,
+
+  acquired: '~2008',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 350,
+    currency: 'EUR',
+    approximate: true
+  },
+
+  originalSpec: {
+    Configuration: '4-string fretless bass',
+    Finish: 'Black',
+    Fingerboard: 'Unlined fretless fingerboard',
+    Electronics: 'Stock',
+    Hardware: 'Stock'
+  },
+
+  currentSpec: {
+    Configuration: '4-string fretless bass',
+    Finish: 'Black',
+    Fingerboard: 'Unlined fretless fingerboard',
+    Electronics: 'Stock',
+    Hardware: 'Stock',
+    Strings: 'Flatwound'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 350,
+      currency: 'EUR',
+      approximate: true,
+      personalSpend: true,
+      note: 'Purchased from local music shop'
+    },
+
+    tradeIn: {
+      amount: null,
+      currency: 'EUR',
+      date: null,
+      toward: 'Unknown amp or pedal',
+      note: 'Believed to have been traded toward an amp or pedal. Exact item, date and trade-in value currently unknown.'
+    }
+  },
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  notes: 'Affordable fretless bass kept completely stock during ownership. Typically used with flatwound strings. Eventually believed to have been traded toward another piece of gear.',
+
+  history: [
+    {
+      date: 'Date unknown',
+      type: 'Trade-in',
+      title: 'Traded toward other gear',
+      description: 'Believed to have been traded toward the purchase of an amp or pedal. Exact item, date and trade-in value are currently unknown.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: '~2008',
+      type: 'Acquisition',
+      title: 'Purchased',
+      description: 'Purchased from the local music shop for approximately €350.',
+      cost: 350,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
+},
+
+{
+  id: 'fender-geddy-lee-jazz-bass-2007',
+
+  kind: 'bass',
+
+  brand: 'Fender',
+
+  model: 'Geddy Lee Signature Jazz Bass',
+
+  year: 2007,
+
+  finish: 'Originally Black / Currently Natural',
+
+  origin: 'Japan',
+
+  status: 'Owned',
+
+  modified: true,
+
+  serial: null,
+
+  serialRecorded: true,
+
+  acquired: 'June 2007',
+
+  acquisitionType: 'Purchased',
+
+  originalPrice: {
+    amount: 1200,
+    currency: 'EUR',
+    approximate: false
+  },
+
+  originalSpec: {
+    Model: 'Geddy Lee Signature Jazz Bass',
+    BodyShape: 'Jazz Bass',
+    BodyType: 'Solid body',
+    BodyWood: 'Alder',
+    BodyFinish: 'Gloss',
+    Finish: 'Black',
+
+    NeckWood: 'Maple',
+    NeckShape: 'Thin C profile',
+    ScaleLength: '34"',
+    NeckJoint: 'Bolt-on',
+
+    NutMaterial: 'Synthetic bone',
+    NutWidth: '1.5"',
+
+    Fingerboard: 'Maple',
+    FingerboardRadius: '9.5"',
+    FingerboardInlays: 'Black blocks',
+    FingerboardBinding: 'Black',
+
+    Frets: '20 medium jumbo',
+
+    Pickups: 'Fender vintage Jazz Bass single coils',
+    Controls: '2 × volume, master tone',
+
+    Bridge: 'BadAss II High Mass',
+
+    Tuners: '70s vintage-style open gear',
+
+    Hardware: 'Chrome'
+  },
+
+  currentSpec: {
+    BodyShape: 'Jazz Bass',
+    BodyWood: 'Alder',
+    Finish: 'Natural — Tru-Oil',
+
+    Neck: '2019 Fender replacement Jazz Bass neck',
+    NeckMaterial: 'Maple',
+    NeckShape: 'Mid ’60s C',
+    NeckThickness: '1st fret: .815" / 20.70 mm · 12th fret: 1.0" / 25.40 mm',
+    NeckMounting: '4-bolt',
+
+    Fingerboard: 'Pau Ferro',
+    FingerboardRadius: '9.5" / 241 mm',
+    PositionInlays: 'White dots',
+    SideDots: 'White',
+
+    Frets: '20 medium jumbo',
+
+    Nut: 'Pre-slotted synthetic bone',
+    NutMaterial: 'Synthetic bone',
+    NutWidth: '1.5" / 38.1 mm',
+
+    TrussRod: 'Vintage-style adjustment',
+
+    Pickups: 'Original Fender vintage Jazz Bass single coils',
+    PickupCovers: 'Solid black covers without exposed pole-piece holes',
+
+    Controls: '2 × volume, master tone',
+
+    Bridge: 'BadAss II High Mass',
+
+    Hardware: 'Chrome'
+  },
+
+  financials: {
+    acquisition: {
+      amount: 1200,
+      currency: 'EUR',
+      personalSpend: true,
+      note: 'Purchased from local music shop'
+    },
+
+    modificationSpend: {
+      amount: 434,
+      currency: 'EUR',
+      note: 'Known documented modification spend only'
+    },
+
+    sales: {
+      originalNeck: {
+        amount: 339.25,
+        currency: 'EUR',
+        date: '16 Mar 2023',
+        destination: 'USA',
+        platform: 'Reverb'
+      }
+    },
+
+    knownSpend: {
+      amount: 1634,
+      currency: 'EUR',
+      note: 'Purchase price plus currently known modification costs'
+    },
+
+    knownNetInvestment: {
+      amount: 1294.75,
+      currency: 'EUR',
+      note: 'Known gross spend less €339.25 recovered from sale of original neck'
+    }
+  },
+
+  modificationCosts: [
+    {
+      component: 'Solid black pickup covers',
+      cost: 14,
+      currency: 'EUR',
+      date: '2016'
+    },
+
+    {
+      component: 'Black pickguard',
+      cost: 20,
+      currency: 'EUR',
+      date: '2016',
+      note: 'Replacement pickguard did not fit particularly well'
+    },
+
+    {
+      component: '2019 Fender replacement Jazz Bass neck',
+      cost: 400,
+      currency: 'EUR',
+      date: 'Jun 2020'
+    }
+  ],
+
+  images: {
+    cover: null,
+    gallery: []
+  },
+
+  notes: 'Long-term bass purchased in 2007 and extensively changed cosmetically over its ownership while retaining the original pickups, controls and bridge. Originally black, refinished bright blue around 2012, then stripped to natural alder and finished with Tru-Oil in 2020. The original Geddy Lee signature neck was eventually sold separately in 2023.',
+
+  history: [
+    {
+      date: '16 Mar 2023',
+      type: 'Sale',
+      title: 'Original Geddy Lee neck sold',
+      description: 'Original maple Geddy Lee Signature Jazz Bass neck sold separately through Reverb and shipped to a buyer in the USA.',
+      cost: -339.25,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Jun 2020',
+      type: 'Hardware · Major modification',
+      title: '2019 Fender replacement neck installed',
+      description: 'Bass reassembled with a more modern Fender replacement Jazz Bass neck. Maple neck with Mid ’60s C profile, 9.5-inch-radius pau ferro fingerboard, 20 medium jumbo frets, white dot inlays and synthetic bone nut.',
+      cost: 400,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'May 2020',
+      type: 'Finish · Permanent alteration',
+      title: 'Blue finish removed and body refinished natural',
+      description: 'Stripped the blue paint from the body and sanded it back to reveal the natural alder. Applied two coats of Tru-Oil to create the current natural finish.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: '2016',
+      type: 'Hardware',
+      title: 'Black pickup covers installed',
+      description: 'Replaced the original pickup covers with solid black covers without exposed pole-piece holes.',
+      cost: 14,
+      currency: 'EUR'
+    },
+
+    {
+      date: '2016',
+      type: 'Hardware',
+      title: 'Black pickguard installed',
+      description: 'Installed a replacement black pickguard. Fit was imperfect.',
+      cost: 20,
+      currency: 'EUR'
+    },
+
+    {
+      date: '~2012',
+      type: 'Finish · Permanent alteration',
+      title: 'Body refinished bright blue',
+      description: 'Original black finish was stripped from the body by a friend and the body was refinished in bright blue.',
+      cost: null,
+      currency: 'EUR'
+    },
+
+    {
+      date: 'Jun 2007',
+      type: 'Acquisition',
+      title: 'Purchased',
+      description: 'Purchased from the local music shop for €1,200. The Aria SB-303 was traded toward the purchase.',
+      cost: 1200,
+      currency: 'EUR',
+      personalSpend: true
+    }
+  ]
 },
 
   {
