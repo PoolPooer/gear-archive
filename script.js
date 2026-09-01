@@ -5,9 +5,8 @@ const collectionView = document.getElementById('collectionView');
 const detailView = document.getElementById('detailView');
 const filterButtons = [...document.querySelectorAll('.filter')];
 
-const statusButtons = [
-  ...document.querySelectorAll('.status-filter')
-];
+const collectionStatus =
+  document.getElementById('collectionStatus');
 
 const collectionSearch =
   document.getElementById('collectionSearch');
@@ -142,34 +141,46 @@ function renderStats() {
 
   const past = gear.length - owned;
 
-  const knownPersonalSpend = gear.reduce(
-    (total, item) =>
-      total + getKnownPersonalSpend(item),
-    0
-  );
+  const datedItems = gear
+    .filter(item => item.acquiredSort)
+    .map(item => String(item.acquiredSort).slice(0, 4));
+
+  const firstYear = datedItems.length
+    ? Math.min(...datedItems)
+    : null;
+
+  const lastYear = datedItems.length
+    ? Math.max(...datedItems)
+    : null;
 
   stats.innerHTML = `
-    <div class="stat">
-      <div class="stat-value">${gear.length}</div>
-      <div class="stat-label">Items archived</div>
-    </div>
+    <span>
+      <strong>${gear.length}</strong> items archived
+    </span>
 
-    <div class="stat">
-      <div class="stat-value">${owned}</div>
-      <div class="stat-label">Currently owned</div>
-    </div>
+    <span class="summary-divider">·</span>
 
-    <div class="stat">
-      <div class="stat-value">${past}</div>
-      <div class="stat-label">Past gear</div>
-    </div>
+    <span>
+      <strong>${owned}</strong> owned
+    </span>
 
-    <div class="stat">
-      <div class="stat-value small">
-        ${formatCurrency(knownPersonalSpend)}
-      </div>
-      <div class="stat-label">Known personal spend</div>
-    </div>
+    <span class="summary-divider">·</span>
+
+    <span>
+      <strong>${past}</strong> past
+    </span>
+
+    ${
+      firstYear && lastYear
+        ? `
+          <span class="summary-divider">·</span>
+
+          <span>
+            ${firstYear}—${lastYear}
+          </span>
+        `
+        : ''
+    }
   `;
 }
 
@@ -296,33 +307,37 @@ function renderCollection() {
   let lastYear = null;
 
   list.innerHTML = visible.map(item => {
-    const year = getAcquisitionYear(item);
+    const acquisitionYear =
+      getAcquisitionYear(item);
 
     let yearHeading = '';
 
-    if (groupByYear && year !== lastYear) {
+    if (
+      groupByYear &&
+      acquisitionYear !== lastYear
+    ) {
       yearHeading = `
         <div class="year-divider">
-          <span>${escapeHtml(year)}</span>
+          <span>
+            ${escapeHtml(acquisitionYear)}
+          </span>
         </div>
       `;
 
-      lastYear = year;
+      lastYear = acquisitionYear;
     }
 
     const details = [
       getKindLabel(item),
+
       item.year
         ? `${item.yearApproximate ? '~' : ''}${item.year}`
         : '',
+
       item.finish
     ]
       .filter(Boolean)
       .join(' · ');
-
-    const acquiredLine = item.acquired
-      ? `Acquired ${item.acquired}`
-      : '';
 
     return `
       ${yearHeading}
@@ -330,11 +345,8 @@ function renderCollection() {
       <button
         class="gear-row"
         data-id="${escapeHtml(item.id)}"
+        type="button"
       >
-        <div class="gear-icon">
-          ${escapeHtml(item.brand?.slice(0, 1) || '?')}
-        </div>
-
         <div class="gear-main">
           <div class="gear-name">
             ${escapeHtml(item.brand)}
@@ -344,44 +356,41 @@ function renderCollection() {
           <div class="gear-meta">
             ${escapeHtml(details)}
           </div>
-
-          ${
-            acquiredLine
-              ? `
-                <div class="gear-acquired">
-                  ${escapeHtml(acquiredLine)}
-                </div>
-              `
-              : ''
-          }
         </div>
 
         <div class="gear-status">
-          <span class="status-text status-${escapeHtml(
-            item.status.toLowerCase()
-          )}">
+          <span class="status-text">
             ${escapeHtml(item.status)}
           </span>
 
           ${
             item.modified
-              ? '<span class="modified-label">Modified</span>'
+              ? `
+                <span class="modified-label">
+                  Modified
+                </span>
+              `
               : ''
           }
         </div>
 
-        <div class="gear-arrow" aria-hidden="true">
+        <div
+          class="gear-arrow"
+          aria-hidden="true"
+        >
           →
         </div>
       </button>
     `;
   }).join('');
 
-  document.querySelectorAll('[data-id]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      showDetail(btn.dataset.id);
+  document
+    .querySelectorAll('.gear-row[data-id]')
+    .forEach(button => {
+      button.addEventListener('click', () => {
+        showDetail(button.dataset.id);
+      });
     });
-  });
 }
 
 function rowsFromObject(obj = {}) {
@@ -673,91 +682,58 @@ function showDetail(id) {
       </div>
     </section>
 
-    <section class="financials">
-      <h3>Financial record</h3>
+    <section class="financial-record">
+  <div class="section-heading">
+    <h3>Financial record</h3>
+  </div>
 
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-label">
-            Acquisition value
+  <dl class="financial-list">
+    <div class="financial-row">
+      <dt>Acquisition value</dt>
+      <dd>${acquisitionValue}</dd>
+    </div>
+
+    <div class="financial-row">
+      <dt>Personal acquisition spend</dt>
+      <dd>
+        ${formatCurrency(personalAcquisitionSpend)}
+      </dd>
+    </div>
+
+    ${
+      additionalSpend
+        ? `
+          <div class="financial-row">
+            <dt>Additional spend</dt>
+            <dd>
+              ${formatCurrency(additionalSpend)}
+            </dd>
           </div>
+        `
+        : ''
+    }
 
-          <div class="stat-value">
-            ${acquisitionValue}
+    ${
+      recoveries
+        ? `
+          <div class="financial-row">
+            <dt>Recoveries</dt>
+            <dd>
+              −${formatCurrency(recoveries)}
+            </dd>
           </div>
+        `
+        : ''
+    }
 
-          ${
-            acquisitionNote
-              ? `
-                <div class="gear-meta">
-                  ${escapeHtml(acquisitionNote)}
-                </div>
-              `
-              : ''
-          }
-        </div>
-
-        <div class="stat">
-          <div class="stat-label">
-            Personal acquisition spend
-          </div>
-
-          <div class="stat-value">
-            ${formatCurrency(personalAcquisitionSpend)}
-          </div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-label">
-            Known additional spend
-          </div>
-
-          <div class="stat-value">
-            ${formatCurrency(additionalSpend)}
-          </div>
-
-          ${
-            modificationSpend
-              ? `
-                <div class="gear-meta">
-                  ${formatCurrency(modificationSpend)} modifications
-                </div>
-              `
-              : ''
-          }
-        </div>
-
-        <div class="stat">
-          <div class="stat-label">
-            Known personal spend
-          </div>
-
-          <div class="stat-value">
-            ${formatCurrency(knownPersonalSpend)}
-          </div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-label">
-            Known recoveries
-          </div>
-
-          <div class="stat-value">
-            ${formatCurrency(recoveries)}
-          </div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-label">
-            Known net cost
-          </div>
-
-          <div class="stat-value">
-            ${formatCurrency(knownNetCost)}
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="financial-row financial-total">
+      <dt>Known net cost</dt>
+      <dd>
+        ${formatCurrency(knownNetCost)}
+      </dd>
+    </div>
+  </dl>
+</section>
   `;
 
   collectionView.classList.add('hidden');
@@ -798,33 +774,32 @@ filterButtons.forEach(button => {
   });
 });
 
-statusButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    statusButtons.forEach(b =>
-      b.classList.remove('active')
-    );
+collectionStatus.addEventListener(
+  'change',
+  event => {
+    currentStatus = event.target.value;
+    renderCollection();
+  }
+);
 
-    button.classList.add('active');
-
-    currentStatus = button.dataset.status;
+collectionSearch.addEventListener(
+  'input',
+  event => {
+    currentSearch = event.target.value
+      .trim()
+      .toLowerCase();
 
     renderCollection();
-  });
-});
+  }
+);
 
-collectionSearch.addEventListener('input', event => {
-  currentSearch = event.target.value
-    .trim()
-    .toLowerCase();
-
-  renderCollection();
-});
-
-collectionSort.addEventListener('change', event => {
-  currentSort = event.target.value;
-
-  renderCollection();
-});
+collectionSort.addEventListener(
+  'change',
+  event => {
+    currentSort = event.target.value;
+    renderCollection();
+  }
+);
 
 renderStats();
 renderCollection();

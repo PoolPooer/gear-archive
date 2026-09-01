@@ -2,91 +2,218 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
   <title>Paul's Gear Archive</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    rel="stylesheet"
+    href="styles.css?v=3"
+  />
 </head>
+
 <body>
   <main class="shell">
+
     <header class="site-header">
       <div>
-        <p class="eyebrow">Personal archive</p>
-        <h1>GEAR</h1>
-        <p class="lede">Instruments, equipment, modifications & maintenance.</p>
+        <p class="eyebrow">
+          Personal archive
+        </p>
+
+        <h1>
+          GEAR
+        </h1>
+
+        <p class="lede">
+          Instruments, equipment, modifications &amp; maintenance.
+        </p>
       </div>
-      <nav class="filters" aria-label="Gear categories">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="guitar">Guitars</button>
-        <button class="filter" data-filter="acoustic">Acoustics</button>
-        <button class="filter" data-filter="bass">Bass</button>
-        <button class="filter" data-filter="amp">Amps</button>
-        <button class="filter" data-filter="pedal">Pedals</button>
-        <button class="filter" data-filter="microphone">Microphones</button>
-        <button class="filter" data-filter="recording">Recording</button>
-        <button class="filter" data-filter="accessory">Accessories</button>
+
+      <nav
+        class="filters"
+        aria-label="Gear categories"
+      >
+        <button
+          class="filter active"
+          data-filter="all"
+          type="button"
+        >
+          All
+        </button>
+
+        <button
+          class="filter"
+          data-filter="guitar"
+          type="button"
+        >
+          Guitars
+        </button>
+
+        <button
+          class="filter"
+          data-filter="acoustic"
+          type="button"
+        >
+          Acoustics
+        </button>
+
+        <button
+          class="filter"
+          data-filter="bass"
+          type="button"
+        >
+          Bass
+        </button>
+
+        <button
+          class="filter"
+          data-filter="amp"
+          type="button"
+        >
+          Amps
+        </button>
+
+        <button
+          class="filter"
+          data-filter="pedal"
+          type="button"
+        >
+          Pedals
+        </button>
+
+        <button
+          class="filter"
+          data-filter="microphone"
+          type="button"
+        >
+          Microphones
+        </button>
+
+        <button
+          class="filter"
+          data-filter="recording"
+          type="button"
+        >
+          Recording
+        </button>
+
+        <button
+          class="filter"
+          data-filter="accessory"
+          type="button"
+        >
+          Accessories
+        </button>
       </nav>
     </header>
 
+
     <section id="collectionView">
-      <section id="collectionView">
-  <div class="stats" id="stats"></div>
 
-  <div class="collection-toolbar">
-    <div class="status-filters" aria-label="Ownership status">
-      <button class="status-filter active" data-status="all">
-        All
-      </button>
-      <button class="status-filter" data-status="owned">
-        Owned
-      </button>
-      <button class="status-filter" data-status="past">
-        Past gear
-      </button>
-    </div>
+      <div
+        class="archive-summary"
+        id="stats"
+      ></div>
 
-    <div class="collection-controls">
-      <label class="search-control">
-        <span class="sr-only">Search collection</span>
-        <input
-          id="collectionSearch"
-          type="search"
-          placeholder="Search collection"
-          autocomplete="off"
-        />
-      </label>
 
-      <label class="sort-control">
-        <span class="sr-only">Sort collection</span>
-        <select id="collectionSort">
-          <option value="acquired-asc">
-            Acquired: oldest first
-          </option>
-          <option value="acquired-desc">
-            Acquired: newest first
-          </option>
-          <option value="brand-asc">
-            Brand: A–Z
-          </option>
-        </select>
-      </label>
-    </div>
-  </div>
+      <div class="collection-toolbar">
 
-  <div class="section-heading">
-    <h2>Collection</h2>
-    <span id="collectionCount"></span>
-  </div>
+        <div class="collection-search">
+          <label
+            class="sr-only"
+            for="collectionSearch"
+          >
+            Search collection
+          </label>
 
-  <div id="gearList" class="gear-list"></div>
-</section>
+          <input
+            id="collectionSearch"
+            type="search"
+            placeholder="Search the archive…"
+            autocomplete="off"
+          />
+        </div>
+
+
+        <div class="collection-controls">
+
+          <label
+            class="sr-only"
+            for="collectionStatus"
+          >
+            Ownership status
+          </label>
+
+          <select id="collectionStatus">
+            <option value="all">
+              All gear
+            </option>
+
+            <option value="owned">
+              Owned
+            </option>
+
+            <option value="past">
+              Past gear
+            </option>
+          </select>
+
+
+          <label
+            class="sr-only"
+            for="collectionSort"
+          >
+            Sort collection
+          </label>
+
+          <select id="collectionSort">
+            <option value="acquired-asc">
+              Oldest first
+            </option>
+
+            <option value="acquired-desc">
+              Newest first
+            </option>
+
+            <option value="brand-asc">
+              Brand A–Z
+            </option>
+          </select>
+
+        </div>
+      </div>
+
+
+      <div class="section-heading">
+        <h2>
+          Collection
+        </h2>
+
+        <span id="collectionCount"></span>
+      </div>
+
+
+      <div
+        id="gearList"
+        class="gear-list"
+      ></div>
+
     </section>
 
-    <section id="detailView" class="hidden"></section>
+
+    <section
+      id="detailView"
+      class="hidden"
+    ></section>
+
   </main>
+
 
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-
