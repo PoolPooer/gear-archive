@@ -5,6 +5,21 @@ const collectionView = document.getElementById('collectionView');
 const detailView = document.getElementById('detailView');
 const filterButtons = [...document.querySelectorAll('.filter')];
 
+const statusButtons = [
+  ...document.querySelectorAll('.status-filter')
+];
+
+const collectionSearch =
+  document.getElementById('collectionSearch');
+
+const collectionSort =
+  document.getElementById('collectionSort');
+
+let currentCategory = 'all';
+let currentStatus = 'all';
+let currentSearch = '';
+let currentSort = 'acquired-asc';
+
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, ch => ({
     '&': '&amp;',
@@ -121,130 +136,244 @@ function getSortValue(item) {
 }
 
 function renderStats() {
-  const counts = {
-    guitar: gear.filter(i => i.kind === 'guitar').length,
-    acoustic: gear.filter(i => i.kind === 'acoustic').length,
-    bass: gear.filter(i => i.kind === 'bass').length,
-    amp: gear.filter(i => i.kind === 'amp').length,
-    pedal: gear.filter(i => i.kind === 'pedal').length,
-    microphone: gear.filter(i => i.kind === 'microphone').length,
-    recording: gear.filter(i => i.kind === 'recording').length,
-    accessory: gear.filter(i => i.kind === 'accessory').length
-  };
+  const owned = gear.filter(
+    item => item.status === 'Owned'
+  ).length;
 
-  const totalKnownModificationSpend = gear.reduce(
-    (total, item) => total + getModificationSpend(item),
+  const past = gear.length - owned;
+
+  const knownPersonalSpend = gear.reduce(
+    (total, item) =>
+      total + getKnownPersonalSpend(item),
     0
   );
 
   stats.innerHTML = `
     <div class="stat">
-      <div class="stat-label">Items</div>
       <div class="stat-value">${gear.length}</div>
+      <div class="stat-label">Items archived</div>
     </div>
 
     <div class="stat">
-      <div class="stat-label">Guitars</div>
-      <div class="stat-value">${counts.guitar}</div>
+      <div class="stat-value">${owned}</div>
+      <div class="stat-label">Currently owned</div>
     </div>
 
     <div class="stat">
-      <div class="stat-label">Acoustics</div>
-      <div class="stat-value">${counts.acoustic}</div>
+      <div class="stat-value">${past}</div>
+      <div class="stat-label">Past gear</div>
     </div>
 
     <div class="stat">
-      <div class="stat-label">Bass</div>
-      <div class="stat-value">${counts.bass}</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-label">Amps</div>
-      <div class="stat-value">${counts.amp}</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-label">Pedals</div>
-      <div class="stat-value">${counts.pedal}</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-label">Microphones</div>
-      <div class="stat-value">${counts.microphone}</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-label">Recording</div>
-      <div class="stat-value">${counts.recording}</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-label">Accessories</div>
-      <div class="stat-value">${counts.accessory}</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-label">Known modification spend</div>
       <div class="stat-value small">
-        ${formatCurrency(totalKnownModificationSpend)}
+        ${formatCurrency(knownPersonalSpend)}
       </div>
+      <div class="stat-label">Known personal spend</div>
     </div>
   `;
 }
 
-function renderCollection(filter = 'all') {
-  const visible = gear
-    .filter(item => filter === 'all' || item.kind === filter)
-    .sort((a, b) =>
-      getSortValue(a).localeCompare(getSortValue(b))
+ function matchesStatus(item) {
+  if (currentStatus === 'owned') {
+    return item.status === 'Owned';
+  }
+
+  if (currentStatus === 'past') {
+    return item.status !== 'Owned';
+  }
+
+  return true;
+}
+
+function matchesSearch(item) {
+  if (!currentSearch) {
+    return true;
+  }
+
+  const searchable = [
+    item.brand,
+    item.model,
+    item.year,
+    item.finish,
+    item.origin,
+    item.status,
+    item.subtype
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  return searchable.includes(currentSearch);
+}
+
+function sortGear(items) {
+  return [...items].sort((a, b) => {
+    if (currentSort === 'brand-asc') {
+      const aName = `${a.brand || ''} ${a.model || ''}`;
+      const bName = `${b.brand || ''} ${b.model || ''}`;
+
+      return aName.localeCompare(bName);
+    }
+
+    const aDate = a.acquiredSort || '';
+    const bDate = b.acquiredSort || '';
+
+    if (!aDate && !bDate) {
+      return 0;
+    }
+
+    if (!aDate) {
+      return 1;
+    }
+
+    if (!bDate) {
+      return -1;
+    }
+
+    if (currentSort === 'acquired-desc') {
+      return bDate.localeCompare(aDate);
+    }
+
+    return aDate.localeCompare(bDate);
+  });
+}
+
+function getAcquisitionYear(item) {
+  if (!item.acquiredSort) {
+    return 'Date unknown';
+  }
+
+  return String(item.acquiredSort).slice(0, 4);
+}
+
+function getKindLabel(item) {
+  const labels = {
+    guitar: 'Guitar',
+    acoustic: 'Acoustic',
+    bass: 'Bass',
+    amp: 'Amplifier',
+    pedal: 'Pedal',
+    microphone: 'Microphone',
+    recording: 'Recording',
+    accessory: 'Accessory'
+  };
+
+  return labels[item.kind] || item.kind || 'Gear';
+} 
+
+function renderCollection() {
+  let visible = gear.filter(item => {
+    const categoryMatch =
+      currentCategory === 'all' ||
+      item.kind === currentCategory;
+
+    return (
+      categoryMatch &&
+      matchesStatus(item) &&
+      matchesSearch(item)
     );
+  });
+
+  visible = sortGear(visible);
 
   collectionCount.textContent =
     `${visible.length} item${visible.length === 1 ? '' : 's'}`;
 
+  if (!visible.length) {
+    list.innerHTML = `
+      <div class="empty-state">
+        No gear matches these filters.
+      </div>
+    `;
+
+    return;
+  }
+
+  const groupByYear =
+    currentSort === 'acquired-asc' ||
+    currentSort === 'acquired-desc';
+
+  let lastYear = null;
+
   list.innerHTML = visible.map(item => {
+    const year = getAcquisitionYear(item);
+
+    let yearHeading = '';
+
+    if (groupByYear && year !== lastYear) {
+      yearHeading = `
+        <div class="year-divider">
+          <span>${escapeHtml(year)}</span>
+        </div>
+      `;
+
+      lastYear = year;
+    }
+
     const details = [
-      item.year,
-      item.finish,
-      item.origin
-    ].filter(Boolean).join(' · ');
+      getKindLabel(item),
+      item.year
+        ? `${item.yearApproximate ? '~' : ''}${item.year}`
+        : '',
+      item.finish
+    ]
+      .filter(Boolean)
+      .join(' · ');
 
-    const note = item.note ? ` · ${item.note}` : '';
-
-    const clickable = item.history ? 'button' : 'div';
-
-    const detailAttr = item.history
-      ? `data-id="${escapeHtml(item.id)}"`
+    const acquiredLine = item.acquired
+      ? `Acquired ${item.acquired}`
       : '';
 
     return `
-      <${clickable}
-        class="gear-row ${item.modified ? 'featured' : ''}"
-        ${detailAttr}
+      ${yearHeading}
+
+      <button
+        class="gear-row"
+        data-id="${escapeHtml(item.id)}"
       >
         <div class="gear-icon">
           ${escapeHtml(item.brand?.slice(0, 1) || '?')}
         </div>
 
-        <div>
+        <div class="gear-main">
           <div class="gear-name">
-            ${escapeHtml(item.brand)} ${escapeHtml(item.model)}
+            ${escapeHtml(item.brand)}
+            ${escapeHtml(item.model)}
           </div>
 
           <div class="gear-meta">
-            ${escapeHtml(details + note)}
+            ${escapeHtml(details)}
           </div>
+
+          ${
+            acquiredLine
+              ? `
+                <div class="gear-acquired">
+                  ${escapeHtml(acquiredLine)}
+                </div>
+              `
+              : ''
+          }
         </div>
 
         <div class="gear-status">
-          ${escapeHtml(item.status)}
-          ${item.modified ? '<br><span>Modified</span>' : ''}
+          <span class="status-text status-${escapeHtml(
+            item.status.toLowerCase()
+          )}">
+            ${escapeHtml(item.status)}
+          </span>
+
+          ${
+            item.modified
+              ? '<span class="modified-label">Modified</span>'
+              : ''
+          }
         </div>
 
-        <div>
-          ${item.history ? '→' : ''}
+        <div class="gear-arrow" aria-hidden="true">
+          →
         </div>
-      </${clickable}>
+      </button>
     `;
   }).join('');
 
@@ -655,20 +784,46 @@ filterButtons.forEach(button => {
 
     button.classList.add('active');
 
-    // Return to the collection if we're currently
-    // viewing an individual gear item.
+    currentCategory = button.dataset.filter;
+
     detailView.classList.add('hidden');
     collectionView.classList.remove('hidden');
 
-    renderCollection(
-      button.dataset.filter
-    );
+    renderCollection();
 
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   });
+});
+
+statusButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    statusButtons.forEach(b =>
+      b.classList.remove('active')
+    );
+
+    button.classList.add('active');
+
+    currentStatus = button.dataset.status;
+
+    renderCollection();
+  });
+});
+
+collectionSearch.addEventListener('input', event => {
+  currentSearch = event.target.value
+    .trim()
+    .toLowerCase();
+
+  renderCollection();
+});
+
+collectionSort.addEventListener('change', event => {
+  currentSort = event.target.value;
+
+  renderCollection();
 });
 
 renderStats();

@@ -28,14 +28,57 @@
     </header>
 
     <section id="collectionView">
-      <div class="stats" id="stats"></div>
+      <section id="collectionView">
+  <div class="stats" id="stats"></div>
 
-      <div class="section-heading">
-        <h2>Collection</h2>
-        <span id="collectionCount"></span>
-      </div>
+  <div class="collection-toolbar">
+    <div class="status-filters" aria-label="Ownership status">
+      <button class="status-filter active" data-status="all">
+        All
+      </button>
+      <button class="status-filter" data-status="owned">
+        Owned
+      </button>
+      <button class="status-filter" data-status="past">
+        Past gear
+      </button>
+    </div>
 
-      <div id="gearList" class="gear-list"></div>
+    <div class="collection-controls">
+      <label class="search-control">
+        <span class="sr-only">Search collection</span>
+        <input
+          id="collectionSearch"
+          type="search"
+          placeholder="Search collection"
+          autocomplete="off"
+        />
+      </label>
+
+      <label class="sort-control">
+        <span class="sr-only">Sort collection</span>
+        <select id="collectionSort">
+          <option value="acquired-asc">
+            Acquired: oldest first
+          </option>
+          <option value="acquired-desc">
+            Acquired: newest first
+          </option>
+          <option value="brand-asc">
+            Brand: A–Z
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <h2>Collection</h2>
+    <span id="collectionCount"></span>
+  </div>
+
+  <div id="gearList" class="gear-list"></div>
+</section>
     </section>
 
     <section id="detailView" class="hidden"></section>
@@ -45,3 +88,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
