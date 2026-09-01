@@ -10,15 +10,11 @@ The project tracks acquisition details, specifications, modifications, maintenan
 
 The project is in active development.
 
-The initial site framework is complete and deployed through GitHub Pages. The current focus is populating the collection with historical data before expanding the visual design and adding photography.
+The core archive structure is complete and deployed through GitHub Pages. The collection currently contains 53 records spanning guitars, basses, amplifiers, pedals, acoustics, microphones, recording equipment, and accessories.
 
-Detailed records currently include:
+Historical acquisition, modification, maintenance, sale, trade, and financial data is being progressively reconstructed and added where records are available.
 
-- Fender Cyclone HH (2004)
-- Fender Classic Series '65 Mustang (2011) — sold
-- Fender Alternate Reality Powercaster (2019)
-
-Additional guitars are already listed and will be populated as purchase, modification, and maintenance records are gathered.
+The current focus is validating the collection data and refining the archive interface before adding original photography.
 
 ## What is tracked
 
@@ -87,16 +83,19 @@ Gear records are currently stored as objects in the `gear` array inside `data.js
 
 Records can contain basic collection information as well as detailed specifications, financial records, and chronological history entries.
 
-History entries are used for events such as:
+History entries use a normalized set of event types including:
 
 - Acquisition
-- Modifications
-- Hardware changes
-- Electronics changes
+- Modification
 - Maintenance
-- Import costs
-- Accessories
-- Sales
+- Repair
+- Accessory
+- Provenance
+- Manufacture
+- Build
+- Sale
+- Trade
+- Disposal
 
 Costs are stored as numeric EUR values so that totals can be calculated automatically by the site.
 
@@ -123,16 +122,6 @@ https://poolpooer.github.io/gear-archive/
 - Refine collection cards and individual gear pages.
 - Improve responsive/mobile presentation.
 
-### Additional Gear
-
-Expand the archive beyond guitars to include:
-
-- Pedals
-- Amplifiers
-- Microphones
-- Recording equipment
-- Cables
-- Accessories
 
 ### Financial Tracking
 

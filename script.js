@@ -30,29 +30,107 @@ function formatCurrency(amount, currency = 'EUR', approximate = false) {
   return approximate ? `~${formatted}` : formatted;
 }
 
-function getModificationSpend(item) {
-  if (item.financials?.modificationSpend?.amount != null) {
-    return Number(item.financials.modificationSpend.amount);
+function numberOrZero(value) {
+  if (value === null || value === undefined || value === '') {
+    return 0;
   }
 
-  return (item.history || [])
-    .filter(event =>
-      event.cost != null &&
-      event.type !== 'Acquisition' &&
-      !event.type.startsWith('Maintenance')
-    )
-    .reduce((total, event) => total + Number(event.cost), 0);
+  const number = Number(value);
+
+  return Number.isFinite(number) ? number : 0;
+}
+
+function getAdditionalSpend(item) {
+  const spend = item.financials?.additionalSpend || {};
+
+  return Object.values(spend).reduce(
+    (total, value) => total + numberOrZero(value),
+    0
+  );
+}
+
+function getModificationSpend(item) {
+  return numberOrZero(
+    item.financials?.additionalSpend?.modifications
+  );
+}
+
+function getAcquisitionOffsets(item) {
+  return (item.financials?.acquisition?.offsets || [])
+    .reduce(
+      (total, offset) =>
+        total + numberOrZero(offset.amount),
+      0
+    );
+}
+
+function getPersonalAcquisitionSpend(item) {
+  const acquisition = item.financials?.acquisition;
+
+  if (!acquisition || acquisition.personalSpend === false) {
+    return 0;
+  }
+
+  return Math.max(
+    0,
+    numberOrZero(acquisition.amount) -
+    getAcquisitionOffsets(item)
+  );
+}
+
+function getRecoveries(item) {
+  return (item.financials?.recoveries || [])
+    .reduce(
+      (total, recovery) =>
+        total + numberOrZero(recovery.amount),
+      0
+    );
+}
+
+function getDisposalRecovery(item) {
+  const disposal = item.financials?.disposal;
+
+  if (!disposal) {
+    return 0;
+  }
+
+  return numberOrZero(disposal.amount);
+}
+
+function getKnownPersonalSpend(item) {
+  return (
+    getPersonalAcquisitionSpend(item) +
+    getAdditionalSpend(item)
+  );
+}
+
+function getKnownNetCost(item) {
+  return (
+    getKnownPersonalSpend(item) -
+    getRecoveries(item) -
+    getDisposalRecovery(item)
+  );
+}
+
+function getSortValue(item) {
+  if (!item.acquiredSort) {
+    return '9999-99-99';
+  }
+
+  return item.acquiredSort;
 }
 
 function renderStats() {
-  const guitars = gear.filter(i => i.kind === 'guitar').length;
-  const acoustics = gear.filter(i => i.kind === 'acoustic').length;
-  const basses = gear.filter(i => i.kind === 'bass').length;
-  const amps = gear.filter(i => i.kind === 'amp').length;
-  const pedals = gear.filter(i => i.kind === 'pedal').length;
-  const microphones = gear.filter(i => i.kind === 'microphone').length;
-  const recording = gear.filter(i => i.kind === 'recording').length;
-  const accessories = gear.filter(i => i.kind === 'accessory').length;
+  const counts = {
+    guitar: gear.filter(i => i.kind === 'guitar').length,
+    acoustic: gear.filter(i => i.kind === 'acoustic').length,
+    bass: gear.filter(i => i.kind === 'bass').length,
+    amp: gear.filter(i => i.kind === 'amp').length,
+    pedal: gear.filter(i => i.kind === 'pedal').length,
+    microphone: gear.filter(i => i.kind === 'microphone').length,
+    recording: gear.filter(i => i.kind === 'recording').length,
+    accessory: gear.filter(i => i.kind === 'accessory').length
+  };
 
   const totalKnownModificationSpend = gear.reduce(
     (total, item) => total + getModificationSpend(item),
@@ -67,42 +145,42 @@ function renderStats() {
 
     <div class="stat">
       <div class="stat-label">Guitars</div>
-      <div class="stat-value">${guitar}</div>
+      <div class="stat-value">${counts.guitar}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Acoustics</div>
-      <div class="stat-value">${acoustics}</div>
+      <div class="stat-value">${counts.acoustic}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Bass</div>
-      <div class="stat-value">${bass}</div>
+      <div class="stat-value">${counts.bass}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Amps</div>
-      <div class="stat-value">${amp}</div>
+      <div class="stat-value">${counts.amp}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Pedals</div>
-      <div class="stat-value">${pedal}</div>
+      <div class="stat-value">${counts.pedal}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Microphones</div>
-      <div class="stat-value">${microphone}</div>
+      <div class="stat-value">${counts.microphone}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Recording</div>
-      <div class="stat-value">${recording}</div>
+      <div class="stat-value">${counts.recording}</div>
     </div>
 
     <div class="stat">
       <div class="stat-label">Accessories</div>
-      <div class="stat-value">${accessory}</div>
+      <div class="stat-value">${counts.accessory}</div>
     </div>
 
     <div class="stat">
@@ -115,12 +193,14 @@ function renderStats() {
 }
 
 function renderCollection(filter = 'all') {
-  const visible = gear.filter(
-    item => filter === 'all' || item.kind === filter
-  );
+  const visible = gear
+    .filter(item => filter === 'all' || item.kind === filter)
+    .sort((a, b) =>
+      getSortValue(a).localeCompare(getSortValue(b))
+    );
 
   collectionCount.textContent =
-  `${visible.length} item${visible.length === 1 ? '' : 's'}`;
+    `${visible.length} item${visible.length === 1 ? '' : 's'}`;
 
   list.innerHTML = visible.map(item => {
     const details = [
@@ -143,7 +223,7 @@ function renderCollection(filter = 'all') {
         ${detailAttr}
       >
         <div class="gear-icon">
-          ${escapeHtml(item.brand.slice(0, 1))}
+          ${escapeHtml(item.brand?.slice(0, 1) || '?')}
         </div>
 
         <div>
@@ -176,7 +256,18 @@ function renderCollection(filter = 'all') {
 }
 
 function rowsFromObject(obj = {}) {
-  return Object.entries(obj).map(([key, value]) => `
+  const entries = Object.entries(obj || {});
+
+  if (!entries.length) {
+    return `
+      <div class="data-row">
+        <dt>Details</dt>
+        <dd>—</dd>
+      </div>
+    `;
+  }
+
+  return entries.map(([key, value]) => `
     <div class="data-row">
       <dt>${escapeHtml(key)}</dt>
       <dd>${escapeHtml(value)}</dd>
@@ -221,32 +312,82 @@ function renderHistoryEvent(event) {
           event.currency || 'EUR',
           event.approximate
         )}
-        ${event.personalSpend === false
-          ? ' · not personal spend'
-          : ''}
+        ${
+          event.personalSpend === false
+            ? ' · not personal spend'
+            : ''
+        }
       </div>
     `
     : '';
 
+  const categoryLine = event.category
+    ? ` · ${escapeHtml(event.category)}`
+    : '';
+
   return `
     <article class="event">
-
       <div class="event-meta">
-        ${escapeHtml(event.date)} · ${escapeHtml(event.type)}
+        ${escapeHtml(event.date || 'Date unknown')}
+        ·
+        ${escapeHtml(event.type || 'Event')}
+        ${categoryLine}
       </div>
 
       <div class="event-title">
-        ${escapeHtml(event.title)}
+        ${escapeHtml(event.title || '')}
       </div>
 
-      <div class="event-desc">
-        ${escapeHtml(event.description)}
-      </div>
+      ${
+        event.description
+          ? `
+            <div class="event-desc">
+              ${escapeHtml(event.description)}
+            </div>
+          `
+          : ''
+      }
 
       ${costLine}
-
     </article>
   `;
+}
+
+function renderOriginalToCurrent(item) {
+  const original = item.originalSpec || {};
+  const current = item.currentSpec || {};
+
+  const keys = [
+    ...new Set([
+      ...Object.keys(original),
+      ...Object.keys(current)
+    ])
+  ];
+
+  if (!keys.length) {
+    return `
+      <div class="data-row">
+        <dt>Details</dt>
+        <dd>—</dd>
+      </div>
+    `;
+  }
+
+  return keys.map(key => {
+    const originalValue = original[key] ?? '—';
+    const currentValue = current[key] ?? originalValue;
+
+    return `
+      <div class="data-row">
+        <dt>${escapeHtml(key)}</dt>
+        <dd>
+          ${escapeHtml(originalValue)}
+          →
+          ${escapeHtml(currentValue)}
+        </dd>
+      </div>
+    `;
+  }).join('');
 }
 
 function showDetail(id) {
@@ -257,8 +398,6 @@ function showDetail(id) {
   }
 
   const acquisition = item.financials?.acquisition;
-
-  const modificationSpend = getModificationSpend(item);
 
   const acquisitionValue = acquisition
     ? formatCurrency(
@@ -276,35 +415,33 @@ function showDetail(id) {
       }`
     : '';
 
-  const personalAcquisitionSpend =
-    acquisition && acquisition.personalSpend !== false
-      ? Number(acquisition.amount || 0)
-      : 0;
+  const modificationSpend = getModificationSpend(item);
+  const additionalSpend = getAdditionalSpend(item);
+  const personalAcquisitionSpend = getPersonalAcquisitionSpend(item);
+  const knownPersonalSpend = getKnownPersonalSpend(item);
+  const recoveries =
+    getRecoveries(item) + getDisposalRecovery(item);
+  const knownNetCost = getKnownNetCost(item);
 
   detailView.innerHTML = `
-
     <button class="back" id="backButton">
       ← Back to collection
     </button>
 
     <div class="hero">
-
       <div class="photo-placeholder">
         <div>
-
           <div class="photo-mark">
-            ${escapeHtml(item.brand.slice(0, 1))}
+            ${escapeHtml(item.brand?.slice(0, 1) || '?')}
           </div>
 
           <div>
-            Your guitar photo goes here
+            Your gear photo goes here
           </div>
-
         </div>
       </div>
 
       <div>
-
         <span class="badge">
           ${escapeHtml(item.status)}
         </span>
@@ -314,9 +451,11 @@ function showDetail(id) {
           style="margin-top:18px"
         >
           ${escapeHtml(item.brand)}
-          ${item.year
-            ? ` · ${escapeHtml(item.year)}`
-            : ''}
+          ${
+            item.year
+              ? ` · ${escapeHtml(item.year)}`
+              : ''
+          }
         </p>
 
         <h2 class="detail-title">
@@ -338,7 +477,6 @@ function showDetail(id) {
         </p>
 
         <dl class="meta-grid">
-
           <div>
             <dt>Serial</dt>
             <dd>${formatSerial(item)}</dd>
@@ -360,95 +498,51 @@ function showDetail(id) {
             <dt>Original price</dt>
             <dd>${formatOriginalPrice(item)}</dd>
           </div>
-
         </dl>
-
       </div>
     </div>
 
     <div class="two-col">
-
       <section>
-
         <h3>Current setup</h3>
 
         <dl class="data-list">
           ${rowsFromObject(item.currentSpec)}
         </dl>
-
       </section>
 
       <section>
-
         <h3>Original → current</h3>
 
         <dl class="data-list">
-
-          ${
-            Object.keys(item.originalSpec || {})
-              .map(key => `
-                <div class="data-row">
-
-                  <dt>
-                    ${escapeHtml(key)}
-                  </dt>
-
-                  <dd>
-                    ${escapeHtml(item.originalSpec[key])}
-                    →
-                    ${escapeHtml(
-                      item.currentSpec?.[key] ||
-                      'Current configuration'
-                    )}
-                  </dd>
-
-                </div>
-              `)
-              .join('')
-          }
-
+          ${renderOriginalToCurrent(item)}
         </dl>
-
       </section>
-
     </div>
 
     <section class="timeline-wrap">
-
       <div class="section-heading">
-
-        <h3>
-          History
-        </h3>
+        <h3>History</h3>
 
         <span>
-          Acquisition · modifications · maintenance
+          Acquisition · modifications · maintenance · disposal
         </span>
-
       </div>
 
       <div class="timeline">
-
         ${
           (item.history || [])
             .map(renderHistoryEvent)
             .join('')
         }
-
       </div>
-
     </section>
 
     <section class="financials">
-
-      <h3>
-        Financial record
-      </h3>
+      <h3>Financial record</h3>
 
       <div class="stats">
-
         <div class="stat">
-
           <div class="stat-label">
             Acquisition value
           </div>
@@ -466,23 +560,9 @@ function showDetail(id) {
               `
               : ''
           }
-
         </div>
 
         <div class="stat">
-
-          <div class="stat-label">
-            Known modification spend
-          </div>
-
-          <div class="stat-value">
-            ${formatCurrency(modificationSpend)}
-          </div>
-
-        </div>
-
-        <div class="stat">
-
           <div class="stat-label">
             Personal acquisition spend
           </div>
@@ -490,43 +570,69 @@ function showDetail(id) {
           <div class="stat-value">
             ${formatCurrency(personalAcquisitionSpend)}
           </div>
-
         </div>
 
         <div class="stat">
+          <div class="stat-label">
+            Known additional spend
+          </div>
 
+          <div class="stat-value">
+            ${formatCurrency(additionalSpend)}
+          </div>
+
+          ${
+            modificationSpend
+              ? `
+                <div class="gear-meta">
+                  ${formatCurrency(modificationSpend)} modifications
+                </div>
+              `
+              : ''
+          }
+        </div>
+
+        <div class="stat">
           <div class="stat-label">
             Known personal spend
           </div>
 
           <div class="stat-value">
-            ${
-              formatCurrency(
-                modificationSpend +
-                personalAcquisitionSpend
-              )
-            }
+            ${formatCurrency(knownPersonalSpend)}
           </div>
-
         </div>
 
-      </div>
+        <div class="stat">
+          <div class="stat-label">
+            Known recoveries
+          </div>
 
+          <div class="stat-value">
+            ${formatCurrency(recoveries)}
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-label">
+            Known net cost
+          </div>
+
+          <div class="stat-value">
+            ${formatCurrency(knownNetCost)}
+          </div>
+        </div>
+      </div>
     </section>
   `;
 
   collectionView.classList.add('hidden');
-
   detailView.classList.remove('hidden');
 
   document
     .getElementById('backButton')
     .addEventListener('click', () => {
-
       detailView.classList.add('hidden');
-
       collectionView.classList.remove('hidden');
-
     });
 
   window.scrollTo({
@@ -536,9 +642,7 @@ function showDetail(id) {
 }
 
 filterButtons.forEach(button => {
-
   button.addEventListener('click', () => {
-
     filterButtons.forEach(b =>
       b.classList.remove('active')
     );
@@ -548,11 +652,8 @@ filterButtons.forEach(button => {
     renderCollection(
       button.dataset.filter
     );
-
   });
-
 });
 
 renderStats();
-
 renderCollection();
