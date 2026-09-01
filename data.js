@@ -705,11 +705,11 @@ const gear = [
         "note": "Purchased via Reverb · final price including tax"
       },
       "additionalSpend": {
-        "modifications": 0,
-        "maintenance": null,
-        "accessories": null,
-        "importFees": null,
-        "other": null
+      "modifications": 280.23,
+      "maintenance": null,
+      "accessories": null,
+      "importFees": null,
+      "other": null
       },
       "recoveries": [],
       "disposal": null
@@ -734,6 +734,15 @@ const gear = [
       "sellerNotes": "Original listing described the guitar as lightweight, strong-output, and in particularly good condition for a 1964 Melody Maker."
     },
     "history": [
+      {
+        "date": "1 Sep 2026",
+        "type": "Modification",
+        "title": "Lollar P-90 conversion parts purchased",
+        "description": "Purchased Lollar P-90 pickups and a custom black pickguard to mount them. Parts purchased for a planned P-90 conversion; installation not yet completed.",
+        "cost": 280.23,
+        "currency": "EUR",
+        "category": "Electronics / Hardware"
+      },
       {
         "date": "12 Sep 2025",
         "type": "Acquisition",

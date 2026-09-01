@@ -502,30 +502,36 @@ function showDetail(id) {
       </div>
     </div>
 
-    <div class="two-col">
-      <section>
-        <h3>Current setup</h3>
+  ${
+    item.kind === 'guitar'
+    ? `
+      <div class="two-col">
+        <section>
+          <h3>Current setup</h3>
 
-        <dl class="data-list">
-          ${rowsFromObject(item.currentSpec)}
-        </dl>
-      </section>
+          <dl class="data-list">
+            ${rowsFromObject(item.currentSpec)}
+          </dl>
+        </section>
 
-      <section>
-        <h3>Original → current</h3>
+        <section>
+          <h3>Original → current</h3>
 
-        <dl class="data-list">
-          ${renderOriginalToCurrent(item)}
-        </dl>
-      </section>
-    </div>
+          <dl class="data-list">
+            ${renderOriginalToCurrent(item)}
+          </dl>
+        </section>
+      </div>
+    `
+    : ''  
+    }
 
     <section class="timeline-wrap">
       <div class="section-heading">
         <h3>History</h3>
 
         <span>
-          Acquisition · modifications · maintenance · disposal
+        Acquisition · provenance · modifications · maintenance · disposal
         </span>
       </div>
 
@@ -649,9 +655,19 @@ filterButtons.forEach(button => {
 
     button.classList.add('active');
 
+    // Return to the collection if we're currently
+    // viewing an individual gear item.
+    detailView.classList.add('hidden');
+    collectionView.classList.remove('hidden');
+
     renderCollection(
       button.dataset.filter
     );
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 });
 
