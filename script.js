@@ -17,7 +17,7 @@ const collectionSort =
 let currentCategory = 'all';
 let currentStatus = 'all';
 let currentSearch = '';
-let currentSort = 'acquired-asc';
+let currentSort = 'acquired-desc';
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, ch => ({
@@ -347,15 +347,16 @@ function renderCollection() {
         data-id="${escapeHtml(item.id)}"
         type="button"
       >
-        <div class="gear-main">
-          <div class="gear-name">
-            ${escapeHtml(item.brand)}
-            ${escapeHtml(item.model)}
-          </div>
+        <div class="gear-brand">
+          ${escapeHtml(item.brand)}
+        </div>
 
-          <div class="gear-meta">
-            ${escapeHtml(details)}
-          </div>
+        <div class="gear-name">
+          ${escapeHtml(item.model)}
+        </div>
+
+        <div class="gear-meta">
+          ${escapeHtml(details)}
         </div>
 
         <div class="gear-status">
@@ -491,43 +492,6 @@ function renderHistoryEvent(event) {
   `;
 }
 
-function renderOriginalToCurrent(item) {
-  const original = item.originalSpec || {};
-  const current = item.currentSpec || {};
-
-  const keys = [
-    ...new Set([
-      ...Object.keys(original),
-      ...Object.keys(current)
-    ])
-  ];
-
-  if (!keys.length) {
-    return `
-      <div class="data-row">
-        <dt>Details</dt>
-        <dd>—</dd>
-      </div>
-    `;
-  }
-
-  return keys.map(key => {
-    const originalValue = original[key] ?? '—';
-    const currentValue = current[key] ?? originalValue;
-
-    return `
-      <div class="data-row">
-        <dt>${escapeHtml(key)}</dt>
-        <dd>
-          ${escapeHtml(originalValue)}
-          →
-          ${escapeHtml(currentValue)}
-        </dd>
-      </div>
-    `;
-  }).join('');
-}
-
 function showDetail(id) {
   const item = gear.find(i => i.id === id);
 
@@ -640,29 +604,29 @@ function showDetail(id) {
       </div>
     </div>
 
-  ${
-    item.kind === 'guitar'
-    ? `
-      <div class="two-col">
-        <section>
-          <h3>Current setup</h3>
+ ${
+  item.kind === 'guitar'
+  ? `
+    <div class="two-col">
+      <section>
+        <h3>As acquired</h3>
 
-          <dl class="data-list">
-            ${rowsFromObject(item.currentSpec)}
-          </dl>
-        </section>
+        <dl class="data-list">
+          ${rowsFromObject(item.originalSpec)}
+        </dl>
+      </section>
 
-        <section>
-          <h3>Original → current</h3>
+      <section>
+        <h3>Current setup</h3>
 
-          <dl class="data-list">
-            ${renderOriginalToCurrent(item)}
-          </dl>
-        </section>
-      </div>
-    `
-    : ''  
-    }
+        <dl class="data-list">
+          ${rowsFromObject(item.currentSpec)}
+        </dl>
+      </section>
+    </div>
+  `
+  : ''
+}
 
     <section class="timeline-wrap">
       <div class="section-heading">

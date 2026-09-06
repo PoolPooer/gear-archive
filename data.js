@@ -680,21 +680,27 @@ const gear = [
     "originalSpec": {
       "Pickups": "Original Gibson pickups",
       "Electronics": "Original electronics",
-      "Bridge": "Vintage Leo Quan Badass bridge fitted at time of purchase; original Gibson wrap-around tailpiece included",
+      "Bridge": "Original Gibson wrap-around bridge",
+      "Additional hardware": "Vintage Leo Quan Badass bridge included with guitar",
       "Body": "Mahogany slab body",
-      "Neck": "Mahogany neck",
-      "Fingerboard": "Brazilian rosewood — as described in original Reverb listing",
-      "NutWidth": "1-9/16 inch",
-      "Weight": "5 lb 9 oz",
-      "Tremolo": "None; listing notes guitar never had one"
+      "Neck": "Mahogany set neck",
+      "Fingerboard": "Brazilian rosewood",
+      "Nut width": "1-9/16 inch",
+      "Weight": "5 lb 9 oz"
     },
+
     "currentSpec": {
       "Pickups": "Original Gibson pickups",
       "Electronics": "Original electronics",
       "Bridge": "Vintage Leo Quan Badass bridge",
+      "Original bridge": "Original Gibson wrap-around bridge retained",
+      "Body": "Mahogany slab body",
+      "Neck": "Mahogany set neck",
+      "Fingerboard": "Brazilian rosewood",
+      "Nut width": "1-9/16 inch",
+      "Weight": "5 lb 9 oz",
       "Strings": "D’Addario NYXL 10–46",
-      "VolumeToneKnobs": "Replacement knobs",
-      "OriginalTailpiece": "Original Gibson wrap-around tailpiece retained"
+      "Knobs": "OAI D10 Dwyer II ×4"
     },
     "financials": {
       "acquisition": {
@@ -734,33 +740,34 @@ const gear = [
       "sellerNotes": "Original listing described the guitar as lightweight, strong-output, and in particularly good condition for a 1964 Melody Maker."
     },
     "history": [
-      {
-        "date": "1 Sep 2026",
-        "type": "Modification",
-        "title": "Lollar P-90 conversion parts purchased",
-        "description": "Purchased Lollar P-90 pickups and a custom black pickguard to mount them. Parts purchased for a planned P-90 conversion; installation not yet completed.",
-        "cost": 280.23,
-        "currency": "EUR",
-        "category": "Electronics / Hardware"
-      },
-      {
-        "date": "12 Sep 2025",
-        "type": "Acquisition",
-        "title": "Purchased via Reverb",
-        "description": "Purchased as a 1964 Gibson Melody Maker with original electronics, vintage Leo Quan Badass bridge fitted, original Gibson wrap-around tailpiece included, and a 1970s Gretsch Committee hard shell case.",
-        "cost": 1965.63,
-        "currency": "EUR",
-        "personalSpend": true
-      },
-      {
-        "date": "Date unknown",
-        "type": "Modification",
-        "title": "Volume and tone knobs replaced",
-        "description": "Replaced the volume and tone control knobs.",
-        "cost": null,
-        "category": "Cosmetic / Hardware"
-      }
-    ],
+  {
+    "date": "11 Oct 2025",
+    "type": "Modification",
+    "title": "OAI D10 Dwyer II knobs fitted",
+    "description": "Four OAI D10 Dwyer II control knobs fitted. The knobs were already owned, having originally been purchased on 4 Nov 2020 for €9 each.",
+    "cost": 0,
+    "currency": "EUR",
+    "category": "Cosmetic / Hardware"
+  },
+  {
+    "date": "Sep 2025",
+    "type": "Modification",
+    "title": "Vintage Leo Quan Badass bridge fitted",
+    "description": "Replaced the original Gibson wrap-around bridge with the Vintage Leo Quan Badass bridge supplied with the guitar. Original Gibson bridge retained.",
+    "cost": 0,
+    "currency": "EUR",
+    "category": "Hardware"
+  },
+  {
+    "date": "12 Sep 2025",
+    "type": "Acquisition",
+    "title": "Purchased",
+    "description": "Purchased as a 1964 Gibson Melody Maker D with its original Gibson wrap-around bridge installed. A Vintage Leo Quan Badass bridge and 1970s Gretsch Committee hard shell case were also included.",
+    "cost": 1965.63,
+    "currency": "EUR",
+    "personalSpend": true
+  }
+],
     "acquiredSort": "2025-09-12",
     "images": {
       "cover": null,
