@@ -770,7 +770,7 @@ const gear = [
 ],
     "acquiredSort": "2025-09-12",
     "images": {
-      "cover": null,
+      "cover": "assets/images/melody-maker-1964/as-acquired.webp",
       "gallery": []
     }
   },
@@ -2306,7 +2306,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-dd3/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2359,7 +2359,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/fuzz-gun/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2475,7 +2475,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/greer-the-southland/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2528,7 +2528,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/ehx-mel-9/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2586,7 +2586,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/jhs-morning-glory/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2646,7 +2646,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/super-war-dance/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2704,7 +2704,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/jhs-the-smiley/as-acquired.webp",
       "gallery": []
     },
     "history": [
