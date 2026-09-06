@@ -11,11 +11,12 @@
 
   <link
     rel="stylesheet"
-    href="styles.css?v=5"
+    href="styles.css?v=7"
   />
 </head>
 
 <body>
+  <a class="skip-link" href="#collectionView">Skip to collection</a>
   <main class="shell">
 
     <header class="site-header">
@@ -25,11 +26,11 @@
         </p>
 
         <h1>
-          GEAR
+          Gear archive
         </h1>
 
         <p class="lede">
-          Instruments, equipment, modifications &amp; maintenance.
+          Paul’s collection
         </p>
       </div>
 
@@ -39,7 +40,7 @@
       >
         <button
           class="filter active"
-          data-filter="all"
+          aria-pressed="true" data-filter="all"
           type="button"
         >
           All
@@ -47,7 +48,7 @@
 
         <button
           class="filter"
-          data-filter="guitar"
+          aria-pressed="false" data-filter="guitar"
           type="button"
         >
           Guitars
@@ -55,7 +56,7 @@
 
         <button
           class="filter"
-          data-filter="acoustic"
+          aria-pressed="false" data-filter="acoustic"
           type="button"
         >
           Acoustics
@@ -63,7 +64,7 @@
 
         <button
           class="filter"
-          data-filter="bass"
+          aria-pressed="false" data-filter="bass"
           type="button"
         >
           Bass
@@ -71,7 +72,7 @@
 
         <button
           class="filter"
-          data-filter="amp"
+          aria-pressed="false" data-filter="amp"
           type="button"
         >
           Amps
@@ -79,7 +80,7 @@
 
         <button
           class="filter"
-          data-filter="pedal"
+          aria-pressed="false" data-filter="pedal"
           type="button"
         >
           Pedals
@@ -87,7 +88,7 @@
 
         <button
           class="filter"
-          data-filter="microphone"
+          aria-pressed="false" data-filter="microphone"
           type="button"
         >
           Microphones
@@ -95,7 +96,7 @@
 
         <button
           class="filter"
-          data-filter="recording"
+          aria-pressed="false" data-filter="recording"
           type="button"
         >
           Recording
@@ -103,7 +104,7 @@
 
         <button
           class="filter"
-          data-filter="accessory"
+          aria-pressed="false" data-filter="accessory"
           type="button"
         >
           Accessories
@@ -112,7 +113,7 @@
     </header>
 
 
-    <section id="collectionView">
+    <section id="collectionView" tabindex="-1" aria-label="Collection">
 
       <div
         class="archive-summary"
@@ -193,7 +194,7 @@
           Collection
         </h2>
 
-        <span id="collectionCount"></span>
+        <span id="collectionCount" role="status" aria-live="polite"></span>
       </div>
 
 
@@ -214,6 +215,6 @@
 
 
   <script src="data.js?v=3"></script>
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
