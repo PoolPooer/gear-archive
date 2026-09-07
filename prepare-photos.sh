@@ -35,7 +35,7 @@ find "$INPUT_DIR" -maxdepth 1 -type f \( \
         -auto-orient \
         -resize "1500x1100>" \
         -gravity center \
-        -background white \
+        -background "#eeeee3" \
         -extent 1600x1200 \
         -strip \
         -colorspace sRGB \
