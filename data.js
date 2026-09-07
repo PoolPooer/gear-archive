@@ -227,7 +227,7 @@ const gear = [
     ],
     "acquiredSort": "2013",
     "images": {
-      "cover": null,
+      "cover": "assets/images/mustang/as-acquired.webp",
       "gallery": []
     }
   },
@@ -524,7 +524,7 @@ const gear = [
     ],
     "acquiredSort": "2021-04",
     "images": {
-      "cover": null,
+      "cover": "assets/images/ibanez/as-acquired.webp",
       "gallery": []
     }
   },
@@ -654,7 +654,7 @@ const gear = [
     ],
     "acquiredSort": "2023-10-14",
     "images": {
-      "cover": null,
+      "cover": "assets/images/strat-o-sonic/as-acquired.webp",
       "gallery": []
     }
   },
@@ -2769,7 +2769,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-eq-7/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2834,7 +2834,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/mxr-phase-100/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2900,7 +2900,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-os-2/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2966,7 +2966,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/zvex-fuzz-factory/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3132,7 +3132,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/big-muff-2/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -4130,7 +4130,7 @@ const gear = [
     },
     "notes": "Purchased from the local music shop. Original purchase date and price have not yet been recovered.",
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-br-600/as-acquired.webp",
       "gallery": []
     },
     "history": [
