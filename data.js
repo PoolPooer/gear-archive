@@ -2200,7 +2200,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/jhs-angry-driver/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2253,7 +2253,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/mxr-carbon-copy/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -2414,7 +2414,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/thee-fuzz-warr-overload/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3026,7 +3026,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/ua-dream-65/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3079,7 +3079,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/tc-poly-tune-noir/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3186,7 +3186,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/hoof-reaper/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3248,7 +3248,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/dunlop-mini-cry-baby/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3375,7 +3375,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/quite-theory-prelude/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3428,7 +3428,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-tuner/as-acquired.webp",
       "gallery": []
     },
     "history": [
