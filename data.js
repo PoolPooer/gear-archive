@@ -128,7 +128,7 @@ const gear = [
     ],
     "acquiredSort": "2004-08",
     "images": {
-      "cover": null,
+      "cover": "assets/images/fender-cyclone-hh/as-acquired.webp",
       "gallery": []
     }
   },
@@ -372,7 +372,7 @@ const gear = [
     ],
     "acquiredSort": "2019-07-05",
     "images": {
-      "cover": null,
+      "cover": "assets/images/powercaster/as-acquired.webp",
       "gallery": []
     }
   },
@@ -911,7 +911,7 @@ const gear = [
     ],
     "acquiredSort": "2024-06-19",
     "images": {
-      "cover": null,
+      "cover": "assets/images/jackson-js32-ah/as-acquired.webp",
       "gallery": []
     }
   },
@@ -1026,7 +1026,7 @@ const gear = [
     ],
     "acquiredSort": "2001",
     "images": {
-      "cover": null,
+      "cover": "assets/images/squier-strat/as-acquired.webp",
       "gallery": []
     }
   },
@@ -1374,7 +1374,7 @@ const gear = [
     "acquiredSort": "2005"
   },
   {
-    "id": "aria-sb40f-fretless",
+    "id": "aria-sb40-fretless",
     "kind": "bass",
     "brand": "Aria",
     "model": "SB-40F",
@@ -1434,7 +1434,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/sb-40f/as-acquired.webp",
       "gallery": []
     },
     "notes": "Affordable fretless bass kept completely stock during ownership. Typically used with flatwound strings. Eventually believed to have been traded toward another piece of gear.",
@@ -1576,7 +1576,7 @@ const gear = [
       }
     ],
     "images": {
-      "cover": null,
+      "cover": "assets/images/geddy-lee-jazz-bass/as-acquired.webp",
       "gallery": []
     },
     "notes": "Long-term bass purchased in 2007 and extensively changed cosmetically over its ownership while retaining the original pickups, controls and bridge. Originally black, refinished bright blue around 2012, then stripped to natural alder and finished with Tru-Oil in 2020. The original Geddy Lee signature neck was eventually sold separately in 2023.",
@@ -1699,7 +1699,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/frontman-amp/as-acquired.webp",
       "gallery": []
     },
     "notes": "First guitar amplifier. Supplied as part of the Squier Affinity Stratocaster starter pack.",
@@ -2087,7 +2087,7 @@ const gear = [
     ],
     "acquiredSort": "2022-12-06",
     "images": {
-      "cover": null,
+      "cover": "assets/images/fender-tone-master-twin/as-acquired.webp",
       "gallery": []
     }
   },
@@ -2158,7 +2158,7 @@ const gear = [
     ],
     "acquiredSort": "2017",
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-katana-50/as-acquired.webp",
       "gallery": []
     }
   },
@@ -3315,7 +3315,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/dunlop-crybaby-classic/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3488,7 +3488,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/boss-me-50-b/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3618,7 +3618,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/cioks-dc7/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3678,7 +3678,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/power-plant-iso/as-acquired.webp",
       "gallery": []
     },
     "notes": "Stopped working and was eventually disposed of.",
@@ -3743,7 +3743,7 @@ const gear = [
     },
     "notes": "Primary guitar pick. Individual packets are intentionally not tracked as separate purchases.",
     "images": {
-      "cover": null,
+      "cover": "assets/images/tortex/as-acquired.webp",
       "gallery": []
     },
     "history": []
@@ -3789,7 +3789,7 @@ const gear = [
     },
     "notes": "First guitar. Acquired around 2001. Further details to be reconstructed.",
     "images": {
-      "cover": null,
+      "cover": "assets/images/encore-w225/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3852,7 +3852,7 @@ const gear = [
     },
     "notes": "Mahogany parlor acoustic acquired in 2010. Purchase price and further acquisition details still to be added.",
     "images": {
-      "cover": null,
+      "cover": "assets/images/tanglewood-tw133/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -3921,7 +3921,7 @@ const gear = [
     ],
     "notes": "Used with an Ammo Clip-style holder to attach the microphone to a conventional microphone stand.",
     "images": {
-      "cover": null,
+      "cover": "assets/images/shure-520-dx/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -4010,7 +4010,7 @@ const gear = [
     },
     "notes": "Purchased as a Thomann bundle with a Millenium DS100 stand and Cordial CAM 9 BK cable. Individual component prices are not recorded.",
     "images": {
-      "cover": null,
+      "cover": "assets/images/superlux/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -4068,7 +4068,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/focusrite-solo/as-acquired.webp",
       "gallery": []
     },
     "history": [
