@@ -1280,7 +1280,7 @@ const gear = [
     ],
     "acquiredSort": "2021",
     "images": {
-      "cover": null,
+      "cover": "assets/images/custom-jazzmaster/as-acquired.webp",
       "gallery": []
     }
   },
@@ -1727,10 +1727,10 @@ const gear = [
   {
     "id": "avalanche-bass-practice-amp",
     "kind": "amp",
-    "brand": "Avalanche",
-    "model": "Unknown 10W Bass Amp",
-    "year": "~2005",
-    "yearApproximate": true,
+    "brand": "Avalanche by Freshman",
+    "model": "GB20 Bass Amp",
+    "year": "2005",
+    "yearApproximate": false,
     "status": "Unknown",
     "modified": false,
     "acquired": "~2005",
@@ -1763,7 +1763,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/freshman-avalanche-gb20/as-acquired.webp",
       "gallery": []
     },
     "notes": "Small bass practice amplifier believed to have been branded Avalanche. Exact model, price and specifications are currently unknown.",
@@ -1784,7 +1784,7 @@ const gear = [
     "id": "fender-guitar-amp-mid-2000s",
     "kind": "amp",
     "brand": "Fender",
-    "model": "Unknown — possibly Champ 100",
+    "model": "Champion 100",
     "year": "",
     "yearApproximate": true,
     "status": "Unknown",
@@ -1818,7 +1818,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/fender-champion-100/as-acquired.webp",
       "gallery": []
     },
     "identification": {
@@ -3556,7 +3556,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/korg-ax10g/as-acquired.webp",
       "gallery": []
     },
     "history": [
