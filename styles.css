@@ -30,3 +30,12 @@
 @media (max-width: 850px) { .collection-toolbar { flex-wrap: wrap; } .collection-controls { gap: 12px; } }
 @media (max-width: 700px) { .gear-list.gear-grid { gap: 24px 16px; } }
 @media (max-width: 420px) { .gear-list.gear-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Archive photo viewer and chronological contact-sheet dividers. */
+.gear-grid > .year-divider { grid-column: 1 / -1; margin: 4px 0 -12px; }
+.photo-enlarge { display: block; width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; cursor: zoom-in; }
+.photo-dialog { max-width: min(1100px, 94vw); max-height: 94dvh; padding: 16px; border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+.photo-dialog::backdrop { background: rgb(15 28 23 / 82%); }
+.photo-dialog img { display: block; max-width: 100%; max-height: 75dvh; width: auto; height: auto; margin: auto; object-fit: contain; }
+.photo-close { display: block; margin: 0 0 12px auto; padding: 8px 12px; border: 1px solid var(--border); background: transparent; font-size: .875rem; }
+.photo-dialog p { margin: 12px 0 0; color: var(--muted); font-size: .875rem; }

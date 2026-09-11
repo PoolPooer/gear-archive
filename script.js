@@ -399,7 +399,14 @@ function renderCollection() {
   }
 
   if (currentView === 'grid') {
-    list.innerHTML = visible.map(renderGridItem).join('');
+    let gridYear = null;
+    list.innerHTML = visible.map(item => {
+      const year = getAcquisitionYear(item);
+      const heading = currentSort !== 'brand-asc' && year !== gridYear
+        ? `<div class="year-divider"><span>${escapeHtml(year)}</span></div>` : '';
+      gridYear = year;
+      return heading + renderGridItem(item);
+    }).join('');
     bindCollectionItems();
     return;
   }
@@ -624,7 +631,7 @@ function renderHistoryEvent(event) {
    Detail page
 ---------------------------------------- */
 
-function showDetail(id) {
+function renderDetail(id) {
   const item = gear.find(
     i => i.id === id
   );
@@ -999,31 +1006,9 @@ function showDetail(id) {
     preventScroll: true
   });
 
-  backButton.addEventListener(
-    'click',
-    () => {
-      detailView.classList.add(
-        'hidden'
-      );
+  backButton.addEventListener('click', returnToCollection);
+  enablePhotoEnlargement(cover);
 
-      collectionView.classList.remove(
-        'hidden'
-      );
-
-      const originatingRow = [
-        ...document.querySelectorAll(
-          '.gear-row, .gear-grid-item'
-        )
-      ].find(
-        row =>
-          row.dataset.id === id
-      );
-
-      originatingRow?.focus({
-        preventScroll: true
-      });
-    }
-  );
 }
 
 
@@ -1055,6 +1040,10 @@ filterButtons.forEach(button => {
         'true'
       );
 
+      if (location.hash.startsWith('#gear/')) {
+        history.replaceState(null, '', location.pathname + location.search);
+        document.title = archiveTitle;
+      }
       currentCategory =
         button.dataset.filter;
 
@@ -1555,3 +1544,119 @@ viewButtons.forEach(button => {
     renderCollection();
   });
 });
+
+
+/* Record links and collection return state stay in browser history, never storage. */
+const archiveTitle = document.title;
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+function collectionSnapshot(id) {
+  return { category: currentCategory, status: currentStatus, search: currentSearch,
+    sort: currentSort, view: currentView, scroll: window.scrollY, id };
+}
+
+function showDetail(id) {
+  if (!gear.some(item => item.id === id)) return;
+  const fromCollection = !collectionView.classList.contains('hidden');
+  if (fromCollection) {
+    history.replaceState({ collection: collectionSnapshot(id) }, '', location.href);
+  }
+  history.pushState({ fromCollection }, '', '#gear/' + encodeURIComponent(id));
+  syncArchiveRoute();
+}
+
+function restoreCollection() {
+  const saved = history.state?.collection;
+  if (saved) {
+    currentCategory = saved.category; currentStatus = saved.status;
+    currentSearch = saved.search; currentSort = saved.sort; currentView = saved.view;
+    collectionSearch.value = currentSearch;
+    collectionStatus.value = currentStatus;
+    collectionSort.value = currentSort;
+    // Synchronize the enhanced select labels through their existing handlers.
+    collectionStatus.dispatchEvent(new Event('change', { bubbles: true }));
+    collectionSort.dispatchEvent(new Event('change', { bubbles: true }));
+    filterButtons.forEach(button => {
+      const active = button.dataset.filter === currentCategory;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    viewButtons.forEach(button => button.setAttribute('aria-pressed',
+      String(button.dataset.collectionView === currentView)));
+  }
+  detailView.classList.add('hidden');
+  collectionView.classList.remove('hidden');
+  document.title = archiveTitle;
+  renderCollection();
+  const target = [...list.querySelectorAll('button[data-id]')]
+    .find(button => button.dataset.id === saved?.id);
+  (target || collectionView).focus({ preventScroll: true });
+  window.scrollTo({ top: saved?.scroll || 0, behavior: 'instant' });
+}
+
+function returnToCollection() {
+  if (history.state?.fromCollection) history.back();
+  else {
+    history.replaceState(null, '', location.pathname + location.search);
+    restoreCollection();
+  }
+}
+
+function syncArchiveRoute() {
+  const dialog = document.getElementById('photoDialog');
+  if (dialog.open) dialog.close();
+  if (location.hash.startsWith('#gear/')) {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(6)); } catch { id = null; }
+    const item = gear.find(record => record.id === id);
+    if (item) {
+      renderDetail(id);
+      document.title = `${item.brand} ${item.model} — ${archiveTitle}`;
+      return;
+    }
+    // Invalid or removed records safely return to the archive.
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+  restoreCollection();
+}
+window.addEventListener('popstate', syncArchiveRoute);
+window.addEventListener('hashchange', syncArchiveRoute);
+
+/* Native modal dialog supplies focus containment and Escape-to-close. */
+const photoDialog = document.getElementById('photoDialog');
+const enlargedPhoto = document.getElementById('enlargedPhoto');
+const photoCaption = document.getElementById('photoCaption');
+let photoTrigger = null;
+document.getElementById('closePhoto').addEventListener('click', () => photoDialog.close());
+photoDialog.addEventListener('click', event => {
+  if (event.target === photoDialog) {
+    const box = photoDialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right ||
+        event.clientY < box.top || event.clientY > box.bottom) photoDialog.close();
+  }
+});
+photoDialog.addEventListener('close', () => {
+  enlargedPhoto.removeAttribute('src');
+  photoTrigger?.focus({ preventScroll: true });
+});
+function enablePhotoEnlargement(cover) {
+  if (!cover) return;
+  const trigger = document.createElement('button');
+  trigger.type = 'button';
+  trigger.className = 'photo-enlarge';
+  trigger.setAttribute('aria-label', `Enlarge photo: ${cover.alt}`);
+  trigger.setAttribute('aria-haspopup', 'dialog');
+  cover.before(trigger);
+  trigger.append(cover);
+  const hideTrigger = () => { trigger.hidden = true; };
+  cover.addEventListener('error', hideTrigger, { once: true });
+  if (cover.classList.contains('hidden')) hideTrigger();
+  trigger.addEventListener('click', () => {
+    photoTrigger = trigger;
+    enlargedPhoto.src = cover.currentSrc || cover.src;
+    enlargedPhoto.alt = cover.alt;
+    photoCaption.textContent = cover.alt;
+    photoDialog.showModal();
+  });
+}
+syncArchiveRoute();
