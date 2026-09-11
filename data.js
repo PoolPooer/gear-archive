@@ -1846,7 +1846,7 @@ const gear = [
     "kind": "amp",
     "subtype": "Bass amp head",
     "brand": "Genz Benz",
-    "model": "Shuttle 3.0",
+    "model": "Shuttle 6.0",
     "year": "",
     "status": "Owned",
     "modified": false,
@@ -1885,13 +1885,13 @@ const gear = [
       "cover": null,
       "gallery": []
     },
-    "notes": "Originally used with a large speaker cabinet believed to have been a 1×15. The original cabinet was later sold due to its size, while the Shuttle 3.0 head was retained.",
+    "notes": "The original cabinet was later sold due to its size, while the Shuttle 6.0 head was retained.",
     "history": [
       {
         "date": "Date unknown",
         "type": "Acquisition",
         "title": "Purchased",
-        "description": "Genz Benz Shuttle 3.0 bass amplifier head. Originally paired with a large speaker cabinet believed to have been a 1×15.",
+        "description": "Genz Benz Shuttle 6.0 bass amplifier head.",
         "cost": null,
         "currency": "EUR",
         "personalSpend": true
@@ -1904,7 +1904,7 @@ const gear = [
     "kind": "amp",
     "subtype": "Bass speaker cabinet",
     "brand": "Genz Benz",
-    "model": "Unknown",
+    "model": "NeoX 212T",
     "year": "",
     "status": "Sold",
     "modified": false,
@@ -1917,7 +1917,7 @@ const gear = [
     },
     "originalSpec": {
       "Type": "Bass speaker cabinet",
-      "Configuration": "Believed to be 1×15"
+      "Configuration": "2x12 cab"
     },
     "financials": {
       "acquisition": {
@@ -1964,7 +1964,7 @@ const gear = [
     "kind": "amp",
     "subtype": "Bass speaker cabinet",
     "brand": "Fender",
-    "model": "Rumble — exact model unknown",
+    "model": "Rumble 112",
     "year": "",
     "status": "Owned",
     "modified": false,
@@ -1980,7 +1980,7 @@ const gear = [
     },
     "currentSpec": {
       "Configuration": "Stock",
-      "Use": "Paired with Genz Benz Shuttle 3.0"
+      "Use": "Paired with Genz Benz Shuttle 6.0"
     },
     "financials": {
       "acquisition": {
@@ -2003,13 +2003,13 @@ const gear = [
       "cover": null,
       "gallery": []
     },
-    "notes": "Purchased as a more practical replacement for the larger Genz Benz cabinet and used with the Genz Benz Shuttle 3.0 head.",
+    "notes": "Purchased as a more practical replacement for the larger Genz Benz cabinet and used with the Genz Benz Shuttle 6.0 head.",
     "history": [
       {
         "date": "Date unknown",
         "type": "Acquisition",
         "title": "Purchased",
-        "description": "Purchased to replace the larger Genz Benz bass cabinet and paired with the retained Shuttle 3.0 amplifier head.",
+        "description": "Purchased to replace the larger Genz Benz bass cabinet and paired with the retained Shuttle 6.0 amplifier head.",
         "cost": null,
         "currency": "EUR",
         "personalSpend": true
