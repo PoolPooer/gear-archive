@@ -1882,7 +1882,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/genz-benz-shuttle-6/as-acquired.webp",
       "gallery": []
     },
     "notes": "The original cabinet was later sold due to its size, while the Shuttle 6.0 head was retained.",
@@ -1943,10 +1943,10 @@ const gear = [
       }
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/genz-benz-neox-212t/as-acquired.webp",
       "gallery": []
     },
-    "notes": "Originally paired with the Genz Benz Shuttle 3.0. Believed to have been a 1×15 cabinet. Sold because of its physical size and storage requirements.",
+    "notes": "Originally paired with the Genz Benz Shuttle 6.0. Sold because of its physical size and storage requirements.",
     "history": [
       {
         "date": "Date unknown",
@@ -2000,7 +2000,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/fender-rumble-112/as-acquired.webp",
       "gallery": []
     },
     "notes": "Purchased as a more practical replacement for the larger Genz Benz cabinet and used with the Genz Benz Shuttle 6.0 head.",
