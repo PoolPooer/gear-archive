@@ -1589,9 +1589,29 @@ function restoreCollection() {
   document.title = archiveTitle;
   renderCollection();
   const target = [...list.querySelectorAll('button[data-id]')]
-    .find(button => button.dataset.id === saved?.id);
-  (target || collectionView).focus({ preventScroll: true });
-  window.scrollTo({ top: saved?.scroll || 0, behavior: 'instant' });
+  .find(button => button.dataset.id === saved?.id);
+
+/*
+ * Restore focus only when returning from a record.
+ * On initial page load there is no saved collection
+ * state, so leave focus alone.
+ */
+if (saved) {
+  if (target) {
+    target.focus({
+      preventScroll: true
+    });
+  } else {
+    collectionView.focus({
+      preventScroll: true
+    });
+  }
+}
+
+window.scrollTo({
+  top: saved?.scroll || 0,
+  behavior: 'instant'
+});
 }
 
 function returnToCollection() {
