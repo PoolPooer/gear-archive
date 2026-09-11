@@ -18,6 +18,7 @@ let currentCategory = 'all';
 let currentStatus = 'all';
 let currentSearch = '';
 let currentSort = 'acquired-desc';
+let currentView = 'list';
 
 
 /* ----------------------------------------
@@ -329,6 +330,43 @@ function getKindLabel(item) {
    Collection
 ---------------------------------------- */
 
+function renderGridItem(item) {
+  const hasCover = typeof item.images?.cover === 'string' && item.images.cover.trim();
+  const metadata = [
+    item.year ? `${item.yearApproximate ? '~' : ''}${item.year}` : '',
+    item.status
+  ].filter(Boolean).join(' · ');
+
+  return `
+    <button class="gear-grid-item" data-id="${escapeHtml(item.id)}" type="button">
+      <span class="grid-photo">
+        ${hasCover ? `<img class="grid-cover" src="${escapeHtml(item.images.cover)}" alt="" loading="lazy" decoding="async" />` : ''}
+        <span class="photo-placeholder${hasCover ? ' hidden' : ''}" aria-hidden="true">
+          <span><span class="photo-mark">${escapeHtml(item.brand?.slice(0, 1) || '?')}</span>
+          <span>Your gear photo goes here</span></span>
+        </span>
+      </span>
+      <span class="grid-brand">${escapeHtml(item.brand)}</span>
+      <span class="grid-model">${escapeHtml(item.model)}</span>
+      <span class="grid-meta">${escapeHtml(metadata)}</span>
+    </button>
+  `;
+}
+
+function bindCollectionItems() {
+  list.querySelectorAll('button[data-id]').forEach(button => {
+    button.addEventListener('click', () => showDetail(button.dataset.id));
+  });
+  list.querySelectorAll('.grid-cover').forEach(cover => {
+    const showPlaceholder = () => {
+      cover.classList.add('hidden');
+      cover.parentElement.querySelector('.photo-placeholder').classList.remove('hidden');
+    };
+    cover.addEventListener('error', showPlaceholder, { once: true });
+    if (cover.complete && !cover.naturalWidth) showPlaceholder();
+  });
+}
+
 function renderCollection() {
   let visible = gear.filter(item => {
     const categoryMatch =
@@ -343,6 +381,7 @@ function renderCollection() {
   });
 
   visible = sortGear(visible);
+  list.classList.toggle('gear-grid', currentView === 'grid');
 
   collectionCount.textContent =
     `${visible.length} item${
@@ -356,6 +395,12 @@ function renderCollection() {
       </div>
     `;
 
+    return;
+  }
+
+  if (currentView === 'grid') {
+    list.innerHTML = visible.map(renderGridItem).join('');
+    bindCollectionItems();
     return;
   }
 
@@ -446,18 +491,7 @@ function renderCollection() {
     })
     .join('');
 
-  document
-    .querySelectorAll('.gear-row[data-id]')
-    .forEach(button => {
-      button.addEventListener(
-        'click',
-        () => {
-          showDetail(
-            button.dataset.id
-          );
-        }
-      );
-    });
+  bindCollectionItems();
 }
 
 
@@ -978,7 +1012,7 @@ function showDetail(id) {
 
       const originatingRow = [
         ...document.querySelectorAll(
-          '.gear-row'
+          '.gear-row, .gear-grid-item'
         )
       ].find(
         row =>
@@ -1509,3 +1543,15 @@ document
 
     sync();
   });
+
+// View choice is intentionally in memory only; every page load starts in List.
+const viewButtons = [...document.querySelectorAll('[data-collection-view]')];
+viewButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    currentView = button.dataset.collectionView;
+    viewButtons.forEach(control => control.setAttribute(
+      'aria-pressed', String(control.dataset.collectionView === currentView)
+    ));
+    renderCollection();
+  });
+});

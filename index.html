@@ -11,7 +11,7 @@
 
   <link
     rel="stylesheet"
-    href="styles.css?v=7"
+    href="styles.css?v=8"
   />
 </head>
 
@@ -141,6 +141,11 @@
 
 
         <div class="collection-controls">
+          <div class="collection-view-toggle" role="group" aria-label="Collection view">
+            <button type="button" data-collection-view="list" aria-pressed="true" aria-controls="gearList">List</button>
+            <button type="button" data-collection-view="grid" aria-pressed="false" aria-controls="gearList">Grid</button>
+          </div>
+
 
           <label
             class="sr-only"
@@ -215,6 +220,6 @@
 
 
   <script src="data.js?v=3"></script>
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

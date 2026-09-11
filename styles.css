@@ -3,3 +3,30 @@
 @media(max-width:1150px){.shell{gap:30px;padding:30px 24px 64px;grid-template-columns:165px minmax(0,1fr)}.site-header{top:30px;padding-right:18px}.gear-row{grid-template-columns:90px minmax(0,1fr) 76px 16px;column-gap:12px;row-gap:3px}.gear-brand{grid-column:1;grid-row:1 / 3}.gear-name{grid-column:2;grid-row:1}.gear-meta{grid-column:2;grid-row:2}.gear-status{grid-column:3;grid-row:1 / 3}.gear-arrow{grid-column:4;grid-row:1 / 3}.hero{grid-template-columns:1fr}.detail-cover{height:480px}.hero>.detail-media+.hero-info{max-width:600px}.two-col{grid-template-columns:1fr;gap:28px}.collection-toolbar{gap:16px}.collection-controls{gap:12px}}
 @media(max-width:700px){.shell{display:block;padding:22px 18px 48px}.site-header{position:static;min-height:0;border-right:0;border-bottom:1px solid var(--border);padding:0 0 16px;margin-bottom:24px}.site-header>div{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}.site-header .eyebrow{width:100%;margin-bottom:5px}.site-header h1{margin-bottom:0}.lede{margin:0}.filters{flex-direction:row;overflow-x:auto;margin-top:22px;gap:3px}.filter{flex-shrink:0;border-left:0;border-bottom:2px solid transparent;padding:10px}.filter.active{border-bottom-color:var(--green)}.archive-summary{gap:6px;font-size:.8125rem;margin-bottom:20px}.collection-toolbar{flex-direction:column;align-items:stretch;margin-bottom:26px;gap:12px}.collection-search{max-width:none}.collection-controls{justify-content:space-between;gap:20px}.archive-select{flex:1}.gear-row{grid-template-columns:minmax(0,1fr) 75px;padding:13px 2px;gap:3px 12px}.gear-brand{grid-column:1;grid-row:1;font-size:.75rem}.gear-name{grid-column:1;grid-row:2}.gear-meta{grid-column:1;grid-row:3}.gear-status{grid-column:2;grid-row:1 / 4}.gear-arrow{display:none}.hero{gap:24px}.detail-cover{height:370px;height:clamp(280px,90vw,470px)}.photo-placeholder{min-height:260px}.detail-title{font-size:2rem}.section-heading{flex-wrap:wrap;gap:8px}.data-row{grid-template-columns:100px minmax(0,1fr);gap:12px}.financial-row{gap:12px}.year-divider{margin-top:25px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Collection view: a contact sheet alongside the unchanged chronological list. */
+.collection-controls { flex-wrap: wrap; align-items: center; }
+.collection-view-toggle { display: flex; gap: 2px; flex-shrink: 0; }
+.collection-view-toggle button {
+  border: 0; border-bottom: 1px solid transparent; border-radius: 0;
+  padding: 10px 8px; background: transparent; color: var(--muted); font-size: .875rem;
+}
+.collection-view-toggle button[aria-pressed="true"] { color: var(--green); border-bottom-color: var(--green); }
+.collection-view-toggle button:hover { background: var(--soft); }
+.gear-list.gear-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 22px; }
+.gear-grid > .empty-state { grid-column: 1 / -1; }
+.gear-grid-item { display: block; min-width: 0; width: 100%; align-self: start; padding: 0 0 12px; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; background: transparent; text-align: left; }
+.grid-photo { display: block; position: relative; aspect-ratio: 4 / 3; margin-bottom: 12px; background: var(--panel); }
+.grid-cover { display: block; width: 100%; height: 100%; object-fit: contain; }
+.grid-photo .photo-placeholder { position: absolute; inset: 0; min-height: 0; font-size: .75rem; padding: 8px; }
+.grid-photo .photo-mark { display: block; font-size: 2rem; margin-bottom: 4px; }
+.grid-brand,.grid-model,.grid-meta { display: block; overflow-wrap: anywhere; }
+.grid-brand { color: var(--muted); font-size: .8125rem; }
+.grid-model { font-size: 1rem; font-weight: 550; margin: 2px 0 4px; }
+.grid-meta { color: var(--muted); font-size: .8125rem; }
+.gear-grid-item:hover { border-bottom-color: var(--teal); }
+.gear-grid-item:hover .grid-model { color: var(--teal); }
+@media (max-width: 1100px) { .gear-list.gear-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 850px) { .collection-toolbar { flex-wrap: wrap; } .collection-controls { gap: 12px; } }
+@media (max-width: 700px) { .gear-list.gear-grid { gap: 24px 16px; } }
+@media (max-width: 420px) { .gear-list.gear-grid { grid-template-columns: minmax(0, 1fr); } }
