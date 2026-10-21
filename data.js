@@ -688,7 +688,6 @@ const gear = [
       "Nut width": "1-9/16 inch",
       "Weight": "5 lb 9 oz"
     },
-
     "currentSpec": {
       "Pickups": "Original Gibson pickups",
       "Electronics": "Original electronics",
@@ -711,11 +710,11 @@ const gear = [
         "note": "Purchased via Reverb · final price including tax"
       },
       "additionalSpend": {
-      "modifications": 280.23,
-      "maintenance": null,
-      "accessories": null,
-      "importFees": null,
-      "other": null
+        "modifications": 280.23,
+        "maintenance": null,
+        "accessories": null,
+        "importFees": null,
+        "other": null
       },
       "recoveries": [],
       "disposal": null
@@ -740,34 +739,34 @@ const gear = [
       "sellerNotes": "Original listing described the guitar as lightweight, strong-output, and in particularly good condition for a 1964 Melody Maker."
     },
     "history": [
-  {
-    "date": "11 Oct 2025",
-    "type": "Modification",
-    "title": "OAI D10 Dwyer II knobs fitted",
-    "description": "Four OAI D10 Dwyer II control knobs fitted. The knobs were already owned, having originally been purchased on 4 Nov 2020 for €9 each.",
-    "cost": 0,
-    "currency": "EUR",
-    "category": "Cosmetic / Hardware"
-  },
-  {
-    "date": "Sep 2025",
-    "type": "Modification",
-    "title": "Vintage Leo Quan Badass bridge fitted",
-    "description": "Replaced the original Gibson wrap-around bridge with the Vintage Leo Quan Badass bridge supplied with the guitar. Original Gibson bridge retained.",
-    "cost": 0,
-    "currency": "EUR",
-    "category": "Hardware"
-  },
-  {
-    "date": "12 Sep 2025",
-    "type": "Acquisition",
-    "title": "Purchased",
-    "description": "Purchased as a 1964 Gibson Melody Maker D with its original Gibson wrap-around bridge installed. A Vintage Leo Quan Badass bridge and 1970s Gretsch Committee hard shell case were also included.",
-    "cost": 1965.63,
-    "currency": "EUR",
-    "personalSpend": true
-  }
-],
+      {
+        "date": "11 Oct 2025",
+        "type": "Modification",
+        "title": "OAI D10 Dwyer II knobs fitted",
+        "description": "Four OAI D10 Dwyer II control knobs fitted. The knobs were already owned, having originally been purchased on 4 Nov 2020 for €9 each.",
+        "cost": 0,
+        "currency": "EUR",
+        "category": "Cosmetic / Hardware"
+      },
+      {
+        "date": "Sep 2025",
+        "type": "Modification",
+        "title": "Vintage Leo Quan Badass bridge fitted",
+        "description": "Replaced the original Gibson wrap-around bridge with the Vintage Leo Quan Badass bridge supplied with the guitar. Original Gibson bridge retained.",
+        "cost": 0,
+        "currency": "EUR",
+        "category": "Hardware"
+      },
+      {
+        "date": "12 Sep 2025",
+        "type": "Acquisition",
+        "title": "Purchased",
+        "description": "Purchased as a 1964 Gibson Melody Maker D with its original Gibson wrap-around bridge installed. A Vintage Leo Quan Badass bridge and 1970s Gretsch Committee hard shell case were also included.",
+        "cost": 1965.63,
+        "currency": "EUR",
+        "personalSpend": true
+      }
+    ],
     "acquiredSort": "2025-09-12",
     "images": {
       "cover": "assets/images/melody-maker-1964/as-acquired.webp",
@@ -1649,7 +1648,6 @@ const gear = [
     ],
     "acquiredSort": "2007-06"
   },
-
   {
     "id": "fender-frontman-10g",
     "kind": "amp",
@@ -2856,7 +2854,7 @@ const gear = [
     ],
     "acquiredSort": "2017-05"
   },
-    {
+  {
     "id": "boss-os-2",
     "kind": "pedal",
     "brand": "Boss",
@@ -3099,7 +3097,7 @@ const gear = [
     "kind": "pedal",
     "brand": "Electro-Harmonix / JHS",
     "model": "Big Muff 2",
-    "status": "Owned",
+    "status": "Sold",
     "modified": false,
     "acquired": "23 Dec 2025",
     "acquisitionType": "Purchased",
@@ -3129,7 +3127,15 @@ const gear = [
         "other": null
       },
       "recoveries": [],
-      "disposal": null
+      "disposal": {
+        "amount": 248.0,
+        "currency": "EUR",
+        "type": "Sale",
+        "platform": "Reverb",
+        "fees": 39.31,
+        "netProceeds": 208.69,
+        "note": "Sold to a buyer in Austria. Net proceeds after Reverb deductions; any separately paid shipping is not yet recorded."
+      }
     },
     "images": {
       "cover": "assets/images/big-muff-2/as-acquired.webp",
@@ -3143,6 +3149,15 @@ const gear = [
         "cost": 236.9,
         "currency": "EUR",
         "personalSpend": true
+      },
+      {
+        "date": "1 Sep 2026",
+        "type": "Sale",
+        "title": "Sold on Reverb",
+        "description": "Sold to a buyer in Austria. Gross sale €248.00; Reverb deductions €39.31; net proceeds €208.69.",
+        "cost": 248.0,
+        "currency": "EUR",
+        "personalSpend": false
       }
     ],
     "acquiredSort": "2025-12-23"
@@ -3748,7 +3763,6 @@ const gear = [
     },
     "history": []
   },
-
   {
     "id": "encore-w225",
     "kind": "acoustic",
@@ -3868,7 +3882,6 @@ const gear = [
     ],
     "acquiredSort": "2010"
   },
-
   {
     "id": "shure-520dx",
     "kind": "microphone",
@@ -4026,7 +4039,6 @@ const gear = [
     ],
     "acquiredSort": "2021-12-01"
   },
-
   {
     "id": "focusrite-scarlett-solo-3rd-gen",
     "kind": "recording",
@@ -4152,6 +4164,64 @@ const gear = [
       }
     ],
     "acquiredSort": null
+  },
+  {
+    "id": "fender-player-fusion-jaguar-baritone-special",
+    "kind": "guitar",
+    "brand": "Fender",
+    "model": "Player Fusion Jaguar Baritone Special",
+    "status": "Owned",
+    "modified": false,
+    "acquired": "28 Sep 2026",
+    "acquisitionType": "Purchased",
+    "originalPrice": {
+      "amount": 1249,
+      "currency": "EUR",
+      "approximate": false
+    },
+    "originalSpec": {
+      "Colour": "Black",
+      "Tuning": "B standard",
+      "Configuration": "Stock"
+    },
+    "currentSpec": {
+      "Colour": "Black",
+      "Tuning": "B standard",
+      "Configuration": "Stock"
+    },
+    "financials": {
+      "acquisition": {
+        "amount": 1249,
+        "currency": "EUR",
+        "personalSpend": true,
+        "approximate": false,
+        "note": "Purchased directly from Fender"
+      },
+      "additionalSpend": {
+        "modifications": null,
+        "maintenance": null,
+        "accessories": null,
+        "importFees": null,
+        "other": null
+      },
+      "recoveries": [],
+      "disposal": null
+    },
+    "images": {
+      "cover": null,
+      "gallery": []
+    },
+    "history": [
+      {
+        "date": "28 Sep 2026",
+        "type": "Acquisition",
+        "title": "Purchased directly from Fender",
+        "cost": 1249,
+        "currency": "EUR",
+        "personalSpend": true
+      }
+    ],
+    "acquiredSort": "2026-09-28"
   }
 ];
 

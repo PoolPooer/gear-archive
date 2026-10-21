@@ -131,11 +131,14 @@ function getRecoveries(item) {
 }
 
 function getDisposalRecovery(item) {
-  const disposal =
-    item.financials?.disposal;
+  const disposal = item.financials?.disposal;
 
   if (!disposal) {
     return 0;
+  }
+
+  if (disposal.netProceeds != null) {
+    return numberOrZero(disposal.netProceeds);
   }
 
   return numberOrZero(disposal.amount);
