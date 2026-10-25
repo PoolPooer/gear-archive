@@ -128,7 +128,7 @@ const gear = [
     ],
     "acquiredSort": "2004-08",
     "images": {
-      "cover": "assets/images/fender-cyclone-hh/as-acquired.webp",
+      "cover": "assets/images/fender-cyclone-hh/catalog.webp",
       "gallery": []
     }
   },
@@ -227,7 +227,7 @@ const gear = [
     ],
     "acquiredSort": "2013",
     "images": {
-      "cover": "assets/images/mustang/as-acquired.webp",
+      "cover": "assets/images/mustang/catalog.webp",
       "gallery": []
     }
   },
@@ -372,7 +372,7 @@ const gear = [
     ],
     "acquiredSort": "2019-07-05",
     "images": {
-      "cover": "assets/images/powercaster/as-acquired.webp",
+      "cover": "assets/images/powercaster/catalog.webp",
       "gallery": []
     }
   },
@@ -524,7 +524,7 @@ const gear = [
     ],
     "acquiredSort": "2021-04",
     "images": {
-      "cover": "assets/images/ibanez/as-acquired.webp",
+      "cover": "assets/images/ibanez/catalog.webp",
       "gallery": []
     }
   },
@@ -654,7 +654,7 @@ const gear = [
     ],
     "acquiredSort": "2023-10-14",
     "images": {
-      "cover": "assets/images/strat-o-sonic/as-acquired.webp",
+      "cover": "assets/images/strat-o-sonic/catalog.webp",
       "gallery": []
     }
   },
@@ -769,7 +769,7 @@ const gear = [
     ],
     "acquiredSort": "2025-09-12",
     "images": {
-      "cover": "assets/images/melody-maker-1964/as-acquired.webp",
+      "cover": "assets/images/melody-maker-1964/catalog.webp",
       "gallery": []
     }
   },
@@ -910,7 +910,7 @@ const gear = [
     ],
     "acquiredSort": "2024-06-19",
     "images": {
-      "cover": "assets/images/jackson-js32-ah/as-acquired.webp",
+      "cover": "assets/images/jackson-js32-ah/catalog.webp",
       "gallery": []
     }
   },
@@ -1025,7 +1025,7 @@ const gear = [
     ],
     "acquiredSort": "2001",
     "images": {
-      "cover": "assets/images/squier-strat/as-acquired.webp",
+      "cover": "assets/images/squier-strat/catalog.webp",
       "gallery": []
     }
   },
@@ -1279,7 +1279,7 @@ const gear = [
     ],
     "acquiredSort": "2021",
     "images": {
-      "cover": "assets/images/custom-jazzmaster/as-acquired.webp",
+      "cover": "assets/images/custom-jazzmaster/catalog.webp",
       "gallery": []
     }
   },
@@ -1433,7 +1433,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/sb-40f/as-acquired.webp",
+      "cover": "assets/images/sb-40f/catalog.webp",
       "gallery": []
     },
     "notes": "Affordable fretless bass kept completely stock during ownership. Typically used with flatwound strings. Eventually believed to have been traded toward another piece of gear.",
@@ -1575,7 +1575,7 @@ const gear = [
       }
     ],
     "images": {
-      "cover": "assets/images/geddy-lee-jazz-bass/as-acquired.webp",
+      "cover": "assets/images/geddy-lee-jazz-bass/catalog.webp",
       "gallery": []
     },
     "notes": "Long-term bass purchased in 2007 and extensively changed cosmetically over its ownership while retaining the original pickups, controls and bridge. Originally black, refinished bright blue around 2012, then stripped to natural alder and finished with Tru-Oil in 2020. The original Geddy Lee signature neck was eventually sold separately in 2023.",
@@ -1697,7 +1697,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/frontman-amp/as-acquired.webp",
+      "cover": "assets/images/frontman-amp/catalog.webp",
       "gallery": []
     },
     "notes": "First guitar amplifier. Supplied as part of the Squier Affinity Stratocaster starter pack.",
@@ -1761,7 +1761,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/freshman-avalanche-gb20/as-acquired.webp",
+      "cover": "assets/images/freshman-avalanche-gb20/catalog.webp",
       "gallery": []
     },
     "notes": "Small bass practice amplifier believed to have been branded Avalanche. Exact model, price and specifications are currently unknown.",
@@ -1816,7 +1816,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/fender-champion-100/as-acquired.webp",
+      "cover": "assets/images/fender-champion-100/catalog.webp",
       "gallery": []
     },
     "identification": {
@@ -1880,7 +1880,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/genz-benz-shuttle-6/as-acquired.webp",
+      "cover": "assets/images/genz-benz-shuttle-6/catalog.webp",
       "gallery": []
     },
     "notes": "The original cabinet was later sold due to its size, while the Shuttle 6.0 head was retained.",
@@ -1941,7 +1941,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/genz-benz-neox-212t/as-acquired.webp",
+      "cover": "assets/images/genz-benz-neox-212t/catalog.webp",
       "gallery": []
     },
     "notes": "Originally paired with the Genz Benz Shuttle 6.0. Sold because of its physical size and storage requirements.",
@@ -1998,7 +1998,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/fender-rumble-112/as-acquired.webp",
+      "cover": "assets/images/fender-rumble-112/catalog.webp",
       "gallery": []
     },
     "notes": "Purchased as a more practical replacement for the larger Genz Benz cabinet and used with the Genz Benz Shuttle 6.0 head.",
@@ -2085,7 +2085,7 @@ const gear = [
     ],
     "acquiredSort": "2022-12-06",
     "images": {
-      "cover": "assets/images/fender-tone-master-twin/as-acquired.webp",
+      "cover": "assets/images/fender-tone-master-twin/catalog.webp",
       "gallery": []
     }
   },
@@ -2156,7 +2156,7 @@ const gear = [
     ],
     "acquiredSort": "2017",
     "images": {
-      "cover": "assets/images/boss-katana-50/as-acquired.webp",
+      "cover": "assets/images/boss-katana-50/catalog.webp",
       "gallery": []
     }
   },
@@ -2198,7 +2198,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/jhs-angry-driver/as-acquired.webp",
+      "cover": "assets/images/jhs-angry-driver/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2251,7 +2251,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/mxr-carbon-copy/as-acquired.webp",
+      "cover": "assets/images/mxr-carbon-copy/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2304,7 +2304,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/boss-dd3/as-acquired.webp",
+      "cover": "assets/images/boss-dd3/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2357,7 +2357,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/fuzz-gun/as-acquired.webp",
+      "cover": "assets/images/fuzz-gun/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2412,7 +2412,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/thee-fuzz-warr-overload/as-acquired.webp",
+      "cover": "assets/images/thee-fuzz-warr-overload/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2473,7 +2473,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/greer-the-southland/as-acquired.webp",
+      "cover": "assets/images/greer-the-southland/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2526,7 +2526,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/ehx-mel-9/as-acquired.webp",
+      "cover": "assets/images/ehx-mel-9/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2584,7 +2584,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/jhs-morning-glory/as-acquired.webp",
+      "cover": "assets/images/jhs-morning-glory/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2644,7 +2644,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/super-war-dance/as-acquired.webp",
+      "cover": "assets/images/super-war-dance/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2702,7 +2702,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/jhs-the-smiley/as-acquired.webp",
+      "cover": "assets/images/jhs-the-smiley/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2767,7 +2767,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/boss-eq-7/as-acquired.webp",
+      "cover": "assets/images/boss-eq-7/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2832,7 +2832,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/mxr-phase-100/as-acquired.webp",
+      "cover": "assets/images/mxr-phase-100/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2898,7 +2898,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/boss-os-2/as-acquired.webp",
+      "cover": "assets/images/boss-os-2/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -2964,7 +2964,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/zvex-fuzz-factory/as-acquired.webp",
+      "cover": "assets/images/zvex-fuzz-factory/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3024,7 +3024,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/ua-dream-65/as-acquired.webp",
+      "cover": "assets/images/ua-dream-65/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3077,7 +3077,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/tc-poly-tune-noir/as-acquired.webp",
+      "cover": "assets/images/tc-poly-tune-noir/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3138,7 +3138,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/big-muff-2/as-acquired.webp",
+      "cover": "assets/images/big-muff-2/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3201,7 +3201,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/hoof-reaper/as-acquired.webp",
+      "cover": "assets/images/hoof-reaper/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3263,7 +3263,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/dunlop-mini-cry-baby/as-acquired.webp",
+      "cover": "assets/images/dunlop-mini-cry-baby/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3330,7 +3330,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/dunlop-crybaby-classic/as-acquired.webp",
+      "cover": "assets/images/dunlop-crybaby-classic/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3390,7 +3390,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/quite-theory-prelude/as-acquired.webp",
+      "cover": "assets/images/quite-theory-prelude/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3443,7 +3443,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/boss-tuner/as-acquired.webp",
+      "cover": "assets/images/boss-tuner/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3503,7 +3503,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/boss-me-50-b/as-acquired.webp",
+      "cover": "assets/images/boss-me-50-b/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3571,7 +3571,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/korg-ax10g/as-acquired.webp",
+      "cover": "assets/images/korg-ax10g/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3633,7 +3633,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/cioks-dc7/as-acquired.webp",
+      "cover": "assets/images/cioks-dc7/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3693,7 +3693,7 @@ const gear = [
       }
     },
     "images": {
-      "cover": "assets/images/power-plant-iso/as-acquired.webp",
+      "cover": "assets/images/power-plant-iso/catalog.webp",
       "gallery": []
     },
     "notes": "Stopped working and was eventually disposed of.",
@@ -3758,7 +3758,7 @@ const gear = [
     },
     "notes": "Primary guitar pick. Individual packets are intentionally not tracked as separate purchases.",
     "images": {
-      "cover": "assets/images/tortex/as-acquired.webp",
+      "cover": "assets/images/tortex/catalog.webp",
       "gallery": []
     },
     "history": []
@@ -3803,7 +3803,7 @@ const gear = [
     },
     "notes": "First guitar. Acquired around 2001. Further details to be reconstructed.",
     "images": {
-      "cover": "assets/images/encore-w225/as-acquired.webp",
+      "cover": "assets/images/encore-w225/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3866,7 +3866,7 @@ const gear = [
     },
     "notes": "Mahogany parlor acoustic acquired in 2010. Purchase price and further acquisition details still to be added.",
     "images": {
-      "cover": "assets/images/tanglewood-tw133/as-acquired.webp",
+      "cover": "assets/images/tanglewood-tw133/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -3934,7 +3934,7 @@ const gear = [
     ],
     "notes": "Used with an Ammo Clip-style holder to attach the microphone to a conventional microphone stand.",
     "images": {
-      "cover": "assets/images/shure-520-dx/as-acquired.webp",
+      "cover": "assets/images/shure-520-dx/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -4023,7 +4023,7 @@ const gear = [
     },
     "notes": "Purchased as a Thomann bundle with a Millenium DS100 stand and Cordial CAM 9 BK cable. Individual component prices are not recorded.",
     "images": {
-      "cover": "assets/images/superlux/as-acquired.webp",
+      "cover": "assets/images/superlux/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -4080,7 +4080,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": "assets/images/focusrite-solo/as-acquired.webp",
+      "cover": "assets/images/focusrite-solo/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -4142,7 +4142,7 @@ const gear = [
     },
     "notes": "Purchased from the local music shop. Original purchase date and price have not yet been recovered.",
     "images": {
-      "cover": "assets/images/boss-br-600/as-acquired.webp",
+      "cover": "assets/images/boss-br-600/catalog.webp",
       "gallery": []
     },
     "history": [
@@ -4208,7 +4208,7 @@ const gear = [
       "disposal": null
     },
     "images": {
-      "cover": null,
+      "cover": "assets/images/baritone/catalog.webp",
       "gallery": []
     },
     "history": [
