@@ -672,6 +672,41 @@ function renderDetail(id) {
     typeof item.images?.cover === 'string' &&
     item.images.cover.trim();
 
+
+  // Optional historical photographs.
+  const galleryPhotos = (Array.isArray(item.images?.gallery)
+    ? item.images.gallery : [])
+    .map(photo => typeof photo === 'string' ? { src: photo } : photo)
+    .filter(photo => photo && typeof photo.src === 'string' && photo.src.trim());
+
+  const galleryMarkup = galleryPhotos.length ? `
+    <section class="photo-history" aria-labelledby="photoHistoryHeading">
+      <div class="section-heading">
+        <h3 id="photoHistoryHeading">Photographic history</h3>
+        <span>Equipment through the years</span>
+      </div>
+      <div class="photo-history-grid">
+        ${galleryPhotos.map(photo => {
+          const description = [photo.date, photo.caption]
+            .filter(Boolean).join(' · ');
+          const alt = photo.alt ||
+            [item.brand, item.model, description].filter(Boolean).join(' · ');
+
+          return `
+            <figure class="photo-history-item">
+              <img class="gallery-photo"
+                src="${escapeHtml(photo.src)}"
+                alt="${escapeHtml(alt)}"
+                loading="lazy"
+                decoding="async" />
+              ${description
+                ? `<figcaption>${escapeHtml(description)}</figcaption>`
+                : ''}
+            </figure>`;
+        }).join('')}
+      </div>
+    </section>` : '';
+
   const historyMarkup =
     (item.history || [])
       .map(renderHistoryEvent)
@@ -848,6 +883,8 @@ function renderDetail(id) {
         : ''
     }
 
+    ${galleryMarkup}
+
     <section class="timeline-wrap">
       <div class="section-heading">
         <h3>
@@ -1011,6 +1048,18 @@ function renderDetail(id) {
 
   backButton.addEventListener('click', returnToCollection);
   enablePhotoEnlargement(cover);
+
+  detailView.querySelectorAll('.gallery-photo').forEach(photo => {
+    photo.addEventListener('error', () => {
+      photo.closest('.photo-history-item')?.remove();
+      if (!detailView.querySelector('.photo-history-item')) {
+        detailView.querySelector('.photo-history')?.remove();
+      }
+    }, { once: true });
+
+    enablePhotoEnlargement(photo);
+  });
+
 
 }
 

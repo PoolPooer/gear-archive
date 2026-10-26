@@ -135,3 +135,49 @@ body { -webkit-font-smoothing: antialiased; }
 .financial-total dt, .financial-total dd { color: var(--green); font-weight: 650; }
 .photo-close { color: var(--green); }
 .photo-close:hover { background: var(--soft); }
+
+/* Historical photographic galleries */
+.photo-history {
+  margin-top: 44px;
+}
+
+.photo-history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.photo-history-item {
+  margin: 0;
+  min-width: 0;
+}
+
+.photo-history-item .photo-enlarge {
+  background: var(--photo-paper);
+}
+
+.gallery-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.photo-history-item figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .photo-history-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .photo-history-grid {
+    grid-template-columns: 1fr;
+  }
+}

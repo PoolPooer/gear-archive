@@ -1575,9 +1575,26 @@ const gear = [
       }
     ],
     "images": {
-      "cover": "assets/images/geddy-lee-jazz-bass/catalog.webp",
-      "gallery": []
+  "cover": "assets/images/geddy-lee-jazz-bass/catalog.webp",
+  "gallery": [
+    {
+      "src": "assets/images/geddy-lee-jazz-bass/gallery/as-acquired.webp",
+      "caption": "Original configuration as acquired"
     },
+    {
+      "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-refinish.webp",
+      "caption": "Blue refinish with white pickguard"
+    },
+    {
+      "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-black-pickguard.webp",
+      "caption": "Blue refinish with black pickguard"
+    },
+    {
+      "src": "assets/images/geddy-lee-jazz-bass/gallery/natural-finish.webp",
+      "caption": "Natural finish with black pickguard and rosewood fingerboard"
+    }
+  ]
+},
     "notes": "Long-term bass purchased in 2007 and extensively changed cosmetically over its ownership while retaining the original pickups, controls and bridge. Originally black, refinished bright blue around 2012, then stripped to natural alder and finished with Tru-Oil in 2020. The original Geddy Lee signature neck was eventually sold separately in 2023.",
     "history": [
       {
