@@ -129,7 +129,28 @@ const gear = [
     "acquiredSort": "2004-08",
     "images": {
       "cover": "assets/images/fender-cyclone-hh/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/fender-cyclone-hh/gallery/as-acquired.webp",
+          "caption": "Original configuration as acquired"
+        },
+        {
+          "src": "assets/images/fender-cyclone-hh/gallery/pickup-change.webp",
+          "caption": "Pickup modification"
+        },
+        {
+          "src": "assets/images/fender-cyclone-hh/gallery/tuner-change.webp",
+          "caption": "Tuner modification"
+        },
+        {
+          "src": "assets/images/fender-cyclone-hh/gallery/locking-tuners.webp",
+          "caption": "Locking tuner installation detail"
+        },
+        {
+          "src": "assets/images/fender-cyclone-hh/gallery/current.webp",
+          "caption": "Current configuration"
+        }
+      ]
     }
   },
   {
@@ -228,7 +249,16 @@ const gear = [
     "acquiredSort": "2013",
     "images": {
       "cover": "assets/images/mustang/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/mustang/gallery/as-acquired.webp",
+          "caption": "Configuration as acquired"
+        },
+        {
+          "src": "assets/images/mustang/gallery/mods.webp",
+          "caption": "Historical modification detail"
+        }
+      ]
     }
   },
   {
@@ -373,7 +403,24 @@ const gear = [
     "acquiredSort": "2019-07-05",
     "images": {
       "cover": "assets/images/powercaster/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/powercaster/gallery/as-purchased.jpeg",
+          "caption": "Original configuration as purchased"
+        },
+        {
+          "src": "assets/images/powercaster/gallery/knob-change.webp",
+          "caption": "Replacement control knobs"
+        },
+        {
+          "src": "assets/images/powercaster/gallery/locking-tuners.webp",
+          "caption": "Locking tuner modification"
+        },
+        {
+          "src": "assets/images/powercaster/gallery/current.webp",
+          "caption": "Current configuration"
+        }
+      ]
     }
   },
   {
@@ -525,7 +572,20 @@ const gear = [
     "acquiredSort": "2021-04",
     "images": {
       "cover": "assets/images/ibanez/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/ibanez/gallery/as-acquired.webp",
+          "caption": "Configuration as acquired"
+        },
+        {
+          "src": "assets/images/ibanez/gallery/as-found.jpeg",
+          "caption": "Historical condition photograph"
+        },
+        {
+          "src": "assets/images/ibanez/gallery/nut-change.jpeg",
+          "caption": "Locking nut modification"
+        }
+      ]
     }
   },
   {
@@ -655,7 +715,20 @@ const gear = [
     "acquiredSort": "2023-10-14",
     "images": {
       "cover": "assets/images/strat-o-sonic/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/strat-o-sonic/gallery/as-acquired.webp",
+          "caption": "Original configuration as acquired"
+        },
+        {
+          "src": "assets/images/strat-o-sonic/gallery/pickup-bridge-change.jpg",
+          "caption": "Pickup and bridge modifications"
+        },
+        {
+          "src": "assets/images/strat-o-sonic/gallery/tuners-change.jpg",
+          "caption": "Replacement tuner modification"
+        }
+      ]
     }
   },
   {
@@ -770,7 +843,20 @@ const gear = [
     "acquiredSort": "2025-09-12",
     "images": {
       "cover": "assets/images/melody-maker-1964/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/melody-maker-1964/gallery/as-acquired.webp",
+          "caption": "Original configuration as acquired"
+        },
+        {
+          "src": "assets/images/melody-maker-1964/gallery/as-purchased.jpeg",
+          "caption": "Condition at purchase"
+        },
+        {
+          "src": "assets/images/melody-maker-1964/gallery/bridge-knob-change.jpeg",
+          "caption": "Bridge and control knob changes"
+        }
+      ]
     }
   },
   {
@@ -911,7 +997,20 @@ const gear = [
     "acquiredSort": "2024-06-19",
     "images": {
       "cover": "assets/images/jackson-js32-ah/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/jackson-js32-ah/gallery/as-acquired.webp",
+          "caption": "Original configuration as acquired"
+        },
+        {
+          "src": "assets/images/jackson-js32-ah/gallery/bridge-nut-replacement.jpeg",
+          "caption": "Bridge and nut replacement"
+        },
+        {
+          "src": "assets/images/jackson-js32-ah/gallery/pickup-stickers.jpeg",
+          "caption": "Pickup appearance modification"
+        }
+      ]
     }
   },
   {
@@ -1026,7 +1125,16 @@ const gear = [
     "acquiredSort": "2001",
     "images": {
       "cover": "assets/images/squier-strat/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/squier-strat/gallery/as-acquired.webp",
+          "caption": "Original instrument photograph"
+        },
+        {
+          "src": "assets/images/squier-strat/gallery/argos-2002.webp",
+          "caption": "Period Argos catalogue reference, 2002"
+        }
+      ]
     }
   },
   {
@@ -1280,7 +1388,16 @@ const gear = [
     "acquiredSort": "2021",
     "images": {
       "cover": "assets/images/custom-jazzmaster/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/custom-jazzmaster/gallery/as-acquired.webp",
+          "caption": "Configuration as acquired"
+        },
+        {
+          "src": "assets/images/custom-jazzmaster/gallery/assembly.jpeg",
+          "caption": "Instrument assembly"
+        }
+      ]
     }
   },
   {
@@ -1577,23 +1694,27 @@ const gear = [
     "images": {
   "cover": "assets/images/geddy-lee-jazz-bass/catalog.webp",
   "gallery": [
-    {
-      "src": "assets/images/geddy-lee-jazz-bass/gallery/as-acquired.webp",
-      "caption": "Original configuration as acquired"
-    },
-    {
-      "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-refinish.webp",
-      "caption": "Blue refinish with white pickguard"
-    },
-    {
-      "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-black-pickguard.webp",
-      "caption": "Blue refinish with black pickguard"
-    },
-    {
-      "src": "assets/images/geddy-lee-jazz-bass/gallery/natural-finish.webp",
-      "caption": "Natural finish with black pickguard and rosewood fingerboard"
-    }
-  ]
+        {
+          "src": "assets/images/geddy-lee-jazz-bass/gallery/as-acquired.webp",
+          "caption": "Original configuration as acquired"
+        },
+        {
+          "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-refinish.webp",
+          "caption": "Blue refinish with white pickguard"
+        },
+        {
+          "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-black-pickguard.webp",
+          "caption": "Blue refinish with black pickguard"
+        },
+        {
+          "src": "assets/images/geddy-lee-jazz-bass/gallery/natural-finish.webp",
+          "caption": "Natural finish with black pickguard and rosewood fingerboard"
+        },
+        {
+          "src": "assets/images/geddy-lee-jazz-bass/gallery/new-black.webp",
+          "caption": "Later configuration with replacement black pickguard"
+        }
+      ]
 },
     "notes": "Long-term bass purchased in 2007 and extensively changed cosmetically over its ownership while retaining the original pickups, controls and bridge. Originally black, refinished bright blue around 2012, then stripped to natural alder and finished with Tru-Oil in 2020. The original Geddy Lee signature neck was eventually sold separately in 2023.",
     "history": [
@@ -2430,7 +2551,16 @@ const gear = [
     },
     "images": {
       "cover": "assets/images/thee-fuzz-warr-overload/catalog.webp",
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/thee-fuzz-warr-overload/gallery/as-acquired.webp",
+          "caption": "Pedal as acquired"
+        },
+        {
+          "src": "assets/images/thee-fuzz-warr-overload/gallery/ffuzz-warr-signed.webp",
+          "caption": "Signed enclosure detail"
+        }
+      ]
     },
     "history": [
       {
