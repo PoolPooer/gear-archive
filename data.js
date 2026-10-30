@@ -1697,28 +1697,30 @@ const gear = [
     ],
     "images": {
   "cover": "assets/images/geddy-lee-jazz-bass/catalog.webp",
-  "gallery": [
-        {
-          "src": "assets/images/geddy-lee-jazz-bass/gallery/as-acquired.webp",
-          "caption": "Original configuration as acquired"
-        },
-        {
-          "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-refinish.webp",
-          "caption": "Blue refinish with white pickguard"
-        },
-        {
-          "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-black-pickguard.webp",
-          "caption": "Blue refinish with black pickguard"
-        },
-        {
-          "src": "assets/images/geddy-lee-jazz-bass/gallery/natural-finish.webp",
-          "caption": "Natural finish with black pickguard and rosewood fingerboard"
-        },
-        {
-          "src": "assets/images/geddy-lee-jazz-bass/gallery/new-black.webp",
-          "caption": "Later configuration with replacement black pickguard"
-        }
-      ]
+  
+"gallery": [
+  {
+    "src": "assets/images/geddy-lee-jazz-bass/gallery/as-acquired.webp",
+    "caption": "Original black finish, white pickguard and maple Geddy Lee signature neck, as acquired in June 2007"
+  },
+  {
+    "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-refinish.webp",
+    "caption": "Body refinished bright blue around 2012, retaining the original white pickguard"
+  },
+  {
+    "src": "assets/images/geddy-lee-jazz-bass/gallery/blue-black-pickguard.webp",
+    "caption": "Blue finish with replacement black pickguard and solid black pickup covers, fitted in 2016"
+  },
+  {
+    "src": "assets/images/geddy-lee-jazz-bass/gallery/natural-finish.webp",
+    "caption": "Natural alder body refinished with Tru-Oil and fitted with a Fender replacement neck featuring a pau ferro fingerboard (2020)"
+  },
+  {
+    "src": "assets/images/geddy-lee-jazz-bass/gallery/new-black.webp",
+    "caption": "Later natural-finish configuration with replacement black pickguard and Fender pau ferro-fingerboard neck"
+  }
+]
+
 },
     "notes": "Long-term bass purchased in 2007 and extensively changed cosmetically over its ownership while retaining the original pickups, controls and bridge. Originally black, refinished bright blue around 2012, then stripped to natural alder and finished with Tru-Oil in 2020. The original Geddy Lee signature neck was eventually sold separately in 2023.",
     "history": [
