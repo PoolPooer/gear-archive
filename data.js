@@ -818,7 +818,7 @@ const gear = [
         "date": "11 Oct 2025",
         "type": "Modification",
         "title": "OAI D10 Dwyer II knobs fitted",
-        "description": "Four OAI D10 Dwyer II control knobs fitted. The knobs were already owned, having originally been purchased on 4 Nov 2020 for €9 each.",
+        "description": "Fitted four OAI D10 Dwyer II control knobs previously purchased in November 2020. As these were already owned, no additional expenditure was incurred.",
         "cost": 0,
         "currency": "EUR",
         "category": "Cosmetic / Hardware"
@@ -827,7 +827,7 @@ const gear = [
         "date": "Sep 2025",
         "type": "Modification",
         "title": "Vintage Leo Quan Badass bridge fitted",
-        "description": "Replaced the original Gibson wrap-around bridge with the Vintage Leo Quan Badass bridge supplied with the guitar. Original Gibson bridge retained.",
+        "description": "Fitted the vintage Leo Quan Badass bridge supplied with the instrument, replacing the original Gibson wrap-around bridge. The original bridge was retained, allowing the modification to be reversed",
         "cost": 0,
         "currency": "EUR",
         "category": "Hardware"
@@ -845,20 +845,22 @@ const gear = [
     "acquiredSort": "2025-09-12",
     "images": {
       "cover": "assets/images/melody-maker-1964/catalog.webp",
-      "gallery": [
-        {
-          "src": "assets/images/melody-maker-1964/gallery/as-acquired.webp",
-          "caption": "Original configuration as acquired"
-        },
-        {
-          "src": "assets/images/melody-maker-1964/gallery/as-purchased.jpeg",
-          "caption": "Condition at purchase"
-        },
-        {
-          "src": "assets/images/melody-maker-1964/gallery/bridge-knob-change.jpeg",
-          "caption": "Bridge and control knob changes"
-        }
-      ]
+      
+"gallery": [
+  {
+    "src": "assets/images/melody-maker-1964/gallery/as-acquired.webp",
+    "caption": "1964 Gibson Melody Maker D in Cherry Red, retaining its original pickups and electronics"
+  },
+  {
+    "src": "assets/images/melody-maker-1964/gallery/as-purchased.jpeg",
+    "caption": "Condition at purchase in September 2025, showing the instrument's Cherry Red finish and vintage hardware"
+  },
+  {
+    "src": "assets/images/melody-maker-1964/gallery/bridge-knob-change.jpeg",
+    "caption": "Vintage Leo Quan Badass bridge and OAI D10 Dwyer II control knobs fitted in 2025"
+  }
+]
+
     }
   },
   {
