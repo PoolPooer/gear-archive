@@ -81,7 +81,7 @@ const gear = [
         "date": "2023",
         "type": "Modification",
         "title": "Fender locking tuners",
-        "description": "Installed black locking tuners. Original tuner holes were drilled wider to accommodate them.",
+        "description": "Replaced the original tuners with black Fender locking tuners. The existing headstock holes required enlargement to accommodate the new hardware.",
         "cost": 80.13,
         "currency": "EUR",
         "category": "Hardware",
@@ -91,7 +91,7 @@ const gear = [
         "date": "2023",
         "type": "Modification",
         "title": "Wilkinson bridge + black control plate",
-        "description": "Installed Wilkinson WVC-SB-BK tremolo and AP-8668-003 black control plate.",
+        "description": "Replaced the original bridge with a black Wilkinson WVC-SB-BK tremolo and fitted a matching black AP-8668-003 control plate.",
         "cost": 135.69,
         "currency": "EUR",
         "category": "Hardware"
@@ -100,7 +100,7 @@ const gear = [
         "date": "2022",
         "type": "Modification",
         "title": "EMG JR “Daemonum” conversion",
-        "description": "Replaced the original Fender humbuckers. Pickguard modified and body cavity enlarged with a Dremel for wiring.",
+        "description": "Replaced the original Fender humbuckers with an EMG JR “Daemonum” set. Modified the pickguard and enlarged the body cavity using a Dremel to accommodate the replacement electronics and wiring.",
         "cost": 238,
         "currency": "EUR",
         "category": "Electronics",
@@ -130,27 +130,27 @@ const gear = [
     "images": {
       "cover": "assets/images/fender-cyclone-hh/catalog.webp",
       "gallery": [
-        {
-          "src": "assets/images/fender-cyclone-hh/gallery/as-acquired.webp",
-          "caption": "Original configuration as acquired"
-        },
-        {
-          "src": "assets/images/fender-cyclone-hh/gallery/pickup-change.webp",
-          "caption": "Pickup modification"
-        },
-        {
-          "src": "assets/images/fender-cyclone-hh/gallery/tuner-change.webp",
-          "caption": "Tuner modification"
-        },
-        {
-          "src": "assets/images/fender-cyclone-hh/gallery/locking-tuners.webp",
-          "caption": "Locking tuner installation detail"
-        },
-        {
-          "src": "assets/images/fender-cyclone-hh/gallery/current.webp",
-          "caption": "Current configuration"
-        }
-      ]
+  {
+    "src": "assets/images/fender-cyclone-hh/gallery/as-acquired.webp",
+    "caption": "Original black finish and factory hardware, as acquired in August 2004"
+  },
+  {
+    "src": "assets/images/fender-cyclone-hh/gallery/pickup-change.webp",
+    "caption": "EMG JR “Daemonum” humbuckers installed, replacing the original Fender pickups (2022)"
+  },
+  {
+    "src": "assets/images/fender-cyclone-hh/gallery/tuner-change.webp",
+    "caption": "Headstock following the replacement of the original tuners with black Fender locking tuners (2023)"
+  },
+  {
+    "src": "assets/images/fender-cyclone-hh/gallery/locking-tuners.webp",
+    "caption": "Detail of the Fender locking tuners, installed after enlarging the original mounting holes (2023)"
+  },
+  {
+    "src": "assets/images/fender-cyclone-hh/gallery/current.webp",
+    "caption": "Current configuration with EMG pickups, Wilkinson tremolo and black hardware"
+  }
+]
     }
   },
   {
