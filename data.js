@@ -309,9 +309,9 @@ const gear = [
         "note": "Purchased in Waterford, Ireland"
       },
       "additionalSpend": {
-        "modifications": 376.35,
+        "modifications": 366.19,
         "maintenance": null,
-        "accessories": null,
+        "accessories": 10.16,
         "importFees": null,
         "other": null
       },
@@ -368,7 +368,7 @@ const gear = [
         "date": "6 May 2023",
         "type": "Modification",
         "title": "WD Custom tortoise shell pickguard",
-        "description": "Installed WD Custom Pickguard for Fender 2019-Present Made in Mexico Alternate Reality Powercaster #05W — Tortoise Shell/White.",
+        "description": "Replaced the factory pickguard with a WD Custom #05W tortoise shell/white pickguard.",
         "cost": 47.1,
         "currency": "EUR",
         "category": "Cosmetic / Hardware"
@@ -403,24 +403,26 @@ const gear = [
     "acquiredSort": "2019-07-05",
     "images": {
       "cover": "assets/images/powercaster/catalog.webp",
-      "gallery": [
-        {
-          "src": "assets/images/powercaster/gallery/as-purchased.jpeg",
-          "caption": "Original configuration as purchased"
-        },
-        {
-          "src": "assets/images/powercaster/gallery/knob-change.webp",
-          "caption": "Replacement control knobs"
-        },
-        {
-          "src": "assets/images/powercaster/gallery/locking-tuners.webp",
-          "caption": "Locking tuner modification"
-        },
-        {
-          "src": "assets/images/powercaster/gallery/current.webp",
-          "caption": "Current configuration"
-        }
-      ]
+      
+"gallery": [
+  {
+    "src": "assets/images/powercaster/gallery/as-purchased.jpeg",
+    "caption": "Original Surf Green finish with factory pickups, pickguard and hardware, as purchased in July 2019"
+  },
+  {
+    "src": "assets/images/powercaster/gallery/knob-change.webp",
+    "caption": "D10 Dwyer II replacement control knobs by OAIModifications, installed in November 2020"
+  },
+  {
+    "src": "assets/images/powercaster/gallery/locking-tuners.webp",
+    "caption": "Chrome Fender locking tuners fitted in August 2023, replacing the original machine heads"
+  },
+  {
+    "src": "assets/images/powercaster/gallery/current.webp",
+    "caption": "Current configuration with tortoise shell pickguard, DiMarzio bridge humbucker and Lollar P-90 neck pickup"
+  }
+]
+
     }
   },
   {
