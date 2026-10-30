@@ -1030,7 +1030,7 @@ const gear = [
     "modified": true,
     "serial": null,
     "serialRecorded": false,
-    "acquired": "~2001–2002",
+    "acquired": "~2002",
     "acquisitionType": "Christmas / birthday gift",
     "originalPrice": {
       "amount": null,
@@ -1040,7 +1040,7 @@ const gear = [
     "identification": {
       "exactModel": "Squier Affinity Series Stratocaster",
       "yearConfirmed": false,
-      "notes": "Received as part of a Squier starter pack around 2001–2002. Exact production year, country of manufacture and serial number are unknown."
+      "notes": "Received as part of a Squier starter pack around 2002. Exact production year, country of manufacture and serial number are unknown."
     },
     "originalSpec": {
       "BodyStyle": "Stratocaster",
@@ -1117,7 +1117,7 @@ const gear = [
         "currency": "EUR"
       },
       {
-        "date": "~2001–2002",
+        "date": "~2002",
         "type": "Acquisition",
         "title": "Received as Christmas / birthday gift",
         "description": "Received while young as part of a Squier starter pack containing the Affinity Series Stratocaster, a small practice amplifier, gig bag and guitar strap.",
@@ -1126,7 +1126,7 @@ const gear = [
         "personalSpend": false
       }
     ],
-    "acquiredSort": "2001",
+    "acquiredSort": "2002",
     "images": {
       "cover": "assets/images/squier-strat/catalog.webp",
       "gallery": [
@@ -1797,11 +1797,11 @@ const gear = [
     "kind": "amp",
     "brand": "Fender",
     "model": "Frontman 10G",
-    "year": "~2001–2002",
+    "year": "~2002",
     "yearApproximate": true,
     "status": "Traded",
     "modified": false,
-    "acquired": "~2001–2002",
+    "acquired": "~2002",
     "acquisitionType": "Part of guitar starter pack",
     "originalPrice": {
       "amount": null,
@@ -1855,7 +1855,7 @@ const gear = [
         "currency": "EUR"
       },
       {
-        "date": "~2001–2002",
+        "date": "~2002",
         "type": "Acquisition",
         "title": "Received with Squier starter pack",
         "description": "10W Fender Frontman practice amplifier supplied with the Squier Affinity Stratocaster starter pack.",
@@ -1864,7 +1864,7 @@ const gear = [
         "personalSpend": false
       }
     ],
-    "acquiredSort": "2001"
+    "acquiredSort": "2002"
   },
   {
     "id": "avalanche-bass-practice-amp",
@@ -1989,10 +1989,10 @@ const gear = [
     "subtype": "Bass amp head",
     "brand": "Genz Benz",
     "model": "Shuttle 6.0",
-    "year": "",
+    "year": "2009",
     "status": "Owned",
     "modified": false,
-    "acquired": "Date unknown",
+    "acquired": "June 2009",
     "acquisitionType": "Purchased",
     "originalPrice": {
       "amount": null,
@@ -2030,16 +2030,16 @@ const gear = [
     "notes": "The original cabinet was later sold due to its size, while the Shuttle 6.0 head was retained.",
     "history": [
       {
-        "date": "Date unknown",
-        "type": "Acquisition",
-        "title": "Purchased",
-        "description": "Genz Benz Shuttle 6.0 bass amplifier head.",
-        "cost": null,
-        "currency": "EUR",
-        "personalSpend": true
-      }
+  "date": "Jun 2009",
+  "type": "Acquisition",
+  "title": "Purchased",
+  "description": "Purchased alongside the Genz Benz NeoX 212T bass cabinet.",
+  "cost": null,
+  "currency": "EUR",
+  "personalSpend": true
+}
     ],
-    "acquiredSort": null
+    "acquiredSort": "2009-06"
   },
   {
     "id": "genz-benz-bass-cab",
@@ -2050,7 +2050,7 @@ const gear = [
     "year": "",
     "status": "Sold",
     "modified": false,
-    "acquired": "Date unknown",
+    "acquired": "June 2009",
     "acquisitionType": "Purchased",
     "originalPrice": {
       "amount": null,
@@ -2099,7 +2099,7 @@ const gear = [
         "currency": "EUR"
       }
     ],
-    "acquiredSort": null
+    "acquiredSort": "2009-06"
   },
   {
     "id": "fender-rumble-bass-cab",
@@ -3929,7 +3929,7 @@ const gear = [
     "status": "Owned",
     "modified": false,
     "serialRecorded": false,
-    "acquired": "~2001",
+    "acquired": "~2002",
     "acquisitionType": "Gift / Unknown",
     "originalPrice": {
       "amount": null,
@@ -3954,7 +3954,7 @@ const gear = [
       "recoveries": [],
       "disposal": null
     },
-    "notes": "First guitar. Acquired around 2001. Further details to be reconstructed.",
+    "notes": "First guitar. Acquired around 2002. Further details to be reconstructed.",
     "images": {
       "cover": "assets/images/encore-w225/catalog.webp",
       "gallery": []
@@ -3964,13 +3964,13 @@ const gear = [
         "date": "~2001",
         "type": "Acquisition",
         "title": "First guitar",
-        "description": "Acquired around 2001. Exact acquisition circumstances and original price are currently unknown.",
+        "description": "Acquired around 2002. Exact acquisition circumstances and original price are currently unknown.",
         "cost": null,
         "currency": "EUR",
         "personalSpend": false
       }
     ],
-    "acquiredSort": "2001"
+    "acquiredSort": "2002"
   },
   {
     "id": "tanglewood-tw133-asm",
@@ -4257,7 +4257,7 @@ const gear = [
     "year": "",
     "status": "Sold",
     "modified": false,
-    "acquired": "Date unknown",
+    "acquired": "Mar 2007",
     "acquisitionType": "Purchased",
     "originalPrice": {
       "amount": null,
@@ -4306,17 +4306,19 @@ const gear = [
         "cost": -110,
         "currency": "EUR"
       },
-      {
-        "date": "Date unknown",
-        "type": "Acquisition",
-        "title": "Purchased from local music shop",
-        "description": "Original purchase date and price are currently unknown.",
-        "cost": null,
-        "currency": "EUR",
-        "personalSpend": true
-      }
+      
+{
+  "date": "Mar 2007",
+  "type": "Acquisition",
+  "title": "Purchased from local music shop",
+  "description": "Purchased from a local music shop in March 2007. Original purchase price unknown.",
+  "cost": null,
+  "currency": "EUR",
+  "personalSpend": true
+}
+
     ],
-    "acquiredSort": null
+    "acquiredSort": "2007-03"
   },
   {
     "id": "fender-player-fusion-jaguar-baritone-special",
