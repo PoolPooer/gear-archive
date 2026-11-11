@@ -318,6 +318,7 @@ function getKindLabel(item) {
     pedal: 'Pedal',
     microphone: 'Microphone',
     recording: 'Recording',
+    keyboard: 'Keyboard / MIDI',
     accessory: 'Accessory'
   };
 

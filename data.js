@@ -4377,6 +4377,137 @@ const gear = [
       }
     ],
     "acquiredSort": "2026-09-28"
+  },
+  {
+    "id": "alesis-qx49",
+    "kind": "keyboard",
+    "subtype": "MIDI keyboard controller",
+    "brand": "Alesis",
+    "model": "QX49",
+    "year": "",
+    "status": "Sold",
+    "modified": false,
+    "acquired": "2012",
+    "acquisitionType": "Purchased",
+    "originalPrice": {
+      "amount": 220,
+      "currency": "EUR",
+      "approximate": true
+    },
+    "originalSpec": {
+      "Type": "USB MIDI keyboard controller",
+      "Keys": "49",
+      "Configuration": "Stock"
+    },
+    "currentSpec": {
+      "Configuration": "Stock"
+    },
+    "financials": {
+      "acquisition": {
+        "amount": 220,
+        "currency": "EUR",
+        "approximate": true,
+        "personalSpend": true,
+        "note": "Purchased from a local music shop in 2012"
+      },
+      "additionalSpend": {
+        "modifications": null,
+        "maintenance": null,
+        "accessories": null,
+        "importFees": null,
+        "other": null
+      },
+      "recoveries": [],
+      "disposal": {
+        "type": "Sale",
+        "amount": 180,
+        "currency": "EUR",
+        "date": "2022"
+      }
+    },
+    "images": {
+      "gallery": []
+    },
+    "history": [
+      {
+        "date": "2022",
+        "type": "Sale",
+        "title": "Sold",
+        "description": "Sold after approximately ten years of ownership.",
+        "cost": -180,
+        "currency": "EUR"
+      },
+      {
+        "date": "2012",
+        "type": "Acquisition",
+        "title": "Purchased from local music shop",
+        "description": "Original purchase price approximately €220.",
+        "cost": 220,
+        "currency": "EUR",
+        "approximate": true,
+        "personalSpend": true
+      }
+    ],
+    "acquiredSort": "2012"
+  },
+  {
+    "id": "akai-mpk-mini-play-mk3",
+    "kind": "keyboard",
+    "subtype": "Portable keyboard / MIDI controller",
+    "brand": "Akai Professional",
+    "model": "MPK Mini Play MK3",
+    "year": "",
+    "status": "Owned",
+    "modified": false,
+    "acquired": "Mar 2022",
+    "acquisitionType": "Purchased",
+    "originalPrice": {
+      "amount": 139,
+      "currency": "EUR",
+      "approximate": false
+    },
+    "originalSpec": {
+      "Type": "Portable keyboard and MIDI controller",
+      "Keys": "25 mini keys",
+      "Pads": "8 velocity-sensitive MPC pads",
+      "Sounds": "Built-in sound engine",
+      "Power": "USB or battery"
+    },
+    "currentSpec": {
+      "Configuration": "Stock"
+    },
+    "financials": {
+      "acquisition": {
+        "amount": 139,
+        "currency": "EUR",
+        "approximate": false,
+        "personalSpend": true,
+        "note": "Purchased in March 2022"
+      },
+      "additionalSpend": {
+        "modifications": null,
+        "maintenance": null,
+        "accessories": null,
+        "importFees": null,
+        "other": null
+      },
+      "recoveries": [],
+      "disposal": null
+    },
+    "images": {
+      "gallery": []
+    },
+    "history": [
+      {
+        "date": "Mar 2022",
+        "type": "Acquisition",
+        "title": "Purchased",
+        "description": "Purchased for €139.",
+        "cost": 139,
+        "currency": "EUR",
+        "personalSpend": true
+      }
+    ],
+    "acquiredSort": "2022-03"
   }
 ];
-
