@@ -4426,6 +4426,7 @@ const gear = [
       }
     },
     "images": {
+      "cover": "assets/images/alesis-qx49/as-acquired.webp",
       "gallery": []
     },
     "history": [
@@ -4495,6 +4496,7 @@ const gear = [
       "disposal": null
     },
     "images": {
+      "cover": "assets/images/akai-mpk-mini-play-mk3/as-acquired.webp",
       "gallery": []
     },
     "history": [
