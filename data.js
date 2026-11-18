@@ -298,7 +298,7 @@ const gear = [
       "Knobs": "D10 Knob Dwyer II by OAIModifications",
       "StrapPins": "Planet Waves PWEEP202 Elliptical End Pins — Chrome",
       "Strap": "Ernie Ball Rainbow Polypro Guitar Strap",
-      "Strings": "Ernie Ball Ultra Slinky 10–48"
+      "Strings": "D’Addario NYXL 10–46"
     },
     "financials": {
       "acquisition": {
@@ -319,6 +319,12 @@ const gear = [
       "disposal": null
     },
     "history": [
+      {
+        "date": "16 Nov 2026",
+        "type": "Maintenance",
+        "title": "Strings replaced",
+        "description": "Replaced the Ernie Ball Ultra Slinky 10–48 set with D’Addario NYXL 10–46 strings."
+      },
       {
         "date": "29 May 2025",
         "type": "Modification",
